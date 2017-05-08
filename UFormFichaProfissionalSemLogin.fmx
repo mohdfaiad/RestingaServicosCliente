@@ -1,0 +1,499 @@
+object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
+  Left = 0
+  Top = 0
+  ClientHeight = 557
+  ClientWidth = 300
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout2: TLayout
+    Align = Client
+    Size.Width = 300.000000000000000000
+    Size.Height = 557.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LytNome: TLayout
+      Align = Top
+      Size.Width = 300.000000000000000000
+      Size.Height = 77.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Rectangle2: TRectangle
+        Align = Client
+        Fill.Bitmap.Bitmap.PNG = {
+          89504E470D0A1A0A0000000D49484452000000AC000000220806000000C28B32
+          70000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+          09F049444154785EED9C4992E4361245838CEAFB9FA67B27336D74052DB46B6B
+          93ACD58BBE406532840FF70F7C38010463C8A14CF9CABC001F3010F4403290B4
+          5C7EF9FFFF2EA7C4E5928B8CD6C1C887FAEBE64A823E8D797D7DF59AD929D45F
+          4FD506D960F13AF8BE7DDFD955B6CDEC40ED248EAFE569D94ECB0517502F62F5
+          922C1EBAA67259965C6709166FBB2CE75C82ECBF584F3576CD75C4693FE7A58D
+          5B2F88A9FDAF27EB774DFD597BF7BBBE79689D9FC7F8BCD183FDCF7E744EA7D3
+          798B574C2CE67CFE472E0B7E5D956F5EB6FD6A9DD0D6C65DA6EDD635AC0FFED3
+          1B1CEB339F12F5C8ADF1E07ACCF53EBEF8FC1CC905B26AF0A81E69E3B0C36117
+          B39D6A54A7BEB7B1AFAA9B302E82788A9376CABBE406B09371377B0C8C7BDBD8
+          60D7EAE66BB01E9E771D1F43D9DFDB2494644830895827BD3896BD3A511FCB59
+          DC941B13AFE591B65F7C0479876562F4EAD441F411D5A39D3026C6ED7752EEC4
+          6C6B3BC3175F80877658D06BA7F160D426C6532A3151DB7E1EDB5DC9D787E147
+          E2A12F5D59F767297CDF675D85F6E82FF6D267B237C9A33E9475ECD24F816D6F
+          952F7E341EFED2058EF6013DDA7AD8630209F14DA282AFC4FB3BB1FCFCE7EF25
+          2366C906686BE2F22E6909063B856C9B2594DAB5FE7AB1AFACB435E7ADD0585F
+          6DC7A53051BF7FB7735AD0FADB7180DA899DC356CA339253CF33537D5976E798
+          27BF769EAFD2B7F8B927C6325B3847753DFD9FE3683FFB0C2CE6743A2F7ECEE9
+          E7AE9C1FFD173FFF4DA3E71223E7BECABC7D5CD7795E8CEB00CB8B97DE1F4BF4
+          03AE9DC32E4BF04FD88F01B6C64E21EA03F1FE64F486929E0D83F5EDC6F17E1C
+          DF3D738CAFF0ADFD7F04BAC060B6E03D66ED9FC1B5751A8DF7EC793C8392B0BC
+          A87871D0D536AB1F8903D473891D5A9E67CD267D2189D5977756FDA0987EBF3C
+          066F6AEFE6469BEAB1DD91F66F416F4EE03DC6BE87DDB116513BD1B8EA6B77D9
+          D6376AD3DAB5D49FC13B5F0275D53F13B8C9BCD1B344E8C58099EFADD1F1DE7B
+          EC5BD8EDB020268426498C331D25762BAB53A74D7D7B7B85FD99E0D9B07E18E2
+          79AD9DD5DAF3E347A24946A8AB2FC68DEC407D6F8D8E3FAA7F269A1D16D404A9
+          C943A28F44FBCC47625D75429B96A3D88F26DEE0599DFAC80EB4FE1E7CE4D8B7
+          D07CE98A09A28C9264963CBDFE62BCEEBE10F82920EEAC56373DC7F833EEDDF2
+          04E2CDEEDDFC9804BD18807A8C7D6B6673F96C741F0922EA3B520747FA2BA5AF
+          0BCB1EB53F9BF2A5346A3E736F0A8F820A29E171536D2A21F9DDA7F412609614
+          471206732A4754592EF5080B92EA10AC52168D870F8A7F784B1DBE3C3402A153
+          121ECBB8D63F92E7B1FCF4DF7FFBF46B5268B2ED924B7C60DB7090376E877358
+          6D4B01786BE8F5F292CB65C35981EEAC56F27D56B5DBF32B56147DD7F70ECCB7
+          EF83A8CEFA1A1654BEF365F4E3A067A604D3C06726DFEBC5CF3CDD8F535546E2
+          7DD462470CCF699329EBB93DDA5A9CF587786BC3F6B49B2FE1AF5E659BCFBD3D
+          6BB5D8E803758C48BDEA95E7C09918BB366B9AFBF20DA4EDB7B5A90FEDD51E63
+          F47D5848991907D60900E8D146ECC7F5DEA7F1A3B640BF34DDF6CA5B5DD0F782
+          C94A6A025889F96F31DBCB2E54E18D20B1DF6BC4F639D15DC039DFD4CD93D5FA
+          870F7A14EB4B7742CE57F466374D8D8A00899378DDB58DFD4F9B198CEDB5E91E
+          6BD1469D447F214D6CF4CE00C5F6CFEACBF542B2DD256F0F164D178E75EE8C64
+          1407B40EA023A9F28D859E8A51FB9C6C39A9EB35179FB7D17624DAF181BAAC6D
+          BBC7C0DC6B0EB0BFD86F1DCBE6AFFEEAEBB7EB51125605CCEACAC877C46EBC4F
+          E23D035D5C5DD058EFF9D406A07BBEEEE2A3AE25E9E9A35830F33DC2685CB513
+          8D8B3E30B22BEB6BDAE9AEFDDBD28E088975EC99F94761EA08BFF3E71ED0ABAB
+          8D7A9BB80F90E673B71C401752179476241E9E56998000BB62F9719C77488B47
+          1C84C47ED107847D03941C43EDA0A713FA681BF96672148D8DEDB4AF18A74258
+          571BE9EEB02A84F5D68E7AFDD2037A71D156F4830933E678D2DDCB68218FD881
+          FA14C6E2695C637A715A12E8FC20108DEDC5B38CBE4788FDC57166BE88DA7B7E
+          90BFBD344924751075D2D87DB7EA3DC76A3D4AED37E977C933C01C44F203A588
+          DB6DFDAA5EEDEDC272476549748704B96B9449C74DA000D8D89E3B2EEDEC9BED
+          418E67BF5E12F529B45F935B607CAFDDACAFE89BF593775812EBAA83A82B331F
+          18F585C78BBB79A4ED0DE8C21DA98323BE9874CA91F620FA9459BB6773741EB1
+          4E7DD65E59FEF5C76F2977EACAC5FACC67D86E378AD3BF0B00E863F9727949FB
+          94C5C046217C9F16A89D75F3D7361A03E2F811EE5E242E5B796EF4B8B8B071C1
+          57EC8188A7EEEFB12E2CDDCEF2B4FA99A98F9C9F70930FC75319FBADC469653B
+          EF87B4E7A476AC9529E3D658E8980FEB408F16CDD6F67FED1734387B6E69759E
+          37B34F3D07063A16501DF5DDDF25E825018837BEEFB36455623B65E7E3E3C143
+          8CC77B06714195D962CF601CCAD92EDB6316A3BEA371E4C8D8F732EA3BDA551F
+          B5E97E6C8E25AB01BDF79C0ADBE859B6D4DF015CF85CB0A388E4BDAE4AEAA188
+          ED26B54DAEA7FFB1FB95A85407F09A245F5AB2624F753ECF12C4103BF8AFA0EF
+          DC3FFA90A5E7FC7BF4ECB4CD7C60D4E708C45F1332AA4766BEBC3639E93C1163
+          72469DF47CD4AFC5B154FB7DECC77B2BB88871317BF659ACDA90B8BDD891AD67
+          07231FED477C60E49FC9513436B6D3BE6671209FC3C673563B63ADF6B12F3D23
+          62BF4C0983FD12A2E7AED1AE3EDA0D24DC3DE2A4B98C04BF4D1A8A2FD411C9C3
+          7809D44EA07387D436D99E76D13464B16909E0D35304EECCB6CFD738F613E381
+          F6AB76D08B53666D1F41FBEBD5A983E8EB31DD61C1C867763CB0A7C470C671AD
+          4EF2A38126DE3D20290717771524F541468B493DDAB4241AC79249A7B13186A8
+          3DC6AB4FE9C5B254A18D44FFBD424675A0B1D117397CAC35AA03245E4EBE9400
+          2C7BA23E4BD6CF8F2EA612EDDCF108774810DBE7B65E02DD79F9ACAA6DB2DD75
+          B5831847B40DA11EED20B67D26A3BE513FEA232B174B4B24A4E978EB27259894
+          CB8644AB7A4C5EE568C25F037319C93578E163418C48FA99A3828F2341FC3562
+          0CF55EDB5E6FA3F63DE0C31455F8188156DA928F127BF2457A995A4EC63B86E5
+          05C1A31737A95C773FFECC668D6D65EAFBE77F7EB5A336FC8A3515299B4E1B12
+          2A097E758A8BCFFE0DCF9DC98EBFC7EA3A4A7B9720B7CCC4C4EC256A93B03847
+          C58EEB36BC17ABE09C35CF3FD1EBEB257F80C65C3B87C5DF25D09B744EFF484E
+          08F870A6E93AED3C1F3D5BD1FA50BAFF5B3827E5DF6905885D56F3D7766DD29C
+          CBBBAD965835CEEA71BEB5F4F8523AE13CB58ED5DA49B92F4DDF4ABF1DD727C6
+          AB9EEBFE0619E88DA1F71CF63C1A1382615632515242F9AE9AFFE8048C2C53A2
+          F69208687DCCF518CE8D3BAA0AA07F042E722CF6C5ABD901623D77D2267564E4
+          8B76EA288FB651D457FAC23493E45DD5EB8D2026478E400A0C92CE99CD7528A9
+          CBFC134A26A37AA9E71CB82EA9CBC4E5F417EDF9D46581DF09BF000000004945
+          4E44AE426082}
+        Fill.Bitmap.WrapMode = TileStretch
+        Fill.Kind = Bitmap
+        Size.Width = 300.000000000000000000
+        Size.Height = 77.000000000000000000
+        Size.PlatformDefault = False
+        object LblNome: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 29.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'LblNome'
+        end
+        object LblProfissao: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 29.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'LblProfissao'
+        end
+        object LblCidade: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 49.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'LblCidade'
+        end
+      end
+    end
+    object LytFoto: TLayout
+      Align = Top
+      Position.Y = 77.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 132.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Rectangle3: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Size.Width = 300.000000000000000000
+        Size.Height = 132.000000000000000000
+        Size.PlatformDefault = False
+        object ImgFoto: TImage
+          MultiResBitmap = <
+            item
+            end>
+          Align = MostLeft
+          Size.Width = 129.000000000000000000
+          Size.Height = 132.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Layout3: TLayout
+          Align = Client
+          Size.Width = 171.000000000000000000
+          Size.Height = 132.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object LblServicosRealizadosview: TLabel
+            Align = Top
+            StyledSettings = [Size, FontColor]
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 38.000000000000000000
+            Size.Width = 151.000000000000000000
+            Size.Height = 27.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Roboto'
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            Text = 'Servi'#231'os Realizados:'
+            object LblServicosRealizados: TLabel
+              Margins.Left = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Position.X = 120.000000000000000000
+              Position.Y = 2.000000000000000000
+              Size.Width = 50.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'LblServicosRealizados'
+            end
+          end
+          object Label1: TLabel
+            Align = Top
+            StyledSettings = [Size, FontColor]
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 151.000000000000000000
+            Size.Height = 28.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Roboto'
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            Text = 'Reputa'#231#227'o:'
+            object ImgAvaliacao: TImage
+              MultiResBitmap = <
+                item
+                end>
+              Margins.Left = 10.000000000000000000
+              Margins.Right = 80.000000000000000000
+              Position.X = 66.000000000000000000
+              Size.Width = 86.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+        end
+      end
+    end
+    object LytDescricao: TLayout
+      Align = Client
+      Size.Width = 300.000000000000000000
+      Size.Height = 348.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Rectangle4: TRectangle
+        Align = Client
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = claCadetblue
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Size.Width = 300.000000000000000000
+        Size.Height = 348.000000000000000000
+        Size.PlatformDefault = False
+        object Label3: TLabel
+          Align = Top
+          StyledSettings = [Size, FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Descri'#231#227'o:'
+        end
+        object RecOrcamento: TRectangle
+          Align = Bottom
+          Fill.Color = claDeepskyblue
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 306.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object BtnOrcamento: TButton
+            Align = Client
+            StyledSettings = []
+            Size.Width = 280.000000000000000000
+            Size.Height = 37.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Solicitar Or'#231'amento'
+            TextSettings.Font.Family = 'Roboto'
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            OnClick = BtnOrcamentoClick
+          end
+        end
+        object Label4: TLabel
+          Align = Top
+          StyledSettings = [Size, FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Avalia'#231#245'es de clientes'
+        end
+        object RecDescricao: TRectangle
+          Align = Top
+          Fill.Color = claWhite
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 103.000000000000000000
+          Size.PlatformDefault = False
+          object TxtDescricao: TText
+            Align = Client
+            Size.Width = 280.000000000000000000
+            Size.Height = 103.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Leading
+            TextSettings.VertAlign = Leading
+          end
+        end
+        object RecAvaliacoes: TRectangle
+          Align = Client
+          Fill.Color = claBeige
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 150.000000000000000000
+          Size.PlatformDefault = False
+          object LstVwAvaliacoes: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 280.000000000000000000
+            Size.Height = 150.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            ItemAppearance.ItemHeight = 80
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Nome'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.Family = 'Roboto'
+                Appearance.Font.Size = 14.000000000000000000
+                Appearance.Font.StyleExt = {00070000000000000004000000}
+                Appearance.TextAlign = Leading
+                Appearance.Width = 218.000000000000000000
+                Appearance.Height = 25.000000000000000000
+                Appearance.PlaceOffset.X = 65.000000000000000000
+                Appearance.PlaceOffset.Y = 1.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Foto'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 61.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Descricao'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.Family = 'Roboto'
+                Appearance.Font.Size = 10.000000000000000000
+                Appearance.TextAlign = Leading
+                Appearance.TextVertAlign = Leading
+                Appearance.Width = 218.000000000000000000
+                Appearance.Height = 49.000000000000000000
+                Appearance.PlaceOffset.X = 65.000000000000000000
+                Appearance.PlaceOffset.Y = 28.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Avaliacao'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.Y = 60.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.FooterObjects.Text.Width = 280.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.Height = 19.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = 4.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryServicosPrestados
+    ScopeMappings = <>
+    Left = 136
+    Top = 264
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = LstVwAvaliacoes
+      Track = True
+      FillDataSource = BindSourceDB1
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'Contratante'
+          ControlMemberName = 'Nome'
+        end
+        item
+          SourceMemberName = 'Descricao'
+          ControlMemberName = 'Descricao'
+        end
+        item
+          SourceMemberName = 'foto'
+          ControlMemberName = 'Foto'
+        end
+        item
+          SourceMemberName = 'imagem'
+          ControlMemberName = 'Avaliacao'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'Avaliacao'
+      Component = ImgAvaliacao
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'Profissao'
+      Component = LblProfissao
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'Descricao'
+      Component = TxtDescricao
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'TotalAtendimentos'
+      Component = LblServicosRealizados
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldBitmap2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'foto'
+      Component = ImgFoto
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkPropertyToFieldText4: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'CidadeUF'
+      Component = LblCidade
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText5: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'nomepessoa'
+      Component = LblNome
+      ComponentProperty = 'Text'
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DMPrincipal.QueryProfissional
+    ScopeMappings = <>
+    Left = 148
+    Top = 276
+  end
+end

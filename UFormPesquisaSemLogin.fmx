@@ -1,0 +1,180 @@
+object FormPesquisaSemLogin: TFormPesquisaSemLogin
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 557
+  ClientWidth = 300
+  Fill.Color = claCadetblue
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object LblTitulo: TLabel
+    Align = Top
+    StyledSettings = []
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 290.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Roboto'
+    TextSettings.Font.Size = 22.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    TextSettings.HorzAlign = Center
+    Text = 'Selecione o servi'#231'o desejado'
+  end
+  object RctServicos: TRectangle
+    Align = Top
+    Fill.Color = claWhite
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 47.000000000000000000
+    Size.Width = 290.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    object CbxServicos: TComboBox
+      Align = Client
+      Size.Width = 290.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = CbxServicosChange
+    end
+  end
+  object LstVwProfissionais: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 290.000000000000000000
+    Size.Height = 461.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearance.ItemHeight = 80
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Nome'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.Family = 'Roboto'
+        Appearance.Font.Size = 14.000000000000000000
+        Appearance.Font.StyleExt = {00070000000000000004000000}
+        Appearance.TextAlign = Leading
+        Appearance.Width = 185.000000000000000000
+        Appearance.Height = 30.000000000000000000
+        Appearance.PlaceOffset.X = 84.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Profissao'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.Family = 'Roboto'
+        Appearance.Font.Size = 9.000000000000000000
+        Appearance.TextAlign = Leading
+        Appearance.Width = 185.000000000000000000
+        Appearance.Height = 30.000000000000000000
+        Appearance.PlaceOffset.X = 84.000000000000000000
+        Appearance.PlaceOffset.Y = 28.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Foto'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 83.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Avaliacao'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 81.000000000000000000
+        Appearance.Height = 20.000000000000000000
+        Appearance.PlaceOffset.X = 84.000000000000000000
+        Appearance.PlaceOffset.Y = 58.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'id'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Visible = False
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    ItemAppearanceObjects.FooterObjects.Text.Width = 245.000000000000000000
+    ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+    OnItemClickEx = LstVwProfissionaisItemClickEx
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryProfissoes
+    ScopeMappings = <>
+    Left = 136
+    Top = 500
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 136
+    Top = 405
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = CbxServicos
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = LstVwProfissionais
+      Track = True
+      FillDataSource = BindSourceDB2
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'id'
+          ControlMemberName = 'id'
+        end
+        item
+          SourceMemberName = 'nomepessoa'
+          ControlMemberName = 'Nome'
+        end
+        item
+          SourceMemberName = 'Profissao'
+          ControlMemberName = 'Profissao'
+        end
+        item
+          SourceMemberName = 'Avaliacao'
+          ControlMemberName = 'Avaliacao'
+        end
+        item
+          SourceMemberName = 'foto'
+          ControlMemberName = 'Foto'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DMPrincipal.QueryPessoa
+    ScopeMappings = <>
+    Left = 136
+    Top = 452
+  end
+end

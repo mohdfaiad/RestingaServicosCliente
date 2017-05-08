@@ -1,0 +1,26 @@
+inherited FormPesquisaSemLogin_LgXhdpiPh: TFormPesquisaSemLogin_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited LblTitulo: TLabel
+    Size.Width = 440.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited RctServicos: TRectangle
+    Size.Width = 440.000000000000000000
+    inherited CbxServicos: TComboBox
+      Size.Width = 440.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited LstVwProfissionais: TListView
+    Size.Width = 440.000000000000000000
+    Size.Height = 599.000000000000000000
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 1.000000000000000000
+  end
+end

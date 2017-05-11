@@ -31,8 +31,12 @@ type
     Rectangle8: TRectangle;
     Image5: TImage;
     LblMinhaConta: TLabel;
+    Rectangle3: TRectangle;
+    Image6: TImage;
+    Label1: TLabel;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,11 +50,18 @@ implementation
 
 {$R *.fmx}
 
-uses UDMPrincipal, UFormPrincipal;
+uses UDMPrincipal, UFormPrincipal, UFormChat;
 
 procedure TFormModelo.BtnBuscarClick(Sender: TObject);
 begin
   FormPrincipal.Show;
+end;
+
+procedure TFormModelo.Label1Click(Sender: TObject);
+begin
+  if FormChat=nil then
+    Application.CreateForm(TFormChat,FormChat);
+  TFormChat.create(self).show;
 end;
 
 procedure TFormModelo.LblSairClick(Sender: TObject);

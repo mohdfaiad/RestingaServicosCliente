@@ -14112,9 +14112,12 @@ object FormLogin: TFormLogin
         FilterChar = 
           '1234567890abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ.-' +
           '_@'
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
         Size.Width = 250.000000000000000000
         Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
       end
     end
     object RctSenha: TRectangle
@@ -14133,9 +14136,12 @@ object FormLogin: TFormLogin
         StyleLookup = 'editstyle'
         TabOrder = 0
         Password = True
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
         Size.Width = 250.000000000000000000
         Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
       end
     end
     object SpeedButton1: TSpeedButton

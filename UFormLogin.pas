@@ -70,7 +70,6 @@ begin
         if FormPrincipal = nil then
           application.CreateForm(TFormPrincipal,FormPrincipal);
         TFormPrincipal.Create(self).Show;
-        //FormPrincipal.CbxProfissoes.ItemIndex := formpesquisa
       End;
     End;
   end;

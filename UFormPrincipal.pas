@@ -10,7 +10,6 @@ uses
 
 type
   TFormPrincipal = class(TFormModelo)
-    Label1: TLabel;
     CbxProfissoes: TComboBox;
     LstvwProfissionais: TListView;
     BindSourceDB1: TBindSourceDB;
@@ -38,7 +37,7 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-uses UDMPrincipal, UFormFichaProfissionalV2;
+uses UDMPrincipal, UFormFichaProfissional;
 
 procedure TFormPrincipal.CbxProfissoesChange(Sender: TObject);
 begin

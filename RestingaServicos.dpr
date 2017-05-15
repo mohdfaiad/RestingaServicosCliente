@@ -7,7 +7,6 @@ uses
   UDMPrincipal in 'UDMPrincipal.pas' {DMPrincipal: TDataModule},
   UFormModelo in 'UFormModelo.pas' {FormModelo},
   UFormPrincipal in 'UFormPrincipal.pas' {FormPrincipal},
-  UFormFichaProfissionalV2 in 'UFormFichaProfissionalV2.pas' {FormFichaProfissional},
   UFormSelecaoInicial in 'UFormSelecaoInicial.pas' {FormSelecaoInicial},
   UFormSelecionaArea in 'UFormSelecionaArea.pas' {FormSelecionaArea},
   UFormLogin in 'UFormLogin.pas' {FormLogin},
@@ -15,7 +14,8 @@ uses
   UFormCadastroUsuario in 'UFormCadastroUsuario.pas' {FormCadastroUsuario},
   UUtil in 'UUtil.pas',
   UFormEsqueceuSenha in 'UFormEsqueceuSenha.pas' {FormEsqueceuSenha},
-  UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin};
+  UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin},
+  UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional};
 
 {$R *.res}
 

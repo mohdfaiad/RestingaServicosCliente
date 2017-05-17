@@ -35,11 +35,14 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UDMPrincipal, UFormLogin;
 {$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TFormCadastroUsuario.BtnCriarUsuarioClick(Sender: TObject);
+Var
+  id_usuario, id_pessoa: integer;
 begin
 
   if validaCampos then
@@ -52,6 +55,25 @@ begin
       QueryUsuarioSenha.Value := EdtSenha.Text;
       QueryUsuarioCPFCNPJ.Value := EdtCPFCNPJ.Text;
       QueryUsuario.post;
+      id_usuario := QueryUsuarioid.AsInteger;
+
+      QueryCadastraPessoa.Open;
+      QueryCadastraPessoa.Append;
+      QueryCadastraPessoaNomePessoa.Value := EdtNome.Text;
+      QueryCadastraPessoaPessoa_tipo_id.Value := 1;
+      QueryCadastraPessoa.Post;
+      id_pessoa := QueryCadastraPessoaid.AsInteger;
+      QueryCadastraPessoa.Close;
+
+      QueryUsuario.Filtered := False;
+      QueryUsuario.Filter   := 'id = ' + IntToStr(id_usuario);
+      QueryUsuario.Filtered := True;
+
+      QueryUsuario.Edit;
+      QueryUsuariopessoa_id.Value := id_pessoa;
+      QueryUsuario.post;
+      QueryUsuario.Filtered := False;
+
       ShowMessage('Usuário cadastrado com sucesso! entre com suas informações de login.');
       FormLogin.Show;
     End;

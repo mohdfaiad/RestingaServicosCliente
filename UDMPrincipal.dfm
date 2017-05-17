@@ -1,7 +1,7 @@
 object DMPrincipal: TDMPrincipal
   OldCreateOrder = False
-  Height = 121
-  Width = 588
+  Height = 221
+  Width = 592
   object UniConnPrincipal: TUniConnection
     ProviderName = 'mySQL'
     Port = 2020
@@ -357,6 +357,99 @@ object DMPrincipal: TDMPrincipal
     end
     object QueryUsuariopessoa_id: TLongWordField
       FieldName = 'pessoa_id'
+    end
+  end
+  object QueryCadastraPessoa: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO pessoa'
+      
+        '  (id, NomePessoa, Logradouro_cep, numero, complemento, Descrica' +
+        'o, CPFCNPJ, InscricaoEstatual, RazaoSocial, Pessoa_tipo_id, foto' +
+        ', Nota)'
+      'VALUES'
+      
+        '  (:id, :NomePessoa, :Logradouro_cep, :numero, :complemento, :De' +
+        'scricao, :CPFCNPJ, :InscricaoEstatual, :RazaoSocial, :Pessoa_tip' +
+        'o_id, :foto, :Nota)')
+    SQLDelete.Strings = (
+      'DELETE FROM pessoa'
+      'WHERE'
+      '  id = :Old_id')
+    SQLUpdate.Strings = (
+      'UPDATE pessoa'
+      'SET'
+      
+        '  id = :id, NomePessoa = :NomePessoa, Logradouro_cep = :Logradou' +
+        'ro_cep, numero = :numero, complemento = :complemento, Descricao ' +
+        '= :Descricao, CPFCNPJ = :CPFCNPJ, InscricaoEstatual = :Inscricao' +
+        'Estatual, RazaoSocial = :RazaoSocial, Pessoa_tipo_id = :Pessoa_t' +
+        'ipo_id, foto = :foto, Nota = :Nota'
+      'WHERE'
+      '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM pessoa'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
+    SQLRefresh.Strings = (
+      
+        'SELECT id, NomePessoa, Logradouro_cep, numero, complemento, Desc' +
+        'ricao, CPFCNPJ, InscricaoEstatual, RazaoSocial, Pessoa_tipo_id, ' +
+        'foto, Nota FROM pessoa'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM pessoa')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'select * from pessoa')
+    FilterOptions = [foCaseInsensitive]
+    Left = 500
+    Top = 52
+    object QueryCadastraPessoaid: TLongWordField
+      FieldName = 'id'
+    end
+    object QueryCadastraPessoaNomePessoa: TStringField
+      FieldName = 'NomePessoa'
+      Required = True
+      Size = 250
+    end
+    object QueryCadastraPessoaLogradouro_cep: TLongWordField
+      FieldName = 'Logradouro_cep'
+    end
+    object QueryCadastraPessoanumero: TStringField
+      FieldName = 'numero'
+      Size = 45
+    end
+    object QueryCadastraPessoacomplemento: TStringField
+      FieldName = 'complemento'
+      Size = 100
+    end
+    object QueryCadastraPessoaDescricao: TMemoField
+      FieldName = 'Descricao'
+      BlobType = ftMemo
+    end
+    object QueryCadastraPessoaCPFCNPJ: TStringField
+      FieldName = 'CPFCNPJ'
+      Size = 16
+    end
+    object QueryCadastraPessoaInscricaoEstatual: TStringField
+      FieldName = 'InscricaoEstatual'
+      Size = 45
+    end
+    object QueryCadastraPessoaRazaoSocial: TStringField
+      FieldName = 'RazaoSocial'
+      Size = 255
+    end
+    object QueryCadastraPessoaPessoa_tipo_id: TLongWordField
+      FieldName = 'Pessoa_tipo_id'
+      Required = True
+    end
+    object QueryCadastraPessoafoto: TBlobField
+      FieldName = 'foto'
+    end
+    object QueryCadastraPessoaNota: TLongWordField
+      FieldName = 'Nota'
     end
   end
 end

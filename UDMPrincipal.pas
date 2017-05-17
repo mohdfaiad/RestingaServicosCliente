@@ -54,6 +54,19 @@ type
     QueryUsuarioSenha: TStringField;
     QueryUsuarioCPFCNPJ: TStringField;
     QueryUsuariopessoa_id: TLongWordField;
+    QueryCadastraPessoa: TUniQuery;
+    QueryCadastraPessoaid: TLongWordField;
+    QueryCadastraPessoaNomePessoa: TStringField;
+    QueryCadastraPessoaLogradouro_cep: TLongWordField;
+    QueryCadastraPessoanumero: TStringField;
+    QueryCadastraPessoacomplemento: TStringField;
+    QueryCadastraPessoaDescricao: TMemoField;
+    QueryCadastraPessoaCPFCNPJ: TStringField;
+    QueryCadastraPessoaInscricaoEstatual: TStringField;
+    QueryCadastraPessoaRazaoSocial: TStringField;
+    QueryCadastraPessoaPessoa_tipo_id: TLongWordField;
+    QueryCadastraPessoafoto: TBlobField;
+    QueryCadastraPessoaNota: TLongWordField;
   private
     { Private declarations }
   public

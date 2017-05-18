@@ -16,7 +16,8 @@ uses
   UFormEsqueceuSenha in 'UFormEsqueceuSenha.pas' {FormEsqueceuSenha},
   UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin},
   UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional},
-  UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento};
+  UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento},
+  UFormContratos in 'UFormContratos.pas' {FormModelo1};
 
 {$R *.res}
 
@@ -24,5 +25,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
+  Application.CreateForm(TFormModelo1, FormModelo1);
+  Application.CreateForm(TFormModelo1, FormModelo1);
   Application.Run;
 end.

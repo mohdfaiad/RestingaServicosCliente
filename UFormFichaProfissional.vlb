@@ -1,156 +1,159 @@
 ﻿[RctPrincipalMenu]
-Coordinates=387,886,101,33
+Coordinates=329,984,101,33
 
 [Rectangle6]
-Coordinates=184,945,69,33
+Coordinates=981,984,69,33
 
 [Rectangle8]
-Coordinates=89,886,69,33
+Coordinates=10,1046,69,33
 
 [Image1]
-Coordinates=921,642,49,51
+Coordinates=1367,900,49,51
 Visible=True
 
 [RctMenuTop]
-Coordinates=1161,886,76,33
+Coordinates=577,984,76,33
 
 [Label1]
-Coordinates=1068,642,46,51
+Coordinates=1100,900,46,51
 
 [Image5]
-Coordinates=846,642,49,51
+Coordinates=552,900,49,51
 
 [Rectangle1]
-Coordinates=788,886,69,33
+Coordinates=471,984,69,33
 
 [Rectangle7]
-Coordinates=292,886,69,33
+Coordinates=1405,984,69,33
 
 [BtnMenu]
-Coordinates=10,809,58,51
+Coordinates=1450,900,58,51
 
 [Layout2]
-Coordinates=105,945,53,33
+Coordinates=1087,984,53,33
 
 [LblConfiguracoes]
-Coordinates=996,809,101,51
+Coordinates=718,900,101,51
 
 [BtnBuscar]
-Coordinates=754,642,66,51
+Coordinates=10,900,66,51
 
 [Image4]
-Coordinates=810,809,49,51
+Coordinates=859,900,49,51
 
 [Rectangle3]
-Coordinates=598,886,69,33
+Coordinates=116,1046,69,33
 
 [ToolBar1]
-Coordinates=1236,809,58,33
+Coordinates=116,984,58,33
 
 [LblMinhaConta]
-Coordinates=1140,642,88,51
+Coordinates=1169,684,88,51
 
 [Rectangle5]
-Coordinates=693,886,69,33
+Coordinates=325,1046,69,33
 
 [VertScrollBox1]
-Coordinates=566,945,88,33
+Coordinates=1173,984,88,33
 
 [Layout1]
-Coordinates=10,886,53,33
+Coordinates=876,1046,53,33
 
 [MultiView1]
-Coordinates=1263,886,67,33
+Coordinates=222,1046,67,33
 
 [LblSair]
-Coordinates=244,809,49,51
+Coordinates=1179,900,49,51
 
 [Image3]
-Coordinates=94,809,49,51
+Coordinates=272,900,49,51
 
 [Image6]
-Coordinates=169,809,49,51
+Coordinates=110,900,49,51
 
 [Image2]
-Coordinates=735,809,49,51
+Coordinates=635,900,49,51
 
 [LblServicos]
-Coordinates=391,809,72,51
+Coordinates=1260,900,72,51
 
 [ImgAvaliacao]
-Coordinates=10,300,80,51
+Coordinates=457,600,80,51
 
 [LblNome]
-Coordinates=390,200,58,51
+Coordinates=470,482,58,69
+ExplicitSubNodes=Tag
 
 [LytDescricao]
-Coordinates=978,886,79,33
+Coordinates=691,984,79,33
 
 [ImgFoto]
-Coordinates=20,230,54,51
+Coordinates=472,128,54,51
 
 [LblServicosRealizadosview]
-Coordinates=489,809,148,51
+Coordinates=355,900,148,51
 
 [Label2]
-Coordinates=663,809,46,51
+Coordinates=1021,900,46,51
 
 [Label3]
-Coordinates=996,642,46,51
+Coordinates=193,900,46,51
 
 [Rectangle4]
-Coordinates=883,886,69,33
+Coordinates=643,1046,69,33
 
 [LblCidade]
-Coordinates=400,320,64,51
+Coordinates=467,364,64,51
 
 [Label4]
-Coordinates=319,809,46,51
+Coordinates=942,900,46,51
 
 [LstVwAvaliacoes]
-Coordinates=522,10,98,213
+Coordinates=845,10,98,213
 
 [LytNome]
-Coordinates=514,886,58,33
+Coordinates=889,984,58,33
 
 [TxtDescricao]
-Coordinates=390,260,79,51
+Coordinates=458,246,79,69
+ExplicitSubNodes=Tag
 
 [RecOrcamento]
-Coordinates=453,945,87,33
+Coordinates=749,1046,87,33
 
 [RecDescricao]
-Coordinates=184,886,82,33
+Coordinates=209,984,82,33
 
 [LblServicosRealizados]
-Coordinates=370,380,126,51
+Coordinates=431,10,126,51
 
 [Rectangle2]
-Coordinates=358,945,69,33
+Coordinates=1299,984,69,33
 
 [LblProfissao]
-Coordinates=10,360,76,51
+Coordinates=10,305,76,51
 
 [Rectangle9]
-Coordinates=10,945,69,33
+Coordinates=10,984,69,33
 
 [RecAvaliacoes]
-Coordinates=1123,809,87,33
+Coordinates=517,1046,87,33
 
 [Layout3]
-Coordinates=279,945,53,33
+Coordinates=431,1046,53,33
 
 [LytFoto]
-Coordinates=1083,886,52,33
+Coordinates=806,984,52,33
 
 [BtnOrcamento]
-Coordinates=885,809,85,51
+Coordinates=1046,684,85,51
+Visible=True
 
 []
 Coordinates=781,243,91,36
 
 [DMPrincipal.QueryLogradouro]
-Coordinates=10,642,164,141
+Coordinates=203,684,164,141
 
 [DMPrincipal.QueryServicosPrestados]
 Coordinates=1160,20,199,33
@@ -161,23 +164,26 @@ Coordinates=1070,40,165,33
 Visible=False
 
 [DMPrincipal.QueryPessoa]
-Coordinates=200,642,142,141
+Coordinates=417,684,142,141
 
 [DMPrincipal.QueryProfissoes]
-Coordinates=569,642,159,87
+Coordinates=837,684,159,87
 
 [DMPrincipal.QueryBuscaUsuario]
-Coordinates=368,642,175,105
+Coordinates=608,684,175,105
 
 [DMPrincipal.QueryUsuario]
-Coordinates=904,10,144,159
+Coordinates=10,684,144,159
 
 [BindSourceDB1]
-Coordinates=700,10,178,213
+Coordinates=1037,10,178,213
 
 [BindingsList1]
 Coordinates=0,0,82,33
 
 [BindSourceDB2]
-Coordinates=144,198,146,231
+Coordinates=176,195,146,231
+
+[DMPrincipal.QueryCadastraPessoa]
+Coordinates=602,10,186,267
 

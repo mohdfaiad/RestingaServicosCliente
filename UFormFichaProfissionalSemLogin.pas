@@ -57,7 +57,6 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UFormLogin, UDMPrincipal;
 

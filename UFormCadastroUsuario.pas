@@ -35,7 +35,6 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UDMPrincipal, UFormLogin;
 {$R *.LgXhdpiPh.fmx ANDROID}
@@ -156,3 +155,4 @@ begin
 end;
 
 end.
+

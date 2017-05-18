@@ -102,8 +102,9 @@ begin
     QueryServicosPrestados.Close;
     QueryServicosPrestados.ParamByName('pContratado_id').AsInteger := strtoint(id);
     QueryServicosPrestados.Open;
+    if FormFichaProfissional=nil then
+      Application.CreateForm(TFormFichaProfissional,FormFichaProfissional);
     TFormFichaProfissional.Create(self).Show;
-
   end;
 
 end;

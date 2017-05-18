@@ -402,7 +402,7 @@ object DMPrincipal: TDMPrincipal
       'SELECT COUNT(*) FROM pessoa')
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'select * from pessoa')
+      'select * from pessoa limit 1;')
     FilterOptions = [foCaseInsensitive]
     Left = 500
     Top = 52
@@ -451,5 +451,45 @@ object DMPrincipal: TDMPrincipal
     object QueryCadastraPessoaNota: TLongWordField
       FieldName = 'Nota'
     end
+  end
+  object UniSQLAdicionaOrcamento: TUniSQL
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'INSERT INTO orcamento'
+      
+        '  (contratante_id, contratado_id, data_orcamento, Status, Descri' +
+        'cao)'
+      'VALUES'
+      
+        '  (:contratante_id, :contratado_id, :data_orcamento, :Status, :D' +
+        'escricao)')
+    Left = 380
+    Top = 104
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'contratante_id'
+        Value = nil
+      end
+      item
+        DataType = ftInteger
+        Name = 'contratado_id'
+        Value = nil
+      end
+      item
+        DataType = ftDateTime
+        Name = 'data_orcamento'
+        Value = nil
+      end
+      item
+        DataType = ftBoolean
+        Name = 'STATUS'
+        Value = nil
+      end
+      item
+        DataType = ftMemo
+        Name = 'Descricao'
+        Value = ''
+      end>
   end
 end

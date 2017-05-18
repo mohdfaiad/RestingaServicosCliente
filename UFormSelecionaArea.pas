@@ -44,7 +44,6 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UFormPrincipal, UFormPesquisaSemLogin;
 

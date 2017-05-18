@@ -67,6 +67,7 @@ type
     QueryCadastraPessoaPessoa_tipo_id: TLongWordField;
     QueryCadastraPessoafoto: TBlobField;
     QueryCadastraPessoaNota: TLongWordField;
+    UniSQLAdicionaOrcamento: TUniSQL;
   private
     { Private declarations }
   public

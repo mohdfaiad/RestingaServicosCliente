@@ -15,7 +15,8 @@ uses
   UUtil in 'UUtil.pas',
   UFormEsqueceuSenha in 'UFormEsqueceuSenha.pas' {FormEsqueceuSenha},
   UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin},
-  UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional};
+  UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional},
+  UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento};
 
 {$R *.res}
 

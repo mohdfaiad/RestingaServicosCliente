@@ -44,6 +44,8 @@ type
     LinkPropertyToFieldText4: TLinkPropertyToField;
     LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     LinkPropertyToFieldText5: TLinkPropertyToField;
+    LinkPropertyToFieldTag: TLinkPropertyToField;
+    procedure BtnOrcamentoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,6 +60,15 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-uses UDMPrincipal;
+uses UDMPrincipal, UFormSolicitaOrcamento;
+
+procedure TFormFichaProfissional.BtnOrcamentoClick(Sender: TObject);
+begin
+  inherited;
+  if FormSolicitaOrcamento=nil then
+    Application.CreateForm(TFormSolicitaOrcamento,FormSolicitaOrcamento);
+  TFormSolicitaOrcamento.create(self).show;
+
+end;
 
 end.

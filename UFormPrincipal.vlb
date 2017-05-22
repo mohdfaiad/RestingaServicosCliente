@@ -61,3 +61,6 @@ Visible=False
 [DMPrincipal.QueryServicosPrestados]
 Visible=False
 
+[DMPrincipal.QueryPessoaLogada]
+Visible=False
+

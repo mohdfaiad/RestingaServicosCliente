@@ -492,12 +492,12 @@ object DMPrincipal: TDMPrincipal
         Value = ''
       end>
   end
-  object QueryPessoaLogado: TUniQuery
+  object QueryPessoaLogada: TUniQuery
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'Select id, nomepessoa,Foto from pessoa'
-      'where id = :pId ;')
-    Left = 164
+      'select id, nomepessoa, foto from pessoa'
+      'where id = :pId;')
+    Left = 160
     Top = 104
     ParamData = <
       item
@@ -505,16 +505,16 @@ object DMPrincipal: TDMPrincipal
         Name = 'pId'
         Value = nil
       end>
-    object QueryPessoaLogadoid: TLongWordField
+    object QueryPessoaLogadaid: TLongWordField
       FieldName = 'id'
     end
-    object QueryPessoaLogadonomepessoa: TStringField
+    object QueryPessoaLogadanomepessoa: TStringField
       FieldName = 'nomepessoa'
       Required = True
       Size = 250
     end
-    object QueryPessoaLogadoFoto: TBlobField
-      FieldName = 'Foto'
+    object QueryPessoaLogadafoto: TBlobField
+      FieldName = 'foto'
     end
   end
 end

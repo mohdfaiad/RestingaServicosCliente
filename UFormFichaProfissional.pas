@@ -37,14 +37,14 @@ type
     BindingsList1: TBindingsList;
     LinkFillControlToField1: TLinkFillControlToField;
     BindSourceDB2: TBindSourceDB;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
-    LinkPropertyToFieldText: TLinkPropertyToField;
     LinkPropertyToFieldText2: TLinkPropertyToField;
     LinkPropertyToFieldText3: TLinkPropertyToField;
     LinkPropertyToFieldText4: TLinkPropertyToField;
     LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     LinkPropertyToFieldText5: TLinkPropertyToField;
     LinkPropertyToFieldTag: TLinkPropertyToField;
+    LinkPropertyToFieldBitmap3: TLinkPropertyToField;
+    LinkPropertyToFieldText6: TLinkPropertyToField;
     procedure BtnOrcamentoClick(Sender: TObject);
   private
     { Private declarations }

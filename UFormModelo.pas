@@ -4,45 +4,52 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation, FMX.Layouts, FMX.MultiView;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation, FMX.Layouts, FMX.MultiView, Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti,
+  System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope;
 
 type
   TFormModelo = class(TForm)
-    Layout1: TLayout;
-    ToolBar1: TToolBar;
-    Rectangle1: TRectangle;
+    Lyt1: TLayout;
+    TbPrincipal: TToolBar;
+    RctMenuSuperior: TRectangle;
     BtnMenu: TButton;
     BtnBuscar: TButton;
-    Layout2: TLayout;
-    Image1: TImage;
-    MultiView1: TMultiView;
+    Lyt2: TLayout;
+    ImgLogo: TImage;
+    MvMenu: TMultiView;
     RctMenuTop: TRectangle;
-    VertScrollBox1: TVertScrollBox;
-    Rectangle5: TRectangle;
-    Image2: TImage;
+    VsbMenu: TVertScrollBox;
+    RctSair: TRectangle;
+    ImgSair: TImage;
     LblSair: TLabel;
     RctPrincipalMenu: TRectangle;
-    Rectangle6: TRectangle;
-    Image3: TImage;
+    RctConfiguracoes: TRectangle;
+    ImgConfiguracao: TImage;
     LblConfiguracoes: TLabel;
-    Rectangle7: TRectangle;
-    Image4: TImage;
+    RctServicos: TRectangle;
+    ImgServicos: TImage;
     LblServicos: TLabel;
-    Rectangle8: TRectangle;
-    Image5: TImage;
+    RctMinhaConta: TRectangle;
+    ImgMinhaConta: TImage;
     LblMinhaConta: TLabel;
-    Rectangle3: TRectangle;
-    Image6: TImage;
-    Label1: TLabel;
+    RctOrcamento: TRectangle;
+    ImgOrcamento: TImage;
+    LblOrcamento: TLabel;
     RctContratos: TRectangle;
-    Image7: TImage;
-    Contratos: TLabel;
-    Line1: TLine;
+    ImgContratos: TImage;
+    LblContratos: TLabel;
+    LineSeparador: TLine;
+    LblNomeUsuario: TLabel;
+    ImgFotoUsuario: TImage;
+    BDSPessoaLogada: TBindSourceDB;
+    BdlPessoaLogada: TBindingsList;
+    LinkPropertyToFieldText: TLinkPropertyToField;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
-    procedure Label1Click(Sender: TObject);
+    procedure LblOrcamentoClick(Sender: TObject);
     procedure LblServicosClick(Sender: TObject);
-    procedure ContratosClick(Sender: TObject);
+//    procedure ContratosClick(Sender: TObject);
     procedure RctContratosClick(Sender: TObject);
   private
     { Private declarations }
@@ -64,7 +71,7 @@ begin
   FormPrincipal.Show;
 end;
 
-procedure TFormModelo.Label1Click(Sender: TObject);
+procedure TFormModelo.LblOrcamentoClick(Sender: TObject);
 begin
   if FormChat=nil then
     Application.CreateForm(TFormChat,FormChat);

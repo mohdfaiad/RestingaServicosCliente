@@ -1,5 +1,5 @@
 ﻿[RctPrincipalMenu]
-Coordinates=329,984,101,33
+Coordinates=1065,700,101,33
 
 [Rectangle6]
 Coordinates=981,984,69,33
@@ -12,7 +12,7 @@ Coordinates=1367,900,49,51
 Visible=True
 
 [RctMenuTop]
-Coordinates=577,984,76,33
+Coordinates=963,700,76,33
 
 [Label1]
 Coordinates=1100,900,46,51
@@ -27,16 +27,16 @@ Coordinates=471,984,69,33
 Coordinates=1405,984,69,33
 
 [BtnMenu]
-Coordinates=1450,900,58,51
+Coordinates=10,623,58,51
 
 [Layout2]
 Coordinates=1087,984,53,33
 
 [LblConfiguracoes]
-Coordinates=718,900,101,51
+Coordinates=88,700,101,51
 
 [BtnBuscar]
-Coordinates=10,900,66,51
+Coordinates=1321,623,66,51
 
 [Image4]
 Coordinates=859,900,49,51
@@ -48,7 +48,7 @@ Coordinates=116,1046,69,33
 Coordinates=116,984,58,33
 
 [LblMinhaConta]
-Coordinates=1169,684,88,51
+Coordinates=166,623,88,51
 
 [Rectangle5]
 Coordinates=325,1046,69,33
@@ -63,7 +63,7 @@ Coordinates=876,1046,53,33
 Coordinates=222,1046,67,33
 
 [LblSair]
-Coordinates=1179,900,49,51
+Coordinates=1163,623,49,51
 
 [Image3]
 Coordinates=272,900,49,51
@@ -75,85 +75,85 @@ Coordinates=110,900,49,51
 Coordinates=635,900,49,51
 
 [LblServicos]
-Coordinates=1260,900,72,51
+Coordinates=352,623,72,51
 
 [ImgAvaliacao]
-Coordinates=457,600,80,51
+Coordinates=380,10,80,51
 
 [LblNome]
-Coordinates=470,482,58,69
+Coordinates=391,361,58,69
 ExplicitSubNodes=Tag
 
 [LytDescricao]
-Coordinates=691,984,79,33
+Coordinates=1192,700,79,33
 
 [ImgFoto]
-Coordinates=472,128,54,51
+Coordinates=20,290,54,51
 
 [LblServicosRealizadosview]
-Coordinates=355,900,148,51
+Coordinates=667,623,148,51
 
 [Label2]
-Coordinates=1021,900,46,51
+Coordinates=215,700,46,51
 
 [Label3]
-Coordinates=193,900,46,51
+Coordinates=94,623,46,51
 
 [Rectangle4]
-Coordinates=643,1046,69,33
+Coordinates=1025,777,69,33
 
 [LblCidade]
-Coordinates=467,364,64,51
+Coordinates=10,186,64,51
 
 [Label4]
-Coordinates=942,900,46,51
+Coordinates=280,623,46,51
 
 [LstVwAvaliacoes]
-Coordinates=845,10,98,213
+Coordinates=690,60,98,213
 
 [LytNome]
-Coordinates=889,984,58,33
+Coordinates=941,777,58,33
 
 [TxtDescricao]
-Coordinates=458,246,79,69
+Coordinates=381,121,79,69
 ExplicitSubNodes=Tag
 
 [RecOrcamento]
-Coordinates=749,1046,87,33
+Coordinates=10,836,87,33
 
 [RecDescricao]
-Coordinates=209,984,82,33
+Coordinates=405,777,82,33
 
 [LblServicosRealizados]
-Coordinates=431,10,126,51
+Coordinates=0,90,126,51
 
 [Rectangle2]
-Coordinates=1299,984,69,33
+Coordinates=868,700,69,33
 
 [LblProfissao]
-Coordinates=10,305,76,51
+Coordinates=382,250,76,51
 
 [Rectangle9]
-Coordinates=10,984,69,33
+Coordinates=1345,777,69,33
 
 [RecAvaliacoes]
-Coordinates=517,1046,87,33
+Coordinates=513,777,87,33
 
 [Layout3]
-Coordinates=431,1046,53,33
+Coordinates=154,777,53,33
 
 [LytFoto]
-Coordinates=806,984,52,33
+Coordinates=10,777,52,33
 
 [BtnOrcamento]
-Coordinates=1046,684,85,51
+Coordinates=841,623,85,51
 Visible=True
 
 []
 Coordinates=781,243,91,36
 
 [DMPrincipal.QueryLogradouro]
-Coordinates=203,684,164,141
+Coordinates=178,456,164,141
 
 [DMPrincipal.QueryServicosPrestados]
 Coordinates=1160,20,199,33
@@ -164,26 +164,109 @@ Coordinates=1070,40,165,33
 Visible=False
 
 [DMPrincipal.QueryPessoa]
-Coordinates=417,684,142,141
+Coordinates=10,456,142,141
 
 [DMPrincipal.QueryProfissoes]
-Coordinates=837,684,159,87
+Coordinates=1105,456,159,87
 
 [DMPrincipal.QueryBuscaUsuario]
-Coordinates=608,684,175,105
+Coordinates=904,456,175,105
 
 [DMPrincipal.QueryUsuario]
-Coordinates=10,684,144,159
+Coordinates=1080,10,144,159
 
 [BindSourceDB1]
-Coordinates=1037,10,178,213
+Coordinates=876,10,178,213
 
 [BindingsList1]
 Coordinates=0,0,82,33
 
 [BindSourceDB2]
-Coordinates=176,195,146,231
+Coordinates=154,96,146,231
 
 [DMPrincipal.QueryCadastraPessoa]
-Coordinates=602,10,186,267
+Coordinates=486,10,186,267
+
+[DMPrincipal.QueryPessoaLogada]
+Visible=False
+Coordinates=143,464,179,33
+
+[ImgLogo]
+Coordinates=1238,623,57,51
+
+[VsbMenu]
+Coordinates=415,836,60,33
+
+[RctOrcamento]
+Coordinates=304,836,85,33
+
+[RctMinhaConta]
+Coordinates=189,836,89,33
+
+[Lyt2]
+Coordinates=123,836,40,33
+
+[ImgSair]
+Coordinates=10,700,52,51
+
+[ImgFotoUsuario]
+Coordinates=785,492,93,51
+
+[ImgServicos]
+Coordinates=952,623,75,51
+
+[RctMenuSuperior]
+Coordinates=1219,777,100,33
+
+[RctServicos]
+Coordinates=1120,777,73,33
+
+[LblOrcamento]
+Coordinates=1053,623,84,51
+
+[ImgConfiguracao]
+Coordinates=394,700,99,51
+
+[BdlPessoaLogada]
+Coordinates=826,294,103,33
+
+[LblNomeUsuario]
+Coordinates=368,492,96,51
+
+[MvMenu]
+Coordinates=860,777,55,33
+Visible=True
+
+[RctConfiguracoes]
+Coordinates=731,777,103,33
+
+[RctContratos]
+Coordinates=626,777,79,33
+
+[TbPrincipal]
+Coordinates=309,777,70,33
+
+[RctSair]
+Coordinates=233,777,50,33
+
+[BDSPessoaLogada]
+Coordinates=544,456,161,123
+
+[Lyt1]
+Coordinates=88,777,40,33
+
+[ImgContratos]
+Coordinates=287,700,81,51
+
+[LblContratos]
+Coordinates=563,623,78,51
+
+[LineSeparador]
+Coordinates=1297,700,86,33
+
+[ImgMinhaConta]
+Coordinates=519,700,91,51
+
+[ImgOrcamento]
+Coordinates=450,623,87,51
 

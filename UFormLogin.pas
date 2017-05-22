@@ -67,6 +67,8 @@ begin
       Begin
         FormSplash.Nome_Pessoa := QueryBuscaUsuarionome.AsString;
         FormSplash.Pessoa_id := QueryBuscaUsuarioid.AsInteger;
+        QueryPessoaLogada.ParamByName('pId').Value := QueryBuscaUsuarioid.AsInteger;
+        QueryPessoaLogada.Open;
         if FormPrincipal = nil then
           application.CreateForm(TFormPrincipal,FormPrincipal);
         TFormPrincipal.Create(self).Show;

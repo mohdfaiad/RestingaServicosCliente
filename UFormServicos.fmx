@@ -1,4 +1,4 @@
-inherited FormModelo2: TFormModelo2
+inherited FormServicos: TFormServicos
   Caption = 'FormModelo2'
   DesignerMasterStyle = 0
   inherited Layout1: TLayout

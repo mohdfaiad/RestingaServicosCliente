@@ -17,8 +17,8 @@ uses
   UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin},
   UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional},
   UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento},
-  UFormContratos in 'UFormContratos.pas' {FormModelo1},
-  UFormServicos in 'UFormServicos.pas' {FormModelo2};
+  UFormContratos in 'UFormContratos.pas' {FormContratos},
+  UFormServicos in 'UFormServicos.pas' {FormServicos};
 
 {$R *.res}
 
@@ -26,8 +26,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
-  Application.CreateForm(TFormModelo1, FormModelo1);
-  Application.CreateForm(TFormModelo1, FormModelo1);
-  Application.CreateForm(TFormModelo2, FormModelo2);
+  Application.CreateForm(TFormContratos, FormContratos);
   Application.Run;
 end.

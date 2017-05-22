@@ -10,7 +10,7 @@ uses
   FMX.ListView.Adapters.Base, FMX.ListView;
 
 type
-  TFormModelo2 = class(TFormModelo)
+  TFormServicos = class(TFormModelo)
     ListView1: TListView;
     Label2: TLabel;
   private
@@ -20,7 +20,7 @@ type
   end;
 
 var
-  FormModelo2: TFormModelo2;
+  FormServicos: TFormServicos;
 
 implementation
 

@@ -34,9 +34,16 @@ type
     Rectangle3: TRectangle;
     Image6: TImage;
     Label1: TLabel;
+    RctContratos: TRectangle;
+    Image7: TImage;
+    Contratos: TLabel;
+    Line1: TLine;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
     procedure Label1Click(Sender: TObject);
+    procedure LblServicosClick(Sender: TObject);
+    procedure ContratosClick(Sender: TObject);
+    procedure RctContratosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,7 +57,7 @@ implementation
 
 {$R *.fmx}
 
-uses UDMPrincipal, UFormPrincipal, UFormChat;
+uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos;
 
 procedure TFormModelo.BtnBuscarClick(Sender: TObject);
 begin
@@ -82,6 +89,20 @@ begin
       end;
     end);
 
+end;
+
+procedure TFormModelo.LblServicosClick(Sender: TObject);
+begin
+  if FormServicos = nil then
+    application.CreateForm(TFormServicos,FormServicos);
+  TFormServicos.Create(self).Show;
+end;
+
+procedure TFormModelo.RctContratosClick(Sender: TObject);
+begin
+if FormContratos = nil then
+    application.CreateForm(TFormContratos,FormContratos);
+  TFormContratos.create(self).show;
 end;
 
 end.

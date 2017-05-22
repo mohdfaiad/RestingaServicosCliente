@@ -45,6 +45,7 @@ type
     BdlPessoaLogada: TBindingsList;
     LinkPropertyToFieldText: TLinkPropertyToField;
     LinkPropertyToFieldBitmap: TLinkPropertyToField;
+    CrlFoto: TCircle;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
     procedure LblOrcamentoClick(Sender: TObject);

@@ -26,6 +26,5 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
-  Application.CreateForm(TFormContratos, FormContratos);
   Application.Run;
 end.

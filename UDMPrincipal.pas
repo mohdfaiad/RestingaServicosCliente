@@ -68,6 +68,10 @@ type
     QueryCadastraPessoafoto: TBlobField;
     QueryCadastraPessoaNota: TLongWordField;
     UniSQLAdicionaOrcamento: TUniSQL;
+    QueryPessoaLogada: TUniQuery;
+    QueryPessoaLogadaid: TLongWordField;
+    QueryPessoaLogadanomepessoa: TStringField;
+    QueryPessoaLogadafoto: TBlobField;
   private
     { Private declarations }
   public

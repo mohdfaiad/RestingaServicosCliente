@@ -38,6 +38,8 @@ type
     Image7: TImage;
     Contratos: TLabel;
     Line1: TLine;
+    LblNomeUsuario: TLabel;
+    ImgFotoUsuario: TImage;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
     procedure Label1Click(Sender: TObject);

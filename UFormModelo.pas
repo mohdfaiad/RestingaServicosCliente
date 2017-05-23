@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation, FMX.Layouts, FMX.MultiView, Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti,
-  System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope;
+  System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope, FMX.Effects;
 
 type
   TFormModelo = class(TForm)
@@ -40,12 +40,12 @@ type
     LblContratos: TLabel;
     LineSeparador: TLine;
     LblNomeUsuario: TLabel;
-    ImgFotoUsuario: TImage;
     BDSPessoaLogada: TBindSourceDB;
     BdlPessoaLogada: TBindingsList;
     LinkPropertyToFieldText: TLinkPropertyToField;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
     CrlFoto: TCircle;
+    LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField;
+    ShadowEffect1: TShadowEffect;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
     procedure LblOrcamentoClick(Sender: TObject);

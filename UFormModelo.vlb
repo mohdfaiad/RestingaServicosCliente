@@ -69,9 +69,6 @@ Coordinates=387,358,193,146
 Coordinates=1055,764,119,36
 Visible=True
 
-[Lyt1]
-Coordinates=960,680,40,36
-
 [Lyt2]
 Coordinates=10,826,40,36
 
@@ -138,4 +135,7 @@ ExplicitSubNodes=Fill.Bitmap.Bitmap
 
 [ShadowEffect1]
 Coordinates=246,285,101,36
+
+[Lyt1]
+Coordinates=960,680,40,36
 

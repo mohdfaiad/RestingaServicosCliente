@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, UFormModelo, FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, FMX.ListBox,
   FMX.Objects, FMX.Controls.Presentation, FMX.Layouts, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope,
-  FMX.MultiView;
+  FMX.MultiView, FMX.Effects;
 
 type
   TFormPrincipal = class(TFormModelo)
@@ -57,24 +57,24 @@ end;
 procedure TFormPrincipal.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   inherited;
-  CanClose := False;
-  MessageDlg('Deseja realmente fechar o aplicativo?',
-    System.UITypes.TMsgDlgType.mtInformation,
-    [System.UITypes.TMsgDlgBtn.mbYes, System.UITypes.TMsgDlgBtn.mbNo], 0,
-    procedure(const BotaoPressionado: TModalResult)
-      begin
-        case BotaoPressionado of
-          mrYes:
-          begin
-            Application.Terminate;
-          end;
-          mrNo:
-          begin
-            Show;
-          end;
-        end;
-      end
-    );
+//  CanClose := False;
+//  MessageDlg('Deseja realmente fechar o aplicativo?',
+//    System.UITypes.TMsgDlgType.mtInformation,
+//    [System.UITypes.TMsgDlgBtn.mbYes, System.UITypes.TMsgDlgBtn.mbNo], 0,
+//    procedure(const BotaoPressionado: TModalResult)
+//      begin
+//        case BotaoPressionado of
+//          mrYes:
+//          begin
+//            Application.Terminate;
+//          end;
+//          mrNo:
+//          begin
+//            Show;
+//          end;
+//        end;
+//      end
+//    );
 
 end;
 

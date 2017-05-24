@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, UFormModelo, FMX.Layouts, FMX.MultiView, FMX.Objects, FMX.Controls.Presentation, FMX.ListView.Types,
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components,
-  Data.Bind.DBScope;
+  Data.Bind.DBScope, FMX.Effects;
 
 type
   TFormFichaProfissional = class(TFormModelo)
@@ -22,7 +22,6 @@ type
     LstVwAvaliacoes: TListView;
     LytFoto: TLayout;
     Rectangle2: TRectangle;
-    ImgFoto: TImage;
     Layout3: TLayout;
     LblServicosRealizadosview: TLabel;
     LblServicosRealizados: TLabel;
@@ -43,8 +42,9 @@ type
     LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     LinkPropertyToFieldText5: TLinkPropertyToField;
     LinkPropertyToFieldTag: TLinkPropertyToField;
-    LinkPropertyToFieldBitmap3: TLinkPropertyToField;
     LinkPropertyToFieldText6: TLinkPropertyToField;
+    CircleFoto: TCircle;
+    LinkPropertyToFieldFillBitmapBitmap2: TLinkPropertyToField;
     procedure BtnOrcamentoClick(Sender: TObject);
   private
     { Private declarations }

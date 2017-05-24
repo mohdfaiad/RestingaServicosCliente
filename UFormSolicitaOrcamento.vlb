@@ -11,9 +11,6 @@ Coordinates=389,78,53,58
 [LblSair]
 Coordinates=170,78,55,58
 
-[Label3]
-Coordinates=452,78,53,58
-
 [LblServicos]
 Coordinates=298,78,81,58
 
@@ -25,9 +22,6 @@ Coordinates=10,146,115,58
 
 [Rectangle6]
 Coordinates=339,260,80,36
-
-[CornerButton1]
-Coordinates=231,260,98,36
 
 [VertScrollBox1]
 Coordinates=121,260,100,36
@@ -56,9 +50,6 @@ Coordinates=237,214,80,36
 [Image4]
 Coordinates=433,10,57,58
 
-[Label2]
-Coordinates=77,10,53,58
-
 [MemoTexto]
 Coordinates=341,10,82,58
 
@@ -76,9 +67,6 @@ Coordinates=10,214,77,36
 
 [LblMinhaConta]
 Coordinates=515,78,101,58
-
-[Label4]
-Coordinates=235,78,53,58
 
 [Image5]
 Coordinates=140,10,57,58
@@ -109,4 +97,16 @@ Visible=False
 
 [DMPrincipal.QueryPessoaLogada]
 Visible=False
+
+[Lbl1]
+Coordinates=77,10,53,58
+
+[Lbl2]
+Coordinates=452,78,53,58
+
+[Lbl3]
+Coordinates=235,78,53,58
+
+[BtnEnviaOrcamento]
+Coordinates=231,260,98,36
 

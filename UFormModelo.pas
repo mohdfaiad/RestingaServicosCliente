@@ -46,12 +46,14 @@ type
     CrlFoto: TCircle;
     LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField;
     ShadowEffect1: TShadowEffect;
+    ShadowEffect2: TShadowEffect;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
     procedure LblOrcamentoClick(Sender: TObject);
     procedure LblServicosClick(Sender: TObject);
 //    procedure ContratosClick(Sender: TObject);
     procedure RctContratosClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -65,11 +67,18 @@ implementation
 
 {$R *.fmx}
 
-uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos;
+uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos, UFormLogin;
 
 procedure TFormModelo.BtnBuscarClick(Sender: TObject);
 begin
   FormPrincipal.Show;
+end;
+
+procedure TFormModelo.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+
+  FreeAndNil(FormModelo);
+
 end;
 
 procedure TFormModelo.LblOrcamentoClick(Sender: TObject);
@@ -88,12 +97,21 @@ begin
   procedure(const BotaoPressionado: TModalResult)
     begin
       case BotaoPressionado of
-        mrYes: begin
-            Application.Terminate;
-          end;
-        mrNo: begin
-            ShowMessage('Você respondeu não');
-          end;
+        mrYes:
+        begin
+          if FormLogin = nil then
+          Begin
+            application.CreateForm(TFormLogin,FormLogin);
+            TFormLogin.Create(self).Show;
+          End
+          else
+            FormLogin.Show;
+          close;
+        end;
+        mrNo:
+        begin
+          ShowMessage('Você respondeu não');
+        end;
       end;
     end);
 

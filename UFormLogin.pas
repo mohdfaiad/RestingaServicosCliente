@@ -25,6 +25,7 @@ type
     procedure BtnEntrarClick(Sender: TObject);
     procedure BtnCadastrarClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -65,16 +66,30 @@ begin
         ShowMessage('E-mail ou senha invalido!')
       else
       Begin
+        QueryPessoaLogada.Close;
         FormSplash.Nome_Pessoa := QueryBuscaUsuarionome.AsString;
         FormSplash.Pessoa_id := QueryBuscaUsuarioid.AsInteger;
         QueryPessoaLogada.ParamByName('pId').Value := QueryBuscaUsuarioid.AsInteger;
         QueryPessoaLogada.Open;
         if FormPrincipal = nil then
+        Begin
           application.CreateForm(TFormPrincipal,FormPrincipal);
-        TFormPrincipal.Create(self).Show;
+          TFormPrincipal.Create(self).Show;
+        End
+        else
+          FormPrincipal.Show;
+
+        Close;
       End;
     End;
   end;
+
+end;
+
+procedure TFormLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+
+  FreeAndNil(FormLogin);
 
 end;
 

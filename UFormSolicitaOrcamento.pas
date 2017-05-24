@@ -3,20 +3,20 @@ unit UFormSolicitaOrcamento;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, UFormModelo, FMX.Layouts, FMX.MultiView, FMX.Objects, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo,
-  Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope;
+  Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope, FMX.Effects;
 
 type
   TFormSolicitaOrcamento = class(TFormModelo)
-    Label2: TLabel;
-    Label3: TLabel;
+    Lbl1: TLabel;
+    Lbl2: TLabel;
     MemoTexto: TMemo;
     StyleBook1: TStyleBook;
-    Label4: TLabel;
+    Lbl3: TLabel;
     RecOrcamento: TRectangle;
-    CornerButton1: TCornerButton;
-    procedure CornerButton1Click(Sender: TObject);
+    BtnEnviaOrcamento: TCornerButton;
+    procedure BtnEnviaOrcamentoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +34,7 @@ implementation
 uses UDMPrincipal, UFormLogin, UFormSplash, UFormPrincipal, UFormFichaProfissional;
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-procedure TFormSolicitaOrcamento.CornerButton1Click(Sender: TObject);
+procedure TFormSolicitaOrcamento.BtnEnviaOrcamentoClick(Sender: TObject);
 begin
   if MemoTexto.Text = '' then
   Begin

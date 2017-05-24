@@ -77,7 +77,7 @@ end;
 procedure TFormModelo.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 
-  FreeAndNil(FormModelo);
+  FreeAndNil(FormModelo);     // fecha e libera o form
 
 end;
 

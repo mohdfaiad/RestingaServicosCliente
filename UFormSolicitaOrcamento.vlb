@@ -50,9 +50,6 @@ Coordinates=237,214,80,36
 [Image4]
 Coordinates=433,10,57,58
 
-[MemoTexto]
-Coordinates=341,10,82,58
-
 [Layout2]
 Coordinates=167,214,60,36
 
@@ -87,7 +84,7 @@ Coordinates=135,146,116,36
 Coordinates=500,10,57,58
 
 []
-Coordinates=536,372,91,36
+Coordinates=341,10,82,58
 
 [DMPrincipal.QueryProfissional]
 Visible=False

@@ -27,19 +27,19 @@ inherited FormFichaProfissionalSemLogin_LgXhdpiPh: TFormFichaProfissionalSemLogi
       inherited Rectangle3: TRectangle
         Size.Width = 450.000000000000000000
         inherited Layout3: TLayout
-          Size.Width = 321.000000000000000000
+          Size.Width = 327.000000000000000000
           inherited LblServicosRealizadosview: TLabel
-            Size.Width = 301.000000000000000000
+            Size.Width = 307.000000000000000000
             TextSettings.Font.StyleExt = {00070000000000000004000000}
             inherited LblServicosRealizados: TLabel
-              Position.X = 171.000000000000000000
+              Position.X = 172.000000000000000000
             end
           end
           inherited Label1: TLabel
-            Size.Width = 301.000000000000000000
+            Size.Width = 307.000000000000000000
             TextSettings.Font.StyleExt = {00070000000000000004000000}
             inherited ImgAvaliacao: TImage
-              Position.X = 106.000000000000000000
+              Position.X = 94.000000000000000000
             end
           end
         end
@@ -64,24 +64,21 @@ inherited FormFichaProfissionalSemLogin_LgXhdpiPh: TFormFichaProfissionalSemLogi
           end
         end
         inherited Label4: TLabel
-          Position.Y = 177.000000000000000000
           Size.Width = 430.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
         inherited RecDescricao: TRectangle
           Size.Width = 430.000000000000000000
-          Size.Height = 152.000000000000000000
           inherited TxtDescricao: TText
             Size.Width = 430.000000000000000000
-            Size.Height = 152.000000000000000000
           end
         end
         inherited RecAvaliacoes: TRectangle
           Size.Width = 430.000000000000000000
-          Size.Height = 239.000000000000000000
+          Size.Height = 288.000000000000000000
           inherited LstVwAvaliacoes: TListView
             Size.Width = 430.000000000000000000
-            Size.Height = 239.000000000000000000
+            Size.Height = 288.000000000000000000
           end
         end
       end

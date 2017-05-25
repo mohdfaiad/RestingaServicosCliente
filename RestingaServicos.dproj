@@ -6,7 +6,7 @@
         <MainSource>RestingaServicos.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <Platform Condition="'$(Platform)'==''">Android</Platform>
         <TargetedPlatforms>1119</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -394,6 +394,10 @@
         </DCCReference>
         <DCCReference Include="UFormServicos.pas">
             <Form>FormServicos</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormSolicitaOrcamento2.pas">
+            <Form>FormSolicitaOrcamento2</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

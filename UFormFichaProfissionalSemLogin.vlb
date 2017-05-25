@@ -1,47 +1,44 @@
 ﻿[LblCidade]
-Coordinates=10,42,64,51
+Coordinates=426,10,64,51
 
 [Label4]
-Coordinates=10,290,46,51
+Coordinates=513,716,46,51
 
 [TxtDescricao]
-Coordinates=400,80,79,51
+Coordinates=10,232,79,51
 
 [Label3]
-Coordinates=190,360,46,51
+Coordinates=441,716,46,51
 
 [LytDescricao]
-Coordinates=554,360,79,33
+Coordinates=358,829,79,33
 
 [LytNome]
-Coordinates=375,360,58,33
+Coordinates=696,716,58,33
 
 [DMPrincipal.QueryLogradouro]
-Coordinates=329,510,164,141
-
-[ImgFoto]
-Coordinates=410,220,54,51
+Coordinates=180,531,164,141
 
 [Layout2]
-Coordinates=250,300,53,33
+Coordinates=105,829,53,33
 
 [ImgAvaliacao]
-Coordinates=10,212,80,51
+Coordinates=418,121,80,51
 
 [RecOrcamento]
-Coordinates=737,360,87,33
+Coordinates=966,716,87,33
 
 [Layout3]
-Coordinates=424,300,53,33
+Coordinates=279,829,53,33
 
 [LblServicosRealizadosview]
-Coordinates=82,290,148,51
+Coordinates=267,716,148,51
 
 [DMPrincipal.QueryPessoa]
-Coordinates=170,508,142,141
+Coordinates=370,531,142,141
 
 [BtnOrcamento]
-Coordinates=7,360,85,51
+Coordinates=585,716,85,51
 Visible=True
 
 [DMPrincipal.QueryProfissional]
@@ -49,60 +46,74 @@ Coordinates=980,300,165,33
 Visible=False
 
 [Rectangle4]
-Coordinates=459,360,69,33
+Coordinates=871,716,69,33
 
 [LytFoto]
-Coordinates=659,360,52,33
+Coordinates=576,829,52,33
 
 [Rectangle3]
-Coordinates=503,300,69,33
+Coordinates=10,829,69,33
 
 [DMPrincipal.QueryServicosPrestados]
 Coordinates=1120,20,199,33
 Visible=False
 
 [RecAvaliacoes]
-Coordinates=262,360,87,33
+Coordinates=463,829,87,33
 
 [LblProfissao]
-Coordinates=399,10,76,51
+Coordinates=420,454,76,51
 
 [RecDescricao]
-Coordinates=590,300,82,33
+Coordinates=654,829,82,33
 
 [Rectangle2]
-Coordinates=329,300,69,33
+Coordinates=184,829,69,33
 
 [DMPrincipal.QueryBuscaUsuario]
-Coordinates=519,510,175,105
+Coordinates=538,531,175,105
 
 [DMPrincipal.QueryUsuario]
-Coordinates=10,490,144,159
+Coordinates=10,531,144,159
 
 [LstVwAvaliacoes]
-Coordinates=526,10,98,213
+Coordinates=759,10,98,213
 
 [Label1]
-Coordinates=118,360,46,51
+Coordinates=195,716,46,51
 
 [LblNome]
-Coordinates=20,130,58,51
+Coordinates=429,232,58,51
 
 [DMPrincipal.QueryProfissoes]
-Coordinates=720,510,159,87
+Coordinates=10,716,159,87
 
 [LblServicosRealizados]
-Coordinates=380,150,126,51
+Coordinates=395,343,126,51
 
 []
-Coordinates=751,157,82,33
+Coordinates=410,220,54,51
 
 [BindSourceDB1]
-Coordinates=720,0,178,213
+Coordinates=937,10,178,213
 
 [BindingsList1]
 Coordinates=0,0,82,33
 
 [BindSourceDB2]
-Coordinates=150,40,146,231
+Coordinates=169,142,146,231
+
+[DMPrincipal.QueryCadastraPessoa]
+Coordinates=547,10,186,267
+
+[DMPrincipal.QueryPessoaLogada]
+Coordinates=739,531,179,105
+
+[ShadowEffect3]
+Coordinates=422,220,88,33
+
+[CircleFoto]
+Coordinates=20,340,89,51
+Visible=True
+ExplicitSubNodes=Fill.Bitmap.Bitmap
 

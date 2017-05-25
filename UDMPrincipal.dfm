@@ -8,7 +8,6 @@ object DMPrincipal: TDMPrincipal
     Database = 'RestingaServicos'
     Username = 'root'
     Server = 'ielb.no-ip.org'
-    Connected = True
     LoginPrompt = False
     Left = 44
     Top = 2

@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, FMX.Objects, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Layouts, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
+  FMX.Controls.Presentation, FMX.Layouts, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope, FMX.Effects;
 
 type
   TFormFichaProfissionalSemLogin = class(TForm)
@@ -17,7 +17,6 @@ type
     LblCidade: TLabel;
     LytFoto: TLayout;
     Rectangle3: TRectangle;
-    ImgFoto: TImage;
     Layout3: TLayout;
     LblServicosRealizadosview: TLabel;
     LblServicosRealizados: TLabel;
@@ -41,10 +40,13 @@ type
     LinkPropertyToFieldText: TLinkPropertyToField;
     LinkPropertyToFieldText2: TLinkPropertyToField;
     LinkPropertyToFieldText3: TLinkPropertyToField;
-    LinkPropertyToFieldBitmap2: TLinkPropertyToField;
     LinkPropertyToFieldText4: TLinkPropertyToField;
     LinkPropertyToFieldText5: TLinkPropertyToField;
+    CircleFoto: TCircle;
+    ShadowEffect3: TShadowEffect;
+    LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField;
     procedure BtnOrcamentoClick(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -57,6 +59,7 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UFormLogin, UDMPrincipal;
 
@@ -66,6 +69,14 @@ begin
   if FormLogin = nil then
     application.CreateForm(TFormLogin,FormLogin);
   TFormLogin.Create(self).Show;
+end;
+
+procedure TFormFichaProfissionalSemLogin.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+
+//  if Key = vkHardwareBack then
+//    close;
+
 end;
 
 end.

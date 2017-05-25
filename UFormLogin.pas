@@ -26,6 +26,8 @@ type
     procedure BtnCadastrarClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure EdtEmailKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure EdtSenhaKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -58,8 +60,8 @@ begin
     with DMPrincipal do
     Begin
       QueryBuscaUsuario.Close;
-      QueryBuscaUsuario.ParamByName('pEmail').AsString := EdtEmail.Text;
-      QueryBuscaUsuario.ParamByName('pSenha').AsString := EdtSenha.Text;
+      QueryBuscaUsuario.ParamByName('pEmail').AsString := trim(EdtEmail.Text);
+      QueryBuscaUsuario.ParamByName('pSenha').AsString := trim(EdtSenha.Text);
       QueryBuscaUsuario.Open;
 
       if QueryBuscaUsuario.IsEmpty then
@@ -84,6 +86,21 @@ begin
     End;
   end;
 
+end;
+
+procedure TFormLogin.EdtEmailKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+
+  if ((Key = vkReturn) or (Key = vkTab)) then
+    edtsenha.SetFocus;
+
+end;
+
+procedure TFormLogin.EdtSenhaKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+
+  if ((Key = vkReturn) or (Key = vkTab)) then
+    BtnEntrarClick(self);
 end;
 
 procedure TFormLogin.FormClose(Sender: TObject; var Action: TCloseAction);

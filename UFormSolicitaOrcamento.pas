@@ -11,11 +11,11 @@ type
   TFormSolicitaOrcamento = class(TFormModelo)
     Lbl1: TLabel;
     Lbl2: TLabel;
-    MemoTexto: TMemo;
     StyleBook1: TStyleBook;
     Lbl3: TLabel;
     RecOrcamento: TRectangle;
     BtnEnviaOrcamento: TCornerButton;
+    MemoTexto: TMemo;
     procedure BtnEnviaOrcamentoClick(Sender: TObject);
   private
     { Private declarations }

@@ -18,7 +18,8 @@ uses
   UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional},
   UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento},
   UFormContratos in 'UFormContratos.pas' {FormContratos},
-  UFormServicos in 'UFormServicos.pas' {FormServicos};
+  UFormServicos in 'UFormServicos.pas' {FormServicos},
+  UFormSolicitaOrcamento2 in 'UFormSolicitaOrcamento2.pas' {FormSolicitaOrcamento2};
 
 {$R *.res}
 

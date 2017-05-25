@@ -23,6 +23,7 @@ type
     procedure LstvwProfissionaisItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -78,6 +79,32 @@ begin
 
 end;
 
+procedure TFormPrincipal.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+  inherited;
+  if Key = vkHardwareBack then
+  begin
+    MessageDlg('Deseja realmente fechar o aplicativo?',
+      System.UITypes.TMsgDlgType.mtInformation,
+      [System.UITypes.TMsgDlgBtn.mbYes, System.UITypes.TMsgDlgBtn.mbNo], 0,
+      procedure(const BotaoPressionado: TModalResult)
+        begin
+          case BotaoPressionado of
+            mrYes:
+            begin
+              Application.Terminate;
+            end;
+            mrNo:
+            begin
+
+            end;
+          end;
+        end
+      );
+  end;
+
+end;
+
 procedure TFormPrincipal.FormShow(Sender: TObject);
 begin
   inherited;
@@ -103,8 +130,12 @@ begin
     QueryServicosPrestados.ParamByName('pContratado_id').AsInteger := strtoint(id);
     QueryServicosPrestados.Open;
     if FormFichaProfissional=nil then
+    Begin
       Application.CreateForm(TFormFichaProfissional,FormFichaProfissional);
-    TFormFichaProfissional.Create(self).Show;
+      TFormFichaProfissional.Create(self).Show;
+    End
+    else
+      FormFichaProfissional.show;
   end;
 
 end;

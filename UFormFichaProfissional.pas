@@ -45,7 +45,10 @@ type
     LinkPropertyToFieldText6: TLinkPropertyToField;
     CircleFoto: TCircle;
     LinkPropertyToFieldFillBitmapBitmap2: TLinkPropertyToField;
+    ShadowEffect3: TShadowEffect;
+    ShadowEffect4: TShadowEffect;
     procedure BtnOrcamentoClick(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -60,15 +63,26 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-uses UDMPrincipal, UFormSolicitaOrcamento;
+uses UDMPrincipal, UFormSolicitaOrcamento, UFormSolicitaOrcamento2;
 
 procedure TFormFichaProfissional.BtnOrcamentoClick(Sender: TObject);
 begin
   inherited;
-  if FormSolicitaOrcamento=nil then
-    Application.CreateForm(TFormSolicitaOrcamento,FormSolicitaOrcamento);
-  TFormSolicitaOrcamento.create(self).show;
+  if FormSolicitaOrcamento2=nil then
+  Begin
+    Application.CreateForm(TFormSolicitaOrcamento2,FormSolicitaOrcamento2);
+    TFormSolicitaOrcamento2.create(self).show;
+  End
+  Else
+    FormSolicitaOrcamento2.Show;
 
+end;
+
+procedure TFormFichaProfissional.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+  inherited;
+  if Key = vkHardwareBack then
+    close;
 end;
 
 end.

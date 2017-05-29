@@ -6,7 +6,7 @@
         <MainSource>RestingaServicos.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Android</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1119</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -291,16 +291,16 @@
         <IncludeAndroid_Splash>False</IncludeAndroid_Splash>
         <Android_SplashGravity>fill</Android_SplashGravity>
         <Android_SplashTileMode>disabled</Android_SplashTileMode>
-        <Android_SplashImage426>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png</Android_SplashImage426>
-        <Android_LauncherIcon72>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp72.png</Android_LauncherIcon72>
-        <Android_LauncherIcon144>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp144.png</Android_LauncherIcon144>
-        <Android_LauncherIcon48>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp48.png</Android_LauncherIcon48>
-        <Android_SplashImage470>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png</Android_SplashImage470>
-        <Android_SplashImage640>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png</Android_SplashImage640>
-        <Android_SplashImage960>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png</Android_SplashImage960>
+        <Android_SplashImage426>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png</Android_SplashImage426>
+        <Android_LauncherIcon72>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp72.png</Android_LauncherIcon72>
+        <Android_LauncherIcon144>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp144.png</Android_LauncherIcon144>
+        <Android_LauncherIcon48>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp48.png</Android_LauncherIcon48>
+        <Android_SplashImage470>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png</Android_SplashImage470>
+        <Android_SplashImage640>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png</Android_SplashImage640>
+        <Android_SplashImage960>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png</Android_SplashImage960>
         <VerInfo_Build>1</VerInfo_Build>
-        <Android_LauncherIcon96>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp96.png</Android_LauncherIcon96>
-        <Android_LauncherIcon36>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp36.png</Android_LauncherIcon36>
+        <Android_LauncherIcon96>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp96.png</Android_LauncherIcon96>
+        <Android_LauncherIcon36>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp36.png</Android_LauncherIcon36>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -400,6 +400,14 @@
             <Form>FormSolicitaOrcamento2</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UFormChat.pas">
+            <Form>FormChat</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormMinhaConta.pas">
+            <Form>FormMinhaConta</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -432,19 +440,19 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png" Configuration="Debug" Class="Android_SplashImage426">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png" Configuration="Debug" Class="Android_SplashImage426">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp48.png" Configuration="Debug" Class="Android_LauncherIcon48">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp48.png" Configuration="Debug" Class="Android_LauncherIcon48">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png" Configuration="Debug" Class="Android_SplashImage960">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png" Configuration="Debug" Class="Android_SplashImage960">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -461,13 +469,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png" Configuration="Debug" Class="Android_SplashImage640">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png" Configuration="Debug" Class="Android_SplashImage640">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp144.png" Configuration="Debug" Class="Android_LauncherIcon144">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp144.png" Configuration="Debug" Class="Android_LauncherIcon144">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -483,13 +491,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp96.png" Configuration="Debug" Class="Android_LauncherIcon96">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp96.png" Configuration="Debug" Class="Android_LauncherIcon96">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp36.png" Configuration="Debug" Class="Android_LauncherIcon36">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp36.png" Configuration="Debug" Class="Android_LauncherIcon36">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -500,7 +508,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png" Configuration="Debug" Class="Android_SplashImage470">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png" Configuration="Debug" Class="Android_SplashImage470">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -523,7 +531,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp72.png" Configuration="Debug" Class="Android_LauncherIcon72">
+                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp72.png" Configuration="Debug" Class="Android_LauncherIcon72">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -540,27 +548,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -939,12 +932,27 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

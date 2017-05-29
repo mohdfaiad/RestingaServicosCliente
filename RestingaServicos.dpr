@@ -19,7 +19,9 @@ uses
   UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento},
   UFormContratos in 'UFormContratos.pas' {FormContratos},
   UFormServicos in 'UFormServicos.pas' {FormServicos},
-  UFormSolicitaOrcamento2 in 'UFormSolicitaOrcamento2.pas' {FormSolicitaOrcamento2};
+  UFormSolicitaOrcamento2 in 'UFormSolicitaOrcamento2.pas' {FormSolicitaOrcamento2},
+  UFormChat in 'UFormChat.pas' {FormChat},
+  UFormMinhaConta in 'UFormMinhaConta.pas' {FormMinhaConta};
 
 {$R *.res}
 
@@ -27,5 +29,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
+  Application.CreateForm(TFormMinhaConta, FormMinhaConta);
   Application.Run;
 end.

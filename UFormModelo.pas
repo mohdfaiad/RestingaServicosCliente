@@ -54,6 +54,8 @@ type
 //    procedure ContratosClick(Sender: TObject);
     procedure RctContratosClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure RctOrcamentoClick(Sender: TObject);
+    procedure RctMinhaContaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,7 +69,8 @@ implementation
 
 {$R *.fmx}
 
-uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos, UFormLogin;
+uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos, UFormLogin,
+  UFormMinhaConta;
 
 procedure TFormModelo.BtnBuscarClick(Sender: TObject);
 begin
@@ -129,6 +132,20 @@ begin
 if FormContratos = nil then
     application.CreateForm(TFormContratos,FormContratos);
   TFormContratos.create(self).show;
+end;
+
+procedure TFormModelo.RctMinhaContaClick(Sender: TObject);
+begin
+  if FormMinhaConta = nil then
+    application.CreateForm(TFormMinhaConta,FormMinhaConta);
+  TFormMinhaConta.create(self).show;
+end;
+
+procedure TFormModelo.RctOrcamentoClick(Sender: TObject);
+begin
+  if FormChat = nil then
+    application.CreateForm(TFormChat,FormChat);
+  TFormChat.create(self).show;
 end;
 
 end.

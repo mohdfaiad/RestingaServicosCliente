@@ -13,13 +13,14 @@ uses
 type
   TFormMinhaConta = class(TFormModelo)
     LblTituloMinhaConta: TLabel;
-    RctDadosPessoais: TRectangle;
     RctSeguranca: TRectangle;
+    RctDadosPessoais: TRectangle;
+    LblDadosPessoais: TLabel;
+    LytBotoes: TLayout;
+    LblSeguranca: TLabel;
     RctContato: TRectangle;
     LblContato: TLabel;
-    LblSeguranca: TLabel;
-    LytBotoes: TLayout;
-    LblDadosPessoais: TLabel;
+    procedure RctDadosPessoaisClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +33,16 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UFormDadosPessoais;
 {$R *.LgXhdpiPh.fmx ANDROID}
+
+procedure TFormMinhaConta.RctDadosPessoaisClick(Sender: TObject);
+begin
+  inherited;
+  if FormDadosPessoais = nil then
+    application.CreateForm(TFormDadosPessoais,FormDadosPessoais);
+  TFormDadosPessoais.Create(self).Show;
+end;
 
 end.

@@ -41,6 +41,7 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UDMPrincipal, UFormPrincipal, UFormSplash, UFormCadastroUsuario, UFormEsqueceuSenha;
 {$R *.LgXhdpiPh.fmx ANDROID}

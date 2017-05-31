@@ -94,7 +94,7 @@ end;
 procedure TFormModelo.LblSairClick(Sender: TObject);
 begin
 
-  MessageDlg('Deseja realmente fechar o aplicativo?',
+  MessageDlg('Deseja realmente Sair?',
   System.UITypes.TMsgDlgType.mtInformation,
   [System.UITypes.TMsgDlgBtn.mbYes, System.UITypes.TMsgDlgBtn.mbNo], 0,
   procedure(const BotaoPressionado: TModalResult)

@@ -21,7 +21,8 @@ uses
   UFormServicos in 'UFormServicos.pas' {FormServicos},
   UFormSolicitaOrcamento2 in 'UFormSolicitaOrcamento2.pas' {FormSolicitaOrcamento2},
   UFormChat in 'UFormChat.pas' {FormChat},
-  UFormMinhaConta in 'UFormMinhaConta.pas' {FormMinhaConta};
+  UFormMinhaConta in 'UFormMinhaConta.pas' {FormMinhaConta},
+  UFormDadosPessoais in 'UFormDadosPessoais.pas' {FormDadosPessoais};
 
 {$R *.res}
 
@@ -30,5 +31,6 @@ begin
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
   Application.CreateForm(TFormMinhaConta, FormMinhaConta);
+  Application.CreateForm(TFormDadosPessoais, FormDadosPessoais);
   Application.Run;
 end.

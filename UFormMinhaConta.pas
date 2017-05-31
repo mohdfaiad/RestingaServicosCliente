@@ -16,9 +16,10 @@ type
     RctDadosPessoais: TRectangle;
     RctSeguranca: TRectangle;
     RctContato: TRectangle;
-    LblDadosPessoais: TLabel;
     LblContato: TLabel;
     LblSeguranca: TLabel;
+    LytBotoes: TLayout;
+    LblDadosPessoais: TLabel;
   private
     { Private declarations }
   public

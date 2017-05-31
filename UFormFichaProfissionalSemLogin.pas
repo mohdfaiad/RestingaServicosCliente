@@ -45,6 +45,9 @@ type
     CircleFoto: TCircle;
     ShadowEffect3: TShadowEffect;
     LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField;
+    ShadowEffect4: TShadowEffect;
+    ShadowEffect1: TShadowEffect;
+    ShadowEffect2: TShadowEffect;
     procedure BtnOrcamentoClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private

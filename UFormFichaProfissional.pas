@@ -47,6 +47,8 @@ type
     LinkPropertyToFieldFillBitmapBitmap2: TLinkPropertyToField;
     ShadowEffect3: TShadowEffect;
     ShadowEffect4: TShadowEffect;
+    ShadowEffect5: TShadowEffect;
+    ShadowEffect6: TShadowEffect;
     procedure BtnOrcamentoClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private

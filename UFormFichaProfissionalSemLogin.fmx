@@ -112,6 +112,7 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
         Size.Width = 300.000000000000000000
         Size.Height = 77.000000000000000000
         Size.PlatformDefault = False
+        Stroke.Color = claNull
         object LblNome: TLabel
           Align = Top
           StyledSettings = [FontColor]
@@ -153,6 +154,13 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
           Text = 'LblCidade'
         end
       end
+      object ShadowEffect2: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
     end
     object LytFoto: TLayout
       Align = Top
@@ -167,6 +175,7 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
         Size.Width = 300.000000000000000000
         Size.Height = 132.000000000000000000
         Size.PlatformDefault = False
+        Stroke.Color = claNull
         object Layout3: TLayout
           Align = Client
           Size.Width = 177.000000000000000000
@@ -248,6 +257,13 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
             ShadowColor = claBlack
           end
         end
+        object ShadowEffect1: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
       end
     end
     object LytDescricao: TLayout
@@ -258,19 +274,11 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
       TabOrder = 2
       object Rectangle4: TRectangle
         Align = Client
-        Fill.Kind = Gradient
-        Fill.Gradient.Points = <
-          item
-            Color = claCadetblue
-            Offset = 0.000000000000000000
-          end
-          item
-            Color = claWhite
-            Offset = 1.000000000000000000
-          end>
+        Fill.Color = claCadetblue
         Size.Width = 300.000000000000000000
         Size.Height = 348.000000000000000000
         Size.PlatformDefault = False
+        Stroke.Color = claNull
         object Label3: TLabel
           Align = Top
           StyledSettings = [Size, FontColor]
@@ -414,6 +422,13 @@ object FormFichaProfissionalSemLogin: TFormFichaProfissionalSemLogin
             ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = 4.000000000000000000
           end
         end
+      end
+      object ShadowEffect4: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
       end
     end
   end

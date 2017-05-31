@@ -14,11 +14,11 @@ type
     LstvwProfissionais: TListView;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
-    LinkFillControlToField1: TLinkFillControlToField;
     BindSourceDB2: TBindSourceDB;
     LinkFillControlToField2: TLinkFillControlToField;
     RctFundoPrincipal: TRectangle;
     Rectangle2: TRectangle;
+    LinkListControlToField1: TLinkListControlToField;
     procedure CbxProfissoesChange(Sender: TObject);
     procedure LstvwProfissionaisItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure FormShow(Sender: TObject);

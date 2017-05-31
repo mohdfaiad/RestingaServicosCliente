@@ -13,8 +13,8 @@ uses
 
 type
   TFormServicos = class(TFormModelo)
-    ListView1: TListView;
-    Label2: TLabel;
+    LwServicos: TListView;
+    LblTitulo: TLabel;
   private
     { Private declarations }
   public

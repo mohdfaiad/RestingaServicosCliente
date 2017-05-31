@@ -414,7 +414,7 @@ inherited FormServicos: TFormServicos
       Size.Height = 463.000000000000000000
       TabOrder = 2
     end
-    object ListView1: TListView
+    object LwServicos: TListView
       ItemAppearanceClassName = 'TDynamicAppearance'
       ItemEditAppearanceClassName = 'TDynamicAppearance'
       HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -430,13 +430,14 @@ inherited FormServicos: TFormServicos
       TabOrder = 0
       ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
         item
-          AppearanceObjectName = 'Text1'
+          AppearanceObjectName = 'Nome'
           AppearanceClassName = 'TTextObjectAppearance'
-          Appearance.Width = 284.000000000000000000
+          Appearance.Width = 203.000000000000000000
           Appearance.Height = 65.000000000000000000
+          Appearance.PlaceOffset.X = 54.000000000000000000
         end
         item
-          AppearanceObjectName = 'Image2'
+          AppearanceObjectName = 'foto'
           AppearanceClassName = 'TImageObjectAppearance'
           Appearance.Width = 55.000000000000000000
           Appearance.Height = 44.000000000000000000
@@ -450,7 +451,7 @@ inherited FormServicos: TFormServicos
       ItemAppearanceObjects.FooterObjects.Text.Align = Trailing
       ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 158.000000000000000000
     end
-    object Label2: TLabel
+    object LblTitulo: TLabel
       Align = Top
       StyledSettings = []
       Margins.Left = 10.000000000000000000

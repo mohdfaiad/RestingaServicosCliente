@@ -12,7 +12,7 @@ uses
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView;
 
 type
-  TFormModelo1 = class(TFormModelo)
+  TFormContato = class(TFormModelo)
     LblTituloContato: TLabel;
     BtnSalvar: TButton;
     RctSalvar: TRectangle;
@@ -38,7 +38,7 @@ type
   end;
 
 var
-  FormModelo1: TFormModelo1;
+  FormContato: TFormContato;
 
 implementation
 

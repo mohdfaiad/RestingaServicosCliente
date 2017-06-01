@@ -1,9 +1,17 @@
-inherited FormMinhaConta: TFormMinhaConta
-  Caption = 'FormMinhaConta'
+inherited FormSeguranca_LgXhdpiPh: TFormSeguranca_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
   DesignerMasterStyle = 0
   inherited Lyt1: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
     inherited TbPrincipal: TToolBar
+      Size.Width = 450.000000000000000000
       inherited RctMenuSuperior: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited BtnBuscar: TButton
+          Position.X = 402.000000000000000000
+        end
         inherited ImgLogo: TImage
           MultiResBitmap.Height = 47
           MultiResBitmap.Width = 273
@@ -411,184 +419,115 @@ inherited FormMinhaConta: TFormMinhaConta
       end
     end
     inherited Lyt2: TLayout
-      object LblTituloMinhaConta: TLabel
-        Align = Top
-        StyledSettings = []
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 10.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 25.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Roboto'
-        TextSettings.Font.Size = 20.000000000000000000
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited LblTituloSeguranca: TLabel
+        Size.Width = 430.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
-        TextSettings.FontColor = claWhite
-        TextSettings.HorzAlign = Center
-        Text = 'Minha Conta'
       end
-      object LytBotoes: TLayout
-        Align = Center
-        Margins.Top = -70.000000000000000000
-        Size.Width = 300.000000000000000000
-        Size.Height = 183.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-        object RctSeguranca: TRectangle
-          Align = Top
-          Fill.Color = claWhite
-          Margins.Left = 10.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 10.000000000000000000
-          Margins.Bottom = 10.000000000000000000
-          Position.X = 10.000000000000000000
-          Position.Y = 130.000000000000000000
-          Size.Width = 280.000000000000000000
-          Size.Height = 40.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Kind = None
-          OnClick = RctSegurancaClick
-          object LblSeguranca: TLabel
-            Align = Client
-            StyledSettings = [FontColor]
-            Size.Width = 280.000000000000000000
-            Size.Height = 40.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Roboto'
-            TextSettings.Font.Size = 14.000000000000000000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-            TextSettings.HorzAlign = Center
-            Text = 'Seguran'#231'a'
-          end
+      inherited RecEmail: TRectangle
+        Size.Width = 430.000000000000000000
+        inherited EdtEmail: TEdit
+          Size.Width = 410.000000000000000000
+          Size.Height = 32.000000000000000000
         end
-        object RctDadosPessoais: TRectangle
-          Align = Top
-          Fill.Color = claWhite
-          Margins.Left = 10.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 10.000000000000000000
-          Margins.Bottom = 10.000000000000000000
-          Position.X = 10.000000000000000000
-          Position.Y = 10.000000000000000000
-          Size.Width = 280.000000000000000000
-          Size.Height = 40.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Kind = None
-          OnClick = RctDadosPessoaisClick
-          object LblDadosPessoais: TLabel
-            Align = Client
-            StyledSettings = [FontColor]
-            Size.Width = 280.000000000000000000
-            Size.Height = 40.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Roboto'
-            TextSettings.Font.Size = 14.000000000000000000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-            TextSettings.HorzAlign = Center
-            Text = 'Dados Pessoais'
-          end
+        inherited LblEmail: TLabel
+          Size.Width = 430.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
-        object RctContato: TRectangle
-          Align = Top
-          Fill.Color = claWhite
-          Margins.Left = 10.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 10.000000000000000000
-          Margins.Bottom = 10.000000000000000000
-          Position.X = 10.000000000000000000
-          Position.Y = 70.000000000000000000
-          Size.Width = 280.000000000000000000
-          Size.Height = 40.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Kind = None
-          OnClick = RctContatoClick
-          object LblContato: TLabel
-            Align = Client
-            StyledSettings = [FontColor]
-            Size.Width = 280.000000000000000000
-            Size.Height = 40.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Roboto'
-            TextSettings.Font.Size = 14.000000000000000000
-            TextSettings.Font.StyleExt = {00070000000000000004000000}
-            TextSettings.HorzAlign = Center
-            Text = 'Contato'
-          end
+      end
+      inherited RctAlterarSenha: TRectangle
+        Size.Width = 430.000000000000000000
+        inherited EdtSenhaAtual: TEdit
+          Size.Width = 410.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited EdtNovaSenha: TEdit
+          Position.Y = 123.000000000000000000
+          Size.Width = 410.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited EdtConfirmaSenha: TEdit
+          Position.Y = 182.000000000000000000
+          Size.Width = 410.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited LblSenhaAtual: TLabel
+          Size.Width = 410.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited LblNovaSenha: TLabel
+          Position.Y = 106.000000000000000000
+          Size.Width = 410.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited LblConfirmaSenha: TLabel
+          Position.Y = 165.000000000000000000
+          Size.Width = 410.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited LblAlterarSenha: TLabel
+          Size.Width = 430.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited RctSalvar: TRectangle
+        Position.Y = 607.000000000000000000
+        Size.Width = 430.000000000000000000
+        inherited BtnSalvar: TButton
+          Size.Width = 430.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
       end
     end
   end
   inherited MvMenu: TMultiView
-    Size.Width = 250.000000000000000000
     inherited RctPrincipalMenu: TRectangle
-      Size.Width = 249.000000000000000000
       inherited RctMenuTop: TRectangle
-        Size.Width = 251.000000000000000000
         inherited LblNomeUsuario: TLabel
-          Size.Width = 148.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
       end
       inherited VsbMenu: TVertScrollBox
-        Size.Width = 249.000000000000000000
-        Viewport.Width = 249.000000000000000000
+        Viewport.Width = 268.000000000000000000
         Viewport.Height = 448.000000000000000000
         inherited RctSair: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgSair: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctConfiguracoes: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgConfiguracao: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctServicos: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgServicos: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctMinhaConta: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgMinhaConta: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctOrcamento: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgOrcamento: TImage
             MultiResBitmap.Height = 144
             MultiResBitmap.Width = 144
           end
         end
         inherited RctContratos: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgContratos: TImage
             MultiResBitmap.Height = 144
             MultiResBitmap.Width = 144
           end
         end
-        inherited LineSeparador: TLine
-          Size.Width = 239.000000000000000000
-        end
       end
     end
-  end
-  inherited BDSPessoaLogada: TBindSourceDB
-    Left = 212
-    Top = 4
-  end
-  inherited BdlPessoaLogada: TBindingsList
-    Left = 272
-    Top = 5
   end
 end

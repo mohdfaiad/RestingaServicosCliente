@@ -1,4 +1,4 @@
-inherited FormModelo1_LgXhdpiPh: TFormModelo1_LgXhdpiPh
+inherited FormContato_LgXhdpiPh: TFormContato_LgXhdpiPh
   ClientHeight = 695
   ClientWidth = 450
   DesignerMasterStyle = 0

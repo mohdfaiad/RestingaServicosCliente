@@ -1,9 +1,7 @@
-inherited FormContato: TFormContato
+inherited FormSeguranca: TFormSeguranca
   Caption = 'FormModelo1'
-  ClientHeight = 561
   DesignerMasterStyle = 0
   inherited Lyt1: TLayout
-    Size.Height = 561.000000000000000000
     inherited TbPrincipal: TToolBar
       inherited RctMenuSuperior: TRectangle
         inherited ImgLogo: TImage
@@ -413,8 +411,7 @@ inherited FormContato: TFormContato
       end
     end
     inherited Lyt2: TLayout
-      Size.Height = 513.000000000000000000
-      object LblTituloContato: TLabel
+      object LblTituloSeguranca: TLabel
         Align = Top
         StyledSettings = []
         Margins.Left = 10.000000000000000000
@@ -430,21 +427,188 @@ inherited FormContato: TFormContato
         TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claWhite
         TextSettings.HorzAlign = Center
-        Text = 'Contato'
+        Text = 'Seguran'#231'a'
+      end
+      object RecEmail: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 30.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 280.000000000000000000
+        Size.Height = 112.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Stroke.Join = Bevel
+        object EdtEmail: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 0
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 57.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object LblEmail: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Top = 20.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'E-mail de Recupera'#231#227'o'
+        end
+      end
+      object RctAlterarSenha: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 192.000000000000000000
+        Size.Width = 280.000000000000000000
+        Size.Height = 241.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object EdtSenhaAtual: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 0
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 64.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object EdtNovaSenha: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 1
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 121.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object EdtConfirmaSenha: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 2
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 178.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object LblSenhaAtual: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 47.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Senha Atual:'
+        end
+        object LblNovaSenha: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Nova Senha:'
+        end
+        object LblConfirmaSenha: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 161.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Confirme a Senha:'
+        end
+        object LblAlterarSenha: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Top = 20.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Altera'#231#227'o de Senha'
+        end
       end
       object RctSalvar: TRectangle
         Align = Bottom
         Fill.Color = claDarkblue
         Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
         Position.X = 10.000000000000000000
-        Position.Y = 473.000000000000000000
+        Position.Y = 469.000000000000000000
         Size.Width = 280.000000000000000000
         Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         object BtnSalvar: TButton
-          Align = MostBottom
+          Align = Bottom
           StyledSettings = []
           Size.Width = 280.000000000000000000
           Size.Height = 30.000000000000000000
@@ -457,368 +621,59 @@ inherited FormContato: TFormContato
           TextSettings.FontColor = claWhite
         end
       end
-      object GplCEPNum: TGridPanelLayout
-        Align = Top
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 40.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 75.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 46.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 4
-        ColumnCollection = <
-          item
-            Value = 65.083798882681560000
-          end
-          item
-            Value = 34.916201117318440000
-          end>
-        ControlCollection = <
-          item
-            Column = 0
-            Control = LblCEP
-            Row = 0
-          end
-          item
-            Column = 1
-            Control = LblNumero
-            Row = 0
-          end
-          item
-            Column = 0
-            Control = EdtCEP
-            Row = 1
-          end
-          item
-            Column = 1
-            Control = EdtNumero
-            Row = 1
-          end>
-        RowCollection = <
-          item
-            SizeStyle = Absolute
-            Value = 15.000000000000000000
-          end
-          item
-            SizeStyle = Absolute
-            Value = 20.000000000000000000
-          end
-          item
-            SizeStyle = Auto
-          end>
-        object LblCEP: TLabel
-          Align = Top
-          StyledSettings = [FontColor]
-          Size.Width = 182.234634399414100000
-          Size.Height = 14.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 14.000000000000000000
-          TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 'CEP:'
-        end
-        object LblNumero: TLabel
-          Align = Top
-          StyledSettings = [FontColor]
-          Position.X = 182.234634399414100000
-          Size.Width = 97.765365600585940000
-          Size.Height = 14.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 14.000000000000000000
-          TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 'N'#250'mero:'
-        end
-        object EdtCEP: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Align = Top
-          TabOrder = 2
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 14.000000000000000000
-          Position.Y = 15.000000000000000000
-          Margins.Right = 10.000000000000000000
-          Size.Width = 172.234634399414100000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          StyledSettings = [Style, FontColor]
-        end
-        object EdtNumero: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Align = Top
-          TabOrder = 3
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 14.000000000000000000
-          Position.X = 182.234634399414100000
-          Position.Y = 15.000000000000000000
-          Size.Width = 97.765365600585940000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          StyledSettings = [Style, FontColor]
-        end
-      end
-      object LblEndereco: TLabel
-        Align = Top
-        StyledSettings = [FontColor]
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 5.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 126.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Roboto'
-        TextSettings.Font.Size = 14.000000000000000000
-        TextSettings.Font.StyleExt = {00070000000000000004000000}
-        Text = 'Endere'#231'o:'
-      end
-      object EdtEndereco: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Align = Top
-        TabOrder = 6
-        TextSettings.Font.Family = 'Roboto'
-        TextSettings.Font.Size = 14.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 143.000000000000000000
-        Margins.Left = 10.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 30.000000000000000000
-        Size.PlatformDefault = False
-        StyledSettings = [Style, FontColor]
-      end
-      object LblComplemento: TLabel
-        Align = Top
-        StyledSettings = [FontColor]
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 5.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 178.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Roboto'
-        TextSettings.Font.Size = 14.000000000000000000
-        TextSettings.Font.StyleExt = {00070000000000000004000000}
-        Text = 'Complemento:'
-      end
-      object EdtComplemento: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Align = Top
-        TabOrder = 8
-        TextSettings.Font.Family = 'Roboto'
-        TextSettings.Font.Size = 14.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 195.000000000000000000
-        Margins.Left = 10.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 30.000000000000000000
-        Size.PlatformDefault = False
-        StyledSettings = [Style, FontColor]
-      end
-      object GplTipo: TGridPanelLayout
-        Align = Top
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 10.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Position.X = 10.000000000000000000
-        Position.Y = 235.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 30.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 9
-        ColumnCollection = <
-          item
-            Value = 61.290322580645160000
-          end
-          item
-            Value = 38.709677419354830000
-          end
-          item
-            SizeStyle = Absolute
-            Value = 30.000000000000000000
-          end>
-        ControlCollection = <
-          item
-            Column = 0
-            Control = CbxTipo
-            Row = 0
-          end
-          item
-            Column = 1
-            Control = EdtTipo
-            Row = 0
-          end
-          item
-            Column = 2
-            Control = BtnTipo
-            Row = 0
-          end>
-        RowCollection = <
-          item
-            Value = 100.000000000000000000
-          end
-          item
-            SizeStyle = Auto
-          end>
-        object CbxTipo: TComboBox
-          Align = Top
-          Margins.Right = 2.000000000000000000
-          Size.Width = 151.225799560546900000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-        end
-        object EdtTipo: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Align = Client
-          TabOrder = 1
-          Margins.Left = 3.000000000000000000
-          Size.Width = 93.774200439453130000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-        end
-        object BtnTipo: TButton
-          Align = Top
-          Position.X = 250.000000000000000000
-          Size.Width = 30.000000000000000000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          StyleLookup = 'additembutton'
-          TabOrder = 2
-        end
-      end
-      object LvwTipo: TListView
-        ItemAppearanceClassName = 'TDynamicAppearance'
-        ItemEditAppearanceClassName = 'TDynamicAppearance'
-        HeaderAppearanceClassName = 'TListHeaderObjects'
-        FooterAppearanceClassName = 'TListHeaderObjects'
-        Align = Client
-        Margins.Left = 10.000000000000000000
-        Margins.Top = 10.000000000000000000
-        Margins.Right = 10.000000000000000000
-        Margins.Bottom = 10.000000000000000000
-        Size.Width = 280.000000000000000000
-        Size.Height = 188.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 10
-        ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
-          item
-            AppearanceObjectName = 'Tipo'
-            AppearanceClassName = 'TTextObjectAppearance'
-            Appearance.Width = 97.000000000000000000
-            Appearance.Height = 30.000000000000000000
-            Appearance.PlaceOffset.X = -10.000000000000000000
-          end
-          item
-            AppearanceObjectName = 'Informacao'
-            AppearanceClassName = 'TTextObjectAppearance'
-            Appearance.Width = 145.000000000000000000
-            Appearance.Height = 30.000000000000000000
-            Appearance.PlaceOffset.X = 86.000000000000000000
-          end
-          item
-            AppearanceObjectName = 'GlyphButton3'
-            AppearanceClassName = 'TGlyphButtonObjectAppearance'
-            Appearance.ButtonType = Delete
-            Appearance.Width = -185.000000000000000000
-            Appearance.Height = 30.000000000000000000
-            Appearance.PlaceOffset.X = 230.000000000000000000
-          end>
-        ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
-          item
-            AppearanceObjectName = 'Text1'
-            AppearanceClassName = 'TTextObjectAppearance'
-          end>
-        ItemAppearanceObjects.HeaderObjects.Text.Width = 307.000000000000000000
-        ItemAppearanceObjects.HeaderObjects.Text.Height = 24.000000000000000000
-        ItemAppearanceObjects.HeaderObjects.Text.Visible = False
-        ItemAppearanceObjects.HeaderObjects.Text.PlaceOffset.X = -2.000000000000000000
-        ItemAppearanceObjects.FooterObjects.Text.Width = 299.000000000000000000
-        ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
-        ItemAppearanceObjects.FooterObjects.Text.Visible = False
-        ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = -2.000000000000000000
-        object VsbTipo: TVertScrollBox
-          Align = Client
-          Size.Width = 280.000000000000000000
-          Size.Height = 188.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          Viewport.Width = 280.000000000000000000
-          Viewport.Height = 188.000000000000000000
-        end
-      end
     end
   end
   inherited MvMenu: TMultiView
-    Size.Width = 250.000000000000000000
     inherited RctPrincipalMenu: TRectangle
-      Size.Width = 249.000000000000000000
       inherited RctMenuTop: TRectangle
-        Size.Width = 251.000000000000000000
         inherited LblNomeUsuario: TLabel
-          Size.Width = 148.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
       end
       inherited VsbMenu: TVertScrollBox
-        Size.Width = 249.000000000000000000
-        Viewport.Width = 249.000000000000000000
+        Viewport.Width = 268.000000000000000000
         Viewport.Height = 448.000000000000000000
         inherited RctSair: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgSair: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctConfiguracoes: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgConfiguracao: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctServicos: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgServicos: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctMinhaConta: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgMinhaConta: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end
         end
         inherited RctOrcamento: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgOrcamento: TImage
             MultiResBitmap.Height = 144
             MultiResBitmap.Width = 144
           end
         end
         inherited RctContratos: TRectangle
-          Size.Width = 239.000000000000000000
           inherited ImgContratos: TImage
             MultiResBitmap.Height = 144
             MultiResBitmap.Width = 144
           end
         end
-        inherited LineSeparador: TLine
-          Size.Width = 239.000000000000000000
-        end
       end
     end
   end
   inherited BDSPessoaLogada: TBindSourceDB
-    Left = 228
+    Left = 220
     Top = 4
   end
   inherited BdlPessoaLogada: TBindingsList

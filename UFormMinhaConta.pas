@@ -21,6 +21,8 @@ type
     RctContato: TRectangle;
     LblContato: TLabel;
     procedure RctDadosPessoaisClick(Sender: TObject);
+    procedure RctContatoClick(Sender: TObject);
+    procedure RctSegurancaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,8 +36,16 @@ implementation
 
 {$R *.fmx}
 
-uses UFormDadosPessoais;
+uses UFormDadosPessoais, UFormContato, UFormSeguranca;
 {$R *.LgXhdpiPh.fmx ANDROID}
+
+procedure TFormMinhaConta.RctContatoClick(Sender: TObject);
+begin
+  inherited;
+  if FormContato = nil then
+    application.CreateForm(TFormContato,FormContato);
+  TFormContato.Create(self).Show;
+end;
 
 procedure TFormMinhaConta.RctDadosPessoaisClick(Sender: TObject);
 begin
@@ -43,6 +53,14 @@ begin
   if FormDadosPessoais = nil then
     application.CreateForm(TFormDadosPessoais,FormDadosPessoais);
   TFormDadosPessoais.Create(self).Show;
+end;
+
+procedure TFormMinhaConta.RctSegurancaClick(Sender: TObject);
+begin
+  inherited;
+  if FormSeguranca = nil then
+    application.CreateForm(TFormSeguranca,FormSeguranca);
+  TFormSeguranca.Create(self).Show;
 end;
 
 end.

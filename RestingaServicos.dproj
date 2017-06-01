@@ -412,6 +412,10 @@
             <Form>FormDadosPessoais</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UFormContato.pas">
+            <Form>FormModelo1</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

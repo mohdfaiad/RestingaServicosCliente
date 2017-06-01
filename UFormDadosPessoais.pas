@@ -12,7 +12,7 @@ uses
 
 type
   TFormDadosPessoais = class(TFormModelo)
-    LblTituloMinhaConta: TLabel;
+    LblTituloDadosPessoais: TLabel;
     ImgFoto: TImage;
     ImgCamera: TImage;
     LblNomeCompleto: TLabel;

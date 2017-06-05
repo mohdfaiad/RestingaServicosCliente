@@ -72,6 +72,18 @@ type
     QueryPessoaLogadaid: TLongWordField;
     QueryPessoaLogadanomepessoa: TStringField;
     QueryPessoaLogadafoto: TBlobField;
+    QuerySeguranca: TUniQuery;
+    QuerySegurancaid: TLongWordField;
+    QuerySegurancaemail: TStringField;
+    QuerySegurancasenha: TStringField;
+    QueryContato: TUniQuery;
+    QueryContatoLogradouro_cep: TLongWordField;
+    QueryContatonumero: TStringField;
+    QueryContatocomplemento: TStringField;
+    QueryDadosPessoais: TUniQuery;
+    QueryDadosPessoaisid: TLongWordField;
+    QueryDadosPessoaisNomePessoa: TStringField;
+    QueryDadosPessoaisCPFCNPJ: TStringField;
   private
     { Private declarations }
   public

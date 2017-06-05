@@ -31,10 +31,11 @@ type
     BtnTipo: TButton;
     LvwTipo: TListView;
     VsbTipo: TVertScrollBox;
+    procedure BtnSalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    function validaCampoCEP:boolean;
   end;
 
 var
@@ -43,6 +44,19 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UDMPrincipal, UFormSplash;
 {$R *.LgXhdpiPh.fmx ANDROID}
+
+//procedure TFormContato.BtnSalvarClick(Sender: TObject);
+//begin
+  //inherited;
+ // if validaCampos then
+ // begin
+  //  showMessage('Dados de Contato alterados com Sucesso!');
+ //   close;
+ // end;
+//end;
+
 
 end.

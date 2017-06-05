@@ -13,9 +13,6 @@ uses
 type
   TFormSeguranca = class(TFormModelo)
     LblTituloSeguranca: TLabel;
-    RecEmail: TRectangle;
-    LblEmail: TLabel;
-    EdtEmail: TEdit;
     RctAlterarSenha: TRectangle;
     LblSenhaAtual: TLabel;
     EdtSenhaAtual: TEdit;
@@ -26,10 +23,11 @@ type
     LblAlterarSenha: TLabel;
     BtnSalvar: TButton;
     RctSalvar: TRectangle;
+    procedure BtnSalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    function validaCampos:boolean;
   end;
 
 var
@@ -38,6 +36,69 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UDMPrincipal, UFormSplash;
 {$R *.LgXhdpiPh.fmx ANDROID}
+
+procedure TFormSeguranca.BtnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  if validaCampos then
+  begin
+    showMessage('Senha alterada com sucesso!');
+    close;
+  end;
+
+
+end;
+
+function TFormSeguranca.validaCampos: boolean;
+begin
+  with DMPrincipal do
+  begin
+    QuerySeguranca.Close;
+    QuerySeguranca.ParamByName('pIdUsuario').Value:= FormSplash.Pessoa_id;
+    QuerySeguranca.Open;
+
+    if EdtSenhaAtual.Text=QuerySegurancaSenha.AsString then
+    begin
+      if edtNovaSenha.Text <> QuerySegurancaSenha.AsString  then
+      begin
+        if edtNovaSenha.Text = edtConfirmaSenha.text then
+        begin
+          querySeguranca.Edit;
+          QuerySegurancaSenha.Value:=edtConfirmaSenha.Text;
+          QuerySeguranca.Post;
+          result:=true;
+        end
+        else
+        begin
+          showMessage('Confirmação de Senha incorreta. Por favor, confira');
+          edtNovaSenha.SetFocus;
+          edtNovaSenha.Text:='';
+          edtConfirmaSenha.Text:='';
+          result:=false;
+        end;
+      end
+      else
+      begin
+        showMessage('Por Favor insira outra senha');
+        edtNovaSenha.SetFocus;
+        edtNovaSenha.Text:='';
+        result:=false;
+      end;
+    end
+    else
+    begin
+      showMessage('Senha Atual incorreta');
+      edtSenhaAtual.SetFocus;
+      edtSenhaAtual.Text:='';
+      result:=false;
+    end;
+
+
+  end;
+
+end;
 
 end.

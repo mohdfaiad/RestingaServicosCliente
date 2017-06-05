@@ -8,6 +8,7 @@ object DMPrincipal: TDMPrincipal
     Database = 'RestingaServicos'
     Username = 'root'
     Server = 'ielb.no-ip.org'
+    Connected = True
     LoginPrompt = False
     Left = 44
     Top = 2
@@ -514,6 +515,102 @@ object DMPrincipal: TDMPrincipal
     end
     object QueryPessoaLogadafoto: TBlobField
       FieldName = 'foto'
+    end
+  end
+  object QuerySeguranca: TUniQuery
+    SQLUpdate.Strings = (
+      'UPDATE usuario'
+      'SET'
+      '  Senha = :Senha'
+      'WHERE'
+      '  id = :Old_id')
+    SQLRefresh.Strings = (
+      'SELECT Senha FROM usuario'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM usuario')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT id,email, senha'
+      'FROM usuario u'
+      'where id = :pIdUsuario;')
+    Left = 504
+    Top = 104
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'pIdUsuario'
+        Value = nil
+      end>
+    object QuerySegurancaid: TLongWordField
+      FieldName = 'id'
+    end
+    object QuerySegurancaemail: TStringField
+      FieldName = 'email'
+      Required = True
+      Size = 255
+    end
+    object QuerySegurancasenha: TStringField
+      FieldName = 'senha'
+      Required = True
+      Size = 45
+    end
+  end
+  object QueryContato: TUniQuery
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT Logradouro_cep,numero, complemento'
+      'FROM pessoa p'
+      'where id = :pId;')
+    Left = 264
+    Top = 104
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'pId'
+        Value = nil
+      end>
+    object QueryContatoLogradouro_cep: TLongWordField
+      FieldName = 'Logradouro_cep'
+    end
+    object QueryContatonumero: TStringField
+      FieldName = 'numero'
+      Size = 45
+    end
+    object QueryContatocomplemento: TStringField
+      FieldName = 'complemento'
+      Size = 100
+    end
+  end
+  object QueryDadosPessoais: TUniQuery
+    SQLUpdate.Strings = (
+      'UPDATE pessoa'
+      'SET'
+      '  NomePessoa = :NomePessoa, CPFCNPJ = :CPFCNPJ'
+      'WHERE'
+      '  id = :Old_id')
+    SQLRefresh.Strings = (
+      'SELECT NomePessoa, CPFCNPJ FROM pessoa'
+      'WHERE'
+      '  id = :id')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT id, NomePessoa, CPFCNPJ'
+      'FROM pessoa p;')
+    Left = 160
+    Top = 160
+    object QueryDadosPessoaisid: TLongWordField
+      FieldName = 'id'
+    end
+    object QueryDadosPessoaisNomePessoa: TStringField
+      FieldName = 'NomePessoa'
+      Required = True
+      Size = 250
+    end
+    object QueryDadosPessoaisCPFCNPJ: TStringField
+      FieldName = 'CPFCNPJ'
+      Size = 16
     end
   end
 end

@@ -36,5 +36,6 @@ begin
   Application.CreateForm(TFormDadosPessoais, FormDadosPessoais);
   Application.CreateForm(TFormContato, FormContato);
   Application.CreateForm(TFormSeguranca, FormSeguranca);
+  Application.CreateForm(TFormSeguranca, FormSeguranca);
   Application.Run;
 end.

@@ -84,6 +84,7 @@ type
     QueryDadosPessoaisid: TLongWordField;
     QueryDadosPessoaisNomePessoa: TStringField;
     QueryDadosPessoaisCPFCNPJ: TStringField;
+    QueryDadosPessoaisData_nascimento: TDateTimeField;
   private
     { Private declarations }
   public

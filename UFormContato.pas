@@ -31,11 +31,11 @@ type
     BtnTipo: TButton;
     LvwTipo: TListView;
     VsbTipo: TVertScrollBox;
-    procedure BtnSalvarClick(Sender: TObject);
+//    procedure BtnSalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
-    function validaCampoCEP:boolean;
+//    function validaCampoCEP:boolean;
   end;
 
 var

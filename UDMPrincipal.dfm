@@ -587,7 +587,9 @@ object DMPrincipal: TDMPrincipal
     SQLUpdate.Strings = (
       'UPDATE pessoa'
       'SET'
-      '  NomePessoa = :NomePessoa, CPFCNPJ = :CPFCNPJ'
+      
+        '  NomePessoa = :NomePessoa, CPFCNPJ = :CPFCNPJ, Data_nascimento ' +
+        '= :Data_nascimento'
       'WHERE'
       '  id = :Old_id')
     SQLRefresh.Strings = (
@@ -596,7 +598,7 @@ object DMPrincipal: TDMPrincipal
       '  id = :id')
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'SELECT id, NomePessoa, CPFCNPJ'
+      'SELECT id, NomePessoa, CPFCNPJ, Data_nascimento'
       'FROM pessoa p;')
     Left = 160
     Top = 160
@@ -611,6 +613,9 @@ object DMPrincipal: TDMPrincipal
     object QueryDadosPessoaisCPFCNPJ: TStringField
       FieldName = 'CPFCNPJ'
       Size = 16
+    end
+    object QueryDadosPessoaisData_nascimento: TDateTimeField
+      FieldName = 'Data_nascimento'
     end
   end
 end

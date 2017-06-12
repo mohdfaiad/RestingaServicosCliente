@@ -2,6 +2,7 @@ inherited FormContato: TFormContato
   Caption = 'FormModelo1'
   ClientHeight = 561
   Position = ScreenCenter
+  OnShow = FormShow
   DesignerMasterStyle = 0
   inherited Lyt1: TLayout
     Size.Height = 561.000000000000000000
@@ -456,6 +457,7 @@ inherited FormContato: TFormContato
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
           TextSettings.FontColor = claWhite
+          OnClick = BtnSalvarClick
         end
       end
       object GplCEPNum: TGridPanelLayout
@@ -824,5 +826,39 @@ inherited FormContato: TFormContato
   inherited BdlPessoaLogada: TBindingsList
     Left = 264
     Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'complemento'
+      Control = EdtComplemento
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Logradouro_cep'
+      Control = EdtCEP
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'numero'
+      Control = EdtNumero
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'desc_logradouro'
+      Control = EdtEndereco
+      Track = False
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryContato
+    ScopeMappings = <>
+    Left = 136
+    Top = 264
   end
 end

@@ -56,7 +56,7 @@ Coordinates=616,417,124,33
 Coordinates=226,170,151,33
 
 []
-Coordinates=0,251,89,33
+Coordinates=1079,573,82,33
 
 [QueryProfissionalTotalAtendimentos]
 Coordinates=24,242,196,33
@@ -207,4 +207,35 @@ Coordinates=226,222,105,33
 
 [QuerySegurancasenha]
 Coordinates=97,242,126,33
+
+[QueryDadosPessoaisNomePessoa]
+Coordinates=1079,365,184,33
+
+[QueryContato]
+Coordinates=15,170,83,105
+
+[QueryDadosPessoaisCPFCNPJ]
+Coordinates=1079,417,168,33
+
+[QueryContatocomplemento]
+Coordinates=331,689,149,33
+
+[QueryContatoLogradouro_cep]
+Coordinates=1079,469,164,33
+
+[QueryDadosPessoais]
+Coordinates=620,70,120,141
+Visible=True
+
+[QueryDadosPessoaisid]
+Coordinates=192,689,129,33
+
+[QueryContatonumero]
+Coordinates=63,689,120,33
+
+[QueryDadosPessoaisusuario_id]
+Coordinates=1079,521,172,33
+
+[QueryDadosPessoaisData_nascimento]
+Coordinates=1079,625,205,33
 

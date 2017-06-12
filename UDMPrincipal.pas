@@ -85,6 +85,9 @@ type
     QueryDadosPessoaisNomePessoa: TStringField;
     QueryDadosPessoaisCPFCNPJ: TStringField;
     QueryDadosPessoaisData_nascimento: TDateTimeField;
+    QueryDadosPessoaisusuario_id: TLongWordField;
+    QueryContatodesc_logradouro: TStringField;
+    QueryContatoid: TLongWordField;
   private
     { Private declarations }
   public

@@ -31,11 +31,18 @@ type
     BtnTipo: TButton;
     LvwTipo: TListView;
     VsbTipo: TVertScrollBox;
+    BindSourceDB1: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    procedure FormShow(Sender: TObject);
 //    procedure BtnSalvarClick(Sender: TObject);
   private
+    procedure BtnSalvarClick(Sender: TObject);
     { Private declarations }
   public
-//    function validaCampoCEP:boolean;
+    function validaCampos:boolean;
   end;
 
 var
@@ -48,15 +55,69 @@ implementation
 uses UDMPrincipal, UFormSplash;
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-//procedure TFormContato.BtnSalvarClick(Sender: TObject);
-//begin
-  //inherited;
- // if validaCampos then
- // begin
-  //  showMessage('Dados de Contato alterados com Sucesso!');
- //   close;
- // end;
-//end;
+procedure TFormContato.BtnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  if validaCampos then
+  begin
+    DMPrincipal.QueryContato.Post;
+    showMessage('Dados de Contato alterados com Sucesso!');
+    close;
+  end;
+end;
 
+
+procedure TFormContato.FormShow(Sender: TObject);
+begin
+  inherited;
+  with DMPRincipal do
+  begin
+    QueryContato.Close;
+    QueryContato.ParamByName('pUsuario_Id').Value:= FormSplash.Pessoa_id;
+    QueryContato.Open;
+    QueryContato.Edit;
+  end;
+end;
+
+function TFormContato.validaCampos: boolean;
+begin
+  with DMPrincipal do
+  begin
+    if EdtCEP.Text<>'' then
+    begin
+      if EdtNumero.Text<>'' then
+      begin
+        if EdtEndereco.Text<>'' then
+        begin
+          if EdtComplemento.Text<>'' then
+          begin
+            result:=true;
+          end
+          else
+          begin
+            showMessage('Campo Complemento não pode estar vazio');
+            result:=false;
+          end;
+        end
+        else
+        begin
+          showMessage('Campo Endereco não pode estar vazio');
+          result:=false;
+        end;
+      end
+      else
+      begin
+        showMessage('Campo Numero não pode estar vazio');
+        result:=false;
+      end;
+    end
+    else
+    begin
+      showMessage('Campo CEP não pode estar vazio');
+      result:=false;
+    end;
+
+  end;
+end;
 
 end.

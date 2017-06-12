@@ -558,17 +558,35 @@ object DMPrincipal: TDMPrincipal
     end
   end
   object QueryContato: TUniQuery
+    SQLUpdate.Strings = (
+      'UPDATE pessoa'
+      'SET'
+      
+        '  Logradouro_cep = :Logradouro_cep, numero = :numero, complement' +
+        'o = :complemento'
+      'WHERE'
+      '  id = :Old_id')
+    SQLRefresh.Strings = (
+      'SELECT Logradouro_cep, numero, complemento FROM pessoa'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM pessoa')
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'SELECT Logradouro_cep,numero, complemento'
-      'FROM pessoa p'
-      'where id = :pId;')
+      
+        'SELECT p.id, p.Logradouro_cep, p.numero, p.complemento, l.desc_l' +
+        'ogradouro'
+      'FROM pessoa p '
+      'left join Logradouro l on p.Logradouro_cep = l.num_cep'
+      'left join Usuario u on p.id = u.pessoa_id'
+      'WHERE u.id= :pUsuario_id;')
     Left = 264
     Top = 104
     ParamData = <
       item
         DataType = ftUnknown
-        Name = 'pId'
+        Name = 'pUsuario_id'
         Value = nil
       end>
     object QueryContatoLogradouro_cep: TLongWordField
@@ -581,6 +599,14 @@ object DMPrincipal: TDMPrincipal
     object QueryContatocomplemento: TStringField
       FieldName = 'complemento'
       Size = 100
+    end
+    object QueryContatodesc_logradouro: TStringField
+      FieldName = 'desc_logradouro'
+      ReadOnly = True
+      Size = 45
+    end
+    object QueryContatoid: TLongWordField
+      FieldName = 'id'
     end
   end
   object QueryDadosPessoais: TUniQuery
@@ -598,10 +624,19 @@ object DMPrincipal: TDMPrincipal
       '  id = :id')
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'SELECT id, NomePessoa, CPFCNPJ, Data_nascimento'
-      'FROM pessoa p;')
+      
+        'SELECT p.id, p.NomePessoa, p.CPFCNPJ, p.Data_nascimento, u.id us' +
+        'uario_id'
+      'FROM pessoa p left join Usuario u on p.id = u.pessoa_id'
+      'WHERE u.id= :pUsuario_id;')
     Left = 160
     Top = 160
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'pUsuario_id'
+        Value = nil
+      end>
     object QueryDadosPessoaisid: TLongWordField
       FieldName = 'id'
     end
@@ -616,6 +651,10 @@ object DMPrincipal: TDMPrincipal
     end
     object QueryDadosPessoaisData_nascimento: TDateTimeField
       FieldName = 'Data_nascimento'
+    end
+    object QueryDadosPessoaisusuario_id: TLongWordField
+      FieldName = 'usuario_id'
+      ReadOnly = True
     end
   end
 end

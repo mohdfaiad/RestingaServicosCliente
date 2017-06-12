@@ -68,7 +68,6 @@ begin
     QueryDadosPessoais.ParamByName('pUsuario_Id').Value:= FormSplash.Pessoa_id;
     QueryDadosPessoais.Open;
     QueryDadosPessoais.Edit;
-
   end;
 end;
 

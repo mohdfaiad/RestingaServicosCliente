@@ -657,4 +657,88 @@ object DMPrincipal: TDMPrincipal
       ReadOnly = True
     end
   end
+  object QueryTipoContato: TUniQuery
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'select * from contato_tipo'
+      'order by nometipocontato;')
+    Left = 376
+    Top = 156
+    object QueryTipoContatoid: TLongWordField
+      FieldName = 'id'
+    end
+    object QueryTipoContatoNomeTipoContato: TStringField
+      FieldName = 'NomeTipoContato'
+      Required = True
+      Size = 250
+    end
+  end
+  object QueryDadosContato: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO pessoa_contato'
+      '  (id, Pessoa_id, Contato_tipo_id, contato)'
+      'VALUES'
+      '  (:id, :Pessoa_id, :Contato_tipo_id, :contato)')
+    SQLDelete.Strings = (
+      'DELETE FROM pessoa_contato'
+      'WHERE'
+      '  id = :Old_id')
+    SQLUpdate.Strings = (
+      'UPDATE pessoa_contato'
+      'SET'
+      
+        '  id = :id, Pessoa_id = :Pessoa_id, Contato_tipo_id = :Contato_t' +
+        'ipo_id, contato = :contato'
+      'WHERE'
+      '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM pessoa_contato'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
+    SQLRefresh.Strings = (
+      
+        'SELECT id, Pessoa_id, Contato_tipo_id, contato FROM pessoa_conta' +
+        'to'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM pessoa_contato')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT p.*, tp.NomeTipoContato'
+      
+        'FROM pessoa_contato p left join contato_tipo tp on p.contato_tip' +
+        'o_id = tp.id'
+      'where p.pessoa_id = :pPessoa_id;')
+    Left = 264
+    Top = 156
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'pPessoa_id'
+        Value = nil
+      end>
+    object QueryDadosContatoid: TLongWordField
+      FieldName = 'id'
+    end
+    object QueryDadosContatoPessoa_id: TLongWordField
+      FieldName = 'Pessoa_id'
+      Required = True
+    end
+    object QueryDadosContatoContato_tipo_id: TLongWordField
+      FieldName = 'Contato_tipo_id'
+      Required = True
+    end
+    object QueryDadosContatocontato: TStringField
+      FieldName = 'contato'
+      Required = True
+      Size = 255
+    end
+    object QueryDadosContatoNomeTipoContato: TStringField
+      FieldName = 'NomeTipoContato'
+      ReadOnly = True
+      Size = 250
+    end
+  end
 end

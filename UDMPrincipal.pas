@@ -88,6 +88,15 @@ type
     QueryDadosPessoaisusuario_id: TLongWordField;
     QueryContatodesc_logradouro: TStringField;
     QueryContatoid: TLongWordField;
+    QueryTipoContato: TUniQuery;
+    QueryTipoContatoid: TLongWordField;
+    QueryTipoContatoNomeTipoContato: TStringField;
+    QueryDadosContato: TUniQuery;
+    QueryDadosContatoid: TLongWordField;
+    QueryDadosContatoPessoa_id: TLongWordField;
+    QueryDadosContatoContato_tipo_id: TLongWordField;
+    QueryDadosContatocontato: TStringField;
+    QueryDadosContatoNomeTipoContato: TStringField;
   private
     { Private declarations }
   public

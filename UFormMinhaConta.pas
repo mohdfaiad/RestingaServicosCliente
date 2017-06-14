@@ -35,9 +35,10 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UFormDadosPessoais, UFormContato, UFormSeguranca;
-{$R *.LgXhdpiPh.fmx ANDROID}
+
 
 procedure TFormMinhaConta.RctContatoClick(Sender: TObject);
 begin

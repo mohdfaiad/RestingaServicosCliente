@@ -42,10 +42,10 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses UDMPrincipal, UFormSplash;
 
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TFormDadosPessoais.BtnSalvarClick(Sender: TObject);
 begin

@@ -6,199 +6,215 @@ Coordinates=1055,1,179,33
 Coordinates=343,10,186,267
 
 [Lyt2]
-Coordinates=529,908,40,33
+Coordinates=1171,831,40,33
 
 [LblOrcamento]
-Coordinates=478,754,84,51
+Coordinates=675,754,84,51
 
 [DMPrincipal.QueryProfissional]
 Coordinates=555,10,165,213
 
 [BDSPessoaLogada]
-Coordinates=714,420,161,123
+Coordinates=915,420,161,123
 
 [RctPrincipalMenu]
-Coordinates=925,831,101,33
+Coordinates=898,831,101,33
 
 [BtnTipo]
-Coordinates=112,754,53,51
+Coordinates=451,831,53,51
 
 [DMPrincipal.QueryBuscaUsuario]
-Coordinates=328,605,175,105
+Coordinates=120,605,175,105
 
 [RctServicos]
-Coordinates=1163,831,73,33
+Coordinates=470,908,73,33
 
 [MvMenu]
-Coordinates=1094,908,55,33
+Coordinates=112,908,55,33
 
 [LblContratos]
-Coordinates=359,831,78,51
+Coordinates=246,754,78,51
 
 [EdtNumero]
-Coordinates=239,68,69,51
+Coordinates=233,10,69,51
 
 [LblCEP]
-Coordinates=191,754,50,51
+Coordinates=785,754,50,51
 
 [DMPrincipal.QueryDadosPessoais]
-Coordinates=120,605,182,105
+Coordinates=370,420,182,141
 
 [EdtCEP]
-Coordinates=240,130,52,51
+Coordinates=241,232,52,51
 
 [BdlPessoaLogada]
 Coordinates=1055,53,103,33
 
 [RctMenuTop]
-Coordinates=427,908,76,33
+Coordinates=10,908,76,33
 
 [RctConfiguracoes]
-Coordinates=1175,908,103,33
+Coordinates=795,908,103,33
 
 [TbPrincipal]
-Coordinates=125,908,70,33
+Coordinates=193,908,70,33
 
 [ShadowEffect1]
 Coordinates=1055,261,88,33
 
 [DMPrincipal.QueryProfissoes]
-Coordinates=714,605,159,87
+Coordinates=699,605,159,87
 
 [DMPrincipal.QueryLogradouro]
-Coordinates=348,420,164,141
+Coordinates=180,420,164,141
 
 [BtnBuscar]
-Coordinates=1069,754,66,51
+Coordinates=1178,754,66,51
 
 [EdtTipo]
-Coordinates=551,831,52,51
+Coordinates=530,831,52,51
 
 [Lyt1]
-Coordinates=671,908,40,33
+Coordinates=1025,831,40,33
 
 [VsbMenu]
-Coordinates=824,908,60,33
+Coordinates=725,831,60,33
 
 [LblNomeUsuario]
-Coordinates=538,456,96,51
+Coordinates=1156,456,96,51
 
 [LblServicos]
-Coordinates=971,754,72,51
+Coordinates=228,831,72,51
 
 [DMPrincipal.QueryContato]
 Coordinates=1020,0,145,33
 Visible=False
 
 [GplCEPNum]
-Coordinates=824,831,75,33
+Coordinates=1115,908,75,33
 
 [CbxTipo]
-Coordinates=10,605,84,123
+Coordinates=820,270,84,123
 
 [ImgLogo]
-Coordinates=629,831,57,51
+Coordinates=1095,754,57,51
 
 [EdtEndereco]
-Coordinates=229,188,77,51
+Coordinates=229,121,77,51
 Visible=True
 
 [LblTituloContato]
-Coordinates=1023,605,96,51
+Coordinates=10,754,96,51
 
 [DMPrincipal.QuerySeguranca]
-Coordinates=529,605,159,105
+Coordinates=321,605,159,105
 
 [EdtComplemento]
-Coordinates=229,8,99,51
+Coordinates=218,343,99,51
 
 [LblSair]
-Coordinates=588,754,49,51
+Coordinates=350,754,49,51
 
 [LineSeparador]
-Coordinates=712,831,86,33
+Coordinates=1003,908,86,33
 
 [BtnSalvar]
-Coordinates=463,831,62,51
+Coordinates=503,754,62,51
 
 [ImgOrcamento]
-Coordinates=663,754,87,51
+Coordinates=986,605,87,51
 
 [GplTipo]
-Coordinates=910,908,53,33
+Coordinates=924,908,53,33
 
 [LvwTipo]
-Coordinates=971,10,91,195
+Coordinates=970,40,89,195
+Visible=True
 
 [CrlFoto]
-Coordinates=955,456,89,51
+Coordinates=746,456,89,51
 
 [LblConfiguracoes]
-Coordinates=351,754,101,51
+Coordinates=861,754,101,51
 
 [RctMinhaConta]
-Coordinates=10,908,89,33
+Coordinates=680,908,89,33
 
 [LblNumero]
-Coordinates=877,754,68,51
+Coordinates=134,831,68,51
 
 [LblComplemento]
-Coordinates=899,605,98,51
+Coordinates=10,831,98,51
 
 [DMPrincipal.QueryServicosPrestados]
 Coordinates=746,10,199,195
 
 [BtnMenu]
-Coordinates=267,754,58,51
-
-[VsbTipo]
-Coordinates=347,908,54,33
+Coordinates=591,754,58,51
 
 [LblEndereco]
-Coordinates=10,754,76,51
+Coordinates=884,605,76,51
 
 [ImgConfiguracao]
-Coordinates=234,831,99,51
+Coordinates=326,831,99,51
 
 [ShadowEffect2]
 Coordinates=1055,625,88,33
 
 [DMPrincipal.QueryPessoa]
-Coordinates=180,420,142,141
+Coordinates=578,420,142,141
 
 [DMPrincipal.QueryUsuario]
 Coordinates=10,420,144,159
 
 [RctSair]
-Coordinates=595,908,50,33
+Coordinates=394,908,50,33
 
 [RctOrcamento]
-Coordinates=1052,831,85,33
+Coordinates=569,908,85,33
 
 [RctSalvar]
-Coordinates=737,908,61,33
+Coordinates=811,831,61,33
 
 [ImgSair]
-Coordinates=1161,754,52,51
+Coordinates=425,754,52,51
 
 [RctMenuSuperior]
-Coordinates=221,908,100,33
+Coordinates=1237,831,100,33
 
 [RctContratos]
-Coordinates=989,908,79,33
+Coordinates=289,908,79,33
 
 [ImgMinhaConta]
-Coordinates=117,831,91,51
+Coordinates=608,831,91,51
 
 [ImgServicos]
-Coordinates=776,754,75,51
+Coordinates=1099,605,75,51
 
 [ImgContratos]
-Coordinates=10,831,81,51
+Coordinates=988,754,81,51
 
 [LblMinhaConta]
-Coordinates=1239,754,88,51
+Coordinates=132,754,88,51
 
 [BindSourceDB1]
-Coordinates=9,29,128,141
+Coordinates=10,122,128,159
+
+[DMPrincipal.QueryTipoContato]
+Coordinates=1040,280,167,33
+Visible=False
+
+[BindSourceDB2]
+Coordinates=1040,280,148,105
+
+[]
+Coordinates=1091,831,54,33
+Visible=True
+
+[DMPrincipal.QueryDadosContato]
+Coordinates=1140,50,176,33
+Visible=False
+
+[BindSourceDB3]
+Coordinates=1140,50,158,159
 

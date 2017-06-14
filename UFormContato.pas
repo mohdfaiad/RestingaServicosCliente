@@ -30,16 +30,21 @@ type
     EdtTipo: TEdit;
     BtnTipo: TButton;
     LvwTipo: TListView;
-    VsbTipo: TVertScrollBox;
     BindSourceDB1: TBindSourceDB;
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
     LinkControlToField4: TLinkControlToField;
+    BindSourceDB2: TBindSourceDB;
+    LinkListControlToField1: TLinkListControlToField;
+    BindSourceDB3: TBindSourceDB;
+    LinkListControlToField2: TLinkListControlToField;
+    VsbTipo: TVertScrollBox;
     procedure FormShow(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnTipoClick(Sender: TObject);
 //    procedure BtnSalvarClick(Sender: TObject);
   private
-    procedure BtnSalvarClick(Sender: TObject);
     { Private declarations }
   public
     function validaCampos:boolean;
@@ -67,6 +72,21 @@ begin
 end;
 
 
+procedure TFormContato.BtnTipoClick(Sender: TObject);
+begin
+  inherited;
+  with DMPrincipal do
+  Begin
+    QueryDadosContato.append;
+    QueryDadosContatoPessoa_id.value := QueryPessoaLogadaid.Value;
+    QueryDadosContatoContato_tipo_id.Value := BindSourceDB2.DataSet.FieldByName('id').AsInteger;
+    QueryDadosContatocontato.AsString := EdtTipo.Text;
+    QueryDadosContato.Post;
+    Application.ProcessMessages;
+  End;
+
+end;
+
 procedure TFormContato.FormShow(Sender: TObject);
 begin
   inherited;
@@ -76,6 +96,13 @@ begin
     QueryContato.ParamByName('pUsuario_Id').Value:= FormSplash.Pessoa_id;
     QueryContato.Open;
     QueryContato.Edit;
+
+    QueryDadoscontato.Close;
+    QueryDadoscontato.ParamByName('pPessoa_id').Value := QueryPessoaLogadaid.Value;
+    QueryDadoscontato.Open;
+
+    QueryTipoContato.Close;
+    QueryTipoContato.Open;
   end;
 end;
 

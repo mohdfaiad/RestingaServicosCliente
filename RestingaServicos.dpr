@@ -24,7 +24,8 @@ uses
   UFormMinhaConta in 'UFormMinhaConta.pas' {FormMinhaConta},
   UFormDadosPessoais in 'UFormDadosPessoais.pas' {FormDadosPessoais},
   UFormContato in 'UFormContato.pas' {FormContato},
-  UFormSeguranca in 'UFormSeguranca.pas' {FormSeguranca};
+  UFormSeguranca in 'UFormSeguranca.pas' {FormSeguranca},
+  UFormContatoPessoa in 'UFormContatoPessoa.pas' {FormContatoPessoa};
 
 {$R *.res}
 
@@ -32,10 +33,5 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
-  Application.CreateForm(TFormMinhaConta, FormMinhaConta);
-  Application.CreateForm(TFormDadosPessoais, FormDadosPessoais);
-  Application.CreateForm(TFormContato, FormContato);
-  Application.CreateForm(TFormSeguranca, FormSeguranca);
-  Application.CreateForm(TFormSeguranca, FormSeguranca);
   Application.Run;
 end.

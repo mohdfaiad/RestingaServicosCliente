@@ -23,7 +23,6 @@ type
     BtnTipo: TButton;
     LblComplemento: TLabel;
     LblEndereco: TLabel;
-    LblTituloContato: TLabel;
     LvwTipo: TListView;
     VsbTipo: TVertScrollBox;
     RctSalvar: TRectangle;

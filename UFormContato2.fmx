@@ -1,0 +1,492 @@
+inherited FormContato2: TFormContato2
+  Caption = 'FormModelo1'
+  Position = ScreenCenter
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited Lyt1: TLayout
+    inherited TbPrincipal: TToolBar
+      inherited lblTituloModelo: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Dados de contato'
+      end
+    end
+    inherited Lyt2: TLayout
+      object GplCEPNum: TGridPanelLayout
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        ColumnCollection = <
+          item
+            Value = 65.083798882681560000
+          end
+          item
+            Value = 34.916201117318440000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = LblCEP
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = LblNumero
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = EdtCEP
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = EdtNumero
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            SizeStyle = Absolute
+            Value = 15.000000000000000000
+          end
+          item
+            SizeStyle = Absolute
+            Value = 20.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object LblCEP: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Size.Width = 188.743011474609400000
+          Size.Height = 14.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'CEP:'
+        end
+        object LblNumero: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Position.X = 188.743011474609400000
+          Size.Width = 101.256988525390600000
+          Size.Height = 14.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'N'#250'mero:'
+        end
+        object EdtCEP: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 2
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.Y = 15.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 178.743011474609400000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object EdtNumero: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 3
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 188.743011474609400000
+          Position.Y = 15.000000000000000000
+          Size.Width = 101.256988525390600000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+      end
+      object LblEndereco: TLabel
+        Align = Top
+        StyledSettings = [FontColor]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 51.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Endere'#231'o:'
+      end
+      object EdtEndereco: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 6
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 68.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
+      end
+      object LblComplemento: TLabel
+        Align = Top
+        StyledSettings = [FontColor]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 103.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Complemento:'
+      end
+      object EdtComplemento: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 8
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 120.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
+      end
+      object RctDadosContato: TRectangle
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 314.000000000000000000
+        Size.PlatformDefault = False
+        object Label1: TLabel
+          Align = Top
+          StyledSettings = [FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'Label1Style1'
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Dados de contato:'
+        end
+        object GplTipo: TGridPanelLayout
+          Align = Top
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 27.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          ColumnCollection = <
+            item
+              Value = 61.290322580645160000
+            end
+            item
+              Value = 38.709677419354840000
+            end
+            item
+              SizeStyle = Absolute
+              Value = 30.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = CbxTipo
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = EdtTipo
+              Row = 0
+            end
+            item
+              Column = 2
+              Control = BtnTipo
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end
+            item
+              SizeStyle = Auto
+            end>
+          object CbxTipo: TComboBox
+            Align = Top
+            Margins.Right = 2.000000000000000000
+            Size.Width = 151.225799560546900000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object EdtTipo: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Margins.Left = 3.000000000000000000
+            Size.Width = 93.774200439453120000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object BtnTipo: TButton
+            Align = Top
+            Position.X = 250.000000000000000000
+            Size.Width = 30.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'additembutton'
+            TabOrder = 2
+            OnClick = BtnTipoClick
+          end
+        end
+        object LvwTipo: TListView
+          ItemAppearanceClassName = 'TDynamicAppearance'
+          ItemEditAppearanceClassName = 'TDynamicAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 247.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          ItemAppearance.ItemHeight = 60
+          ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+            item
+              AppearanceObjectName = 'Tipo'
+              AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.Font.Family = 'Roboto'
+              Appearance.Font.StyleExt = {00070000000000000004000000}
+              Appearance.TextAlign = Leading
+              Appearance.Width = 197.000000000000000000
+              Appearance.Height = 29.000000000000000000
+              Appearance.PlaceOffset.X = 6.000000000000000000
+            end
+            item
+              AppearanceObjectName = 'Informacao'
+              AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.Font.Family = 'Roboto'
+              Appearance.TextAlign = Leading
+              Appearance.Width = 253.000000000000000000
+              Appearance.Height = 30.000000000000000000
+              Appearance.PlaceOffset.X = 6.000000000000000000
+              Appearance.PlaceOffset.Y = 28.000000000000000000
+            end
+            item
+              AppearanceObjectName = 'BtnDeletar'
+              AppearanceClassName = 'TGlyphButtonObjectAppearance'
+              Appearance.ButtonType = Delete
+              Appearance.Width = 55.000000000000000000
+              Appearance.Height = 30.000000000000000000
+              Appearance.PlaceOffset.X = 202.000000000000000000
+            end>
+          ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+            item
+              AppearanceObjectName = 'Text1'
+              AppearanceClassName = 'TTextObjectAppearance'
+            end>
+          ItemAppearanceObjects.HeaderObjects.Text.Width = 307.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.Height = 24.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.Visible = False
+          ItemAppearanceObjects.HeaderObjects.Text.PlaceOffset.X = -2.000000000000000000
+          ItemAppearanceObjects.FooterObjects.Text.Width = 299.000000000000000000
+          ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+          ItemAppearanceObjects.FooterObjects.Text.Visible = False
+          ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = -2.000000000000000000
+          object ImgLogo: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Position.X = 232.000000000000000000
+            Position.Y = 188.000000000000000000
+            Visible = False
+          end
+        end
+      end
+      object RctSalvar: TRectangle
+        Align = Bottom
+        Fill.Color = claDarkblue
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 474.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        object BtnSalvar: TButton
+          Align = MostBottom
+          StyledSettings = []
+          Size.Width = 290.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Salvar'
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = BtnSalvarClick
+        end
+      end
+    end
+  end
+  inherited MvMenu: TMultiView
+    inherited RctPrincipalMenu: TRectangle
+      inherited RctMenuTop: TRectangle
+        inherited LblNomeUsuario: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited VsbMenu: TVertScrollBox
+        Viewport.Width = 268.000000000000000000
+        Viewport.Height = 448.000000000000000000
+        inherited RctSair: TRectangle
+          inherited ImgSair: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctServicos: TRectangle
+          inherited ImgServicos: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctMinhaConta: TRectangle
+          inherited ImgMinhaConta: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctOrcamento: TRectangle
+          inherited ImgOrcamento: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited RctContratos: TRectangle
+          inherited ImgContratos: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+      end
+    end
+  end
+  inherited BDSPessoaLogada: TBindSourceDB
+    Left = 88
+    Top = 344
+  end
+  inherited BdlPessoaLogada: TBindingsList
+    Left = 240
+    Top = 277
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'desc_logradouro'
+      Control = EdtEndereco
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Logradouro_cep'
+      Control = EdtCEP
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'numero'
+      Control = EdtNumero
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'complemento'
+      Control = EdtComplemento
+      Track = False
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      Control = LvwTipo
+      FillExpressions = <
+        item
+          SourceMemberName = 'NomeTipoContato'
+          ControlMemberName = 'Tipo'
+        end
+        item
+          SourceMemberName = 'contato'
+          ControlMemberName = 'Informacao'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      FieldName = 'NomeTipoContato'
+      Control = CbxTipo
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryContato
+    ScopeMappings = <>
+    Left = 76
+    Top = 180
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DMPrincipal.QueryDadosContato
+    ScopeMappings = <>
+    Left = 60
+    Top = 256
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DMPrincipal.QueryTipoContato
+    ScopeMappings = <>
+    Left = 160
+    Top = 288
+  end
+end

@@ -17,6 +17,7 @@ type
     RecOrcamento: TRectangle;
     BtnEnviaOrcamento: TCornerButton;
     procedure BtnEnviaOrcamentoClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -58,6 +59,14 @@ begin
       close;
     End;
   End;
+
+end;
+
+procedure TFormSolicitaOrcamento2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+//  action := TCloseAction.caFree;
+//  FreeAndNil(FormSolicitaOrcamento2);
 
 end;
 

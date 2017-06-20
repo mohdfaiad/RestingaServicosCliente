@@ -15,7 +15,6 @@ type
     BtnMenu: TButton;
     BtnBuscar: TButton;
     Lyt2: TLayout;
-    ImgLogo: TImage;
     MvMenu: TMultiView;
     RctMenuTop: TRectangle;
     VsbMenu: TVertScrollBox;
@@ -23,9 +22,6 @@ type
     ImgSair: TImage;
     LblSair: TLabel;
     RctPrincipalMenu: TRectangle;
-    RctConfiguracoes: TRectangle;
-    ImgConfiguracao: TImage;
-    LblConfiguracoes: TLabel;
     RctServicos: TRectangle;
     ImgServicos: TImage;
     LblServicos: TLabel;
@@ -47,9 +43,9 @@ type
     LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField;
     ShadowEffect1: TShadowEffect;
     ShadowEffect2: TShadowEffect;
+    lblTituloModelo: TLabel;
     procedure BtnBuscarClick(Sender: TObject);
     procedure LblSairClick(Sender: TObject);
-    procedure LblOrcamentoClick(Sender: TObject);
     procedure LblServicosClick(Sender: TObject);
 //    procedure ContratosClick(Sender: TObject);
     procedure RctContratosClick(Sender: TObject);
@@ -70,7 +66,7 @@ implementation
 {$R *.fmx}
 
 uses UDMPrincipal, UFormPrincipal, UFormChat, UFormContratos, UFormServicos, UFormLogin,
-  UFormMinhaConta;
+  UFormMinhaConta, UFormListaOrcamentos, UFormListaContratos;
 
 procedure TFormModelo.BtnBuscarClick(Sender: TObject);
 begin
@@ -82,13 +78,6 @@ begin
 
   FreeAndNil(FormModelo);     // fecha e libera o form
 
-end;
-
-procedure TFormModelo.LblOrcamentoClick(Sender: TObject);
-begin
-  if FormChat=nil then
-    Application.CreateForm(TFormChat,FormChat);
-  TFormChat.create(self).show;
 end;
 
 procedure TFormModelo.LblSairClick(Sender: TObject);
@@ -129,9 +118,9 @@ end;
 
 procedure TFormModelo.RctContratosClick(Sender: TObject);
 begin
-if FormContratos = nil then
-    application.CreateForm(TFormContratos,FormContratos);
-  TFormContratos.create(self).show;
+if FormListaContratos = nil then
+    application.CreateForm(TFormListaContratos,FormListaContratos);
+  TFormListaContratos.create(self).show;
 end;
 
 procedure TFormModelo.RctMinhaContaClick(Sender: TObject);
@@ -143,9 +132,9 @@ end;
 
 procedure TFormModelo.RctOrcamentoClick(Sender: TObject);
 begin
-  if FormChat = nil then
-    application.CreateForm(TFormChat,FormChat);
-  TFormChat.create(self).show;
+  if FormListaOrcamentos=nil then
+    Application.CreateForm(TFormListaOrcamentos,FormListaOrcamentos);
+  TFormListaOrcamentos.create(self).show;
 end;
 
 end.

@@ -19,6 +19,7 @@ type
     procedure BtnContratarProfissionalClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure BtnTenhoCadastroClick(Sender: TObject);
+    procedure BtnPrestadorServicoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,14 +33,26 @@ implementation
 
 {$R *.fmx}
 
-uses UFormSelecionaArea, UFormLogin;
+uses UFormSelecionaArea, UFormLogin, UFormPesquisaSemLogin;
 
 procedure TFormSelecaoInicial.BtnContratarProfissionalClick(Sender: TObject);
 begin
 
-  if FormSelecionaArea=nil then
-    Application.CreateForm(TFormSelecionaArea,FormSelecionaArea);
-  TFormSelecionaArea.create(self).show;
+  if FormPesquisaSemLogin=nil then
+    Application.CreateForm(TFormPesquisaSemLogin,FormPesquisaSemLogin);
+  TFormPesquisaSemLogin.create(self).show;
+
+
+//  if FormSelecionaArea=nil then
+//    Application.CreateForm(TFormSelecionaArea,FormSelecionaArea);
+//  TFormSelecionaArea.create(self).show;
+
+end;
+
+procedure TFormSelecaoInicial.BtnPrestadorServicoClick(Sender: TObject);
+begin
+  ShowMessage('Acesse www.restingaservicos.com.br e baixe nosso aplicativo para se cadastrar como profissional em nossa plataforma.');
+//  MessageDlg('Acesse www.restingaservicos.com.br e baixe nosso aplicativo para se cadastrar como profissional em nossa plataforma.',System.UITypes.TMsgDlgType.mtInformation,[System.UITypes.TMsgDlgBtn.mbOK],0);
 
 end;
 

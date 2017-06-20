@@ -1,7 +1,7 @@
 object DMPrincipal: TDMPrincipal
   OldCreateOrder = False
-  Height = 221
-  Width = 592
+  Height = 456
+  Width = 650
   object UniConnPrincipal: TUniConnection
     ProviderName = 'mySQL'
     Port = 2020
@@ -17,18 +17,34 @@ object DMPrincipal: TDMPrincipal
   object QueryProfissoes: TUniQuery
     Connection = UniConnPrincipal
     SQL.Strings = (
-      'select id,nome from profissao '
-      'order by nome limit 1000;')
+      'select p.id,'
+      '       p.Profissao_area_id,'
+      '       p.Nome'
+      
+        'From Profissao p left join profissao_area pa on p.Profissao_area' +
+        '_id = pa.id'
+      'where pa.NomeArea = :pNome'
+      'order by Nome;')
     Left = 164
     Top = 2
-    object QueryProfissoesid: TIntegerField
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'pNome'
+        Value = nil
+      end>
+    object QueryProfissoesid: TLongWordField
       AutoGenerateValue = arAutoInc
       FieldName = 'id'
     end
-    object QueryProfissoesnome: TStringField
-      FieldName = 'nome'
+    object QueryProfissoesProfissao_area_id: TLongWordField
+      FieldName = 'Profissao_area_id'
       Required = True
-      Size = 120
+    end
+    object QueryProfissoesNome: TStringField
+      FieldName = 'Nome'
+      Required = True
+      Size = 255
     end
   end
   object MySQLUniProvider1: TMySQLUniProvider
@@ -100,7 +116,7 @@ object DMPrincipal: TDMPrincipal
         '                  left join cidade c on b.cidade_id = c.cidade_i' +
         'd'
       ' where num_cep = :pCep;')
-    Left = 268
+    Left = 280
     Top = 2
     ParamData = <
       item
@@ -161,7 +177,7 @@ object DMPrincipal: TDMPrincipal
         '              left join profissao pro on pro.id = pp.profissao_i' +
         'd'
       'where p.id = :pId;')
-    Left = 268
+    Left = 280
     Top = 52
     ParamData = <
       item
@@ -223,7 +239,7 @@ object DMPrincipal: TDMPrincipal
         'ente_id = p.id'
       'left join notas n on s.Nota_contratado = n.nota'
       'where s.pessoa_contratada_id = :pContratado_id limit 5;')
-    Left = 384
+    Left = 416
     Top = 4
     ParamData = <
       item
@@ -272,7 +288,7 @@ object DMPrincipal: TDMPrincipal
       'FROM usuario'
       'where email = :pEmail'
       'and senha = :pSenha;')
-    Left = 384
+    Left = 416
     Top = 52
     ParamData = <
       item
@@ -330,7 +346,7 @@ object DMPrincipal: TDMPrincipal
     SQL.Strings = (
       'select * from usuario')
     FilterOptions = [foCaseInsensitive]
-    Left = 504
+    Left = 548
     Top = 4
     object QueryUsuarioid: TLongWordField
       FieldName = 'id'
@@ -404,7 +420,7 @@ object DMPrincipal: TDMPrincipal
     SQL.Strings = (
       'select * from pessoa limit 1;')
     FilterOptions = [foCaseInsensitive]
-    Left = 500
+    Left = 548
     Top = 52
     object QueryCadastraPessoaid: TLongWordField
       FieldName = 'id'
@@ -463,7 +479,7 @@ object DMPrincipal: TDMPrincipal
       
         '  (:contratante_id, :contratado_id, :data_orcamento, :Status, :D' +
         'escricao)')
-    Left = 380
+    Left = 416
     Top = 104
     ParamData = <
       item
@@ -535,7 +551,7 @@ object DMPrincipal: TDMPrincipal
       'SELECT id,email, senha'
       'FROM usuario u'
       'where id = :pIdUsuario;')
-    Left = 504
+    Left = 548
     Top = 104
     ParamData = <
       item
@@ -581,7 +597,7 @@ object DMPrincipal: TDMPrincipal
       'left join Logradouro l on p.Logradouro_cep = l.num_cep'
       'left join Usuario u on p.id = u.pessoa_id'
       'WHERE u.id= :pUsuario_id;')
-    Left = 264
+    Left = 280
     Top = 104
     ParamData = <
       item
@@ -610,27 +626,45 @@ object DMPrincipal: TDMPrincipal
     end
   end
   object QueryDadosPessoais: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO pessoa'
+      '  (id, NomePessoa, CPFCNPJ, foto, Data_nascimento)'
+      'VALUES'
+      '  (:id, :NomePessoa, :CPFCNPJ, :foto, :Data_nascimento)')
+    SQLDelete.Strings = (
+      'DELETE FROM pessoa'
+      'WHERE'
+      '  id = :Old_id')
     SQLUpdate.Strings = (
       'UPDATE pessoa'
       'SET'
       
-        '  NomePessoa = :NomePessoa, CPFCNPJ = :CPFCNPJ, Data_nascimento ' +
-        '= :Data_nascimento'
+        '  id = :id, NomePessoa = :NomePessoa, CPFCNPJ = :CPFCNPJ, foto =' +
+        ' :foto, Data_nascimento = :Data_nascimento'
       'WHERE'
       '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM pessoa'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
     SQLRefresh.Strings = (
-      'SELECT NomePessoa, CPFCNPJ FROM pessoa'
+      
+        'SELECT id, NomePessoa, CPFCNPJ, foto, Data_nascimento FROM pesso' +
+        'a'
       'WHERE'
       '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM pessoa')
     Connection = UniConnPrincipal
     SQL.Strings = (
       
         'SELECT p.id, p.NomePessoa, p.CPFCNPJ, p.Data_nascimento, u.id us' +
-        'uario_id'
+        'uario_id,p.foto'
       'FROM pessoa p left join Usuario u on p.id = u.pessoa_id'
       'WHERE u.id= :pUsuario_id;')
     Left = 160
-    Top = 160
+    Top = 156
     ParamData = <
       item
         DataType = ftUnknown
@@ -656,13 +690,16 @@ object DMPrincipal: TDMPrincipal
       FieldName = 'usuario_id'
       ReadOnly = True
     end
+    object QueryDadosPessoaisfoto: TBlobField
+      FieldName = 'foto'
+    end
   end
   object QueryTipoContato: TUniQuery
     Connection = UniConnPrincipal
     SQL.Strings = (
       'select * from contato_tipo'
       'order by nometipocontato;')
-    Left = 376
+    Left = 416
     Top = 156
     object QueryTipoContatoid: TLongWordField
       FieldName = 'id'
@@ -711,7 +748,7 @@ object DMPrincipal: TDMPrincipal
         'FROM pessoa_contato p left join contato_tipo tp on p.contato_tip' +
         'o_id = tp.id'
       'where p.pessoa_id = :pPessoa_id;')
-    Left = 264
+    Left = 280
     Top = 156
     ParamData = <
       item
@@ -737,6 +774,383 @@ object DMPrincipal: TDMPrincipal
     end
     object QueryDadosContatoNomeTipoContato: TStringField
       FieldName = 'NomeTipoContato'
+      ReadOnly = True
+      Size = 250
+    end
+  end
+  object QueryArea: TUniQuery
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'Select * from profissao_area')
+    Left = 548
+    Top = 156
+    object QueryAreaid: TLongWordField
+      FieldName = 'id'
+    end
+    object QueryAreaNomeArea: TStringField
+      FieldName = 'NomeArea'
+      Required = True
+      Size = 255
+    end
+  end
+  object QueryOrcamentos: TUniQuery
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT o.*, p.nomepessoa'
+      'FROM orcamento o join pessoa p on o.contratado_id = p.id'
+      'where contratante_id = :pId'
+      'and Status = :pStatus'
+      'order by data_orcamento;')
+    Left = 160
+    Top = 204
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'pId'
+        Value = 1
+      end
+      item
+        DataType = ftInteger
+        Name = 'pStatus'
+        Value = 0
+      end>
+    object QueryOrcamentosid: TLongWordField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object QueryOrcamentoscontratante_id: TLongWordField
+      FieldName = 'contratante_id'
+      Required = True
+    end
+    object QueryOrcamentoscontratado_id: TLongWordField
+      FieldName = 'contratado_id'
+      Required = True
+    end
+    object QueryOrcamentosdata_orcamento: TDateTimeField
+      FieldName = 'data_orcamento'
+      Required = True
+    end
+    object QueryOrcamentosStatus: TBooleanField
+      FieldName = 'Status'
+      Required = True
+    end
+    object QueryOrcamentosDescricao: TMemoField
+      FieldName = 'Descricao'
+      Required = True
+      BlobType = ftMemo
+    end
+    object QueryOrcamentosnomepessoa: TStringField
+      FieldName = 'nomepessoa'
+      ReadOnly = True
+      Size = 250
+    end
+  end
+  object QueryOrcamento_Chat: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO orcamento_chat'
+      '  (id, DataEnvio, Texto, orcamento_id, Pessoa_id)'
+      'VALUES'
+      '  (:id, :DataEnvio, :Texto, :orcamento_id, :Pessoa_id)')
+    SQLDelete.Strings = (
+      'DELETE FROM orcamento_chat'
+      'WHERE'
+      '  id = :Old_id')
+    SQLUpdate.Strings = (
+      'UPDATE orcamento_chat'
+      'SET'
+      
+        '  id = :id, DataEnvio = :DataEnvio, Texto = :Texto, orcamento_id' +
+        ' = :orcamento_id, Pessoa_id = :Pessoa_id'
+      'WHERE'
+      '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM orcamento_chat'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
+    SQLRefresh.Strings = (
+      
+        'SELECT id, DataEnvio, Texto, orcamento_id, Pessoa_id FROM orcame' +
+        'nto_chat'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM orcamento_chat')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT o.*, p.NomePessoa'
+      'FROM orcamento_chat o left join pessoa p on o.pessoa_id = p.id'
+      'where orcamento_id = :pOrcamento_id'
+      'order by DataEnvio;')
+    Left = 280
+    Top = 204
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'pOrcamento_id'
+        Value = 4
+      end>
+    object QueryOrcamento_Chatid: TLongWordField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object QueryOrcamento_ChatDataEnvio: TDateTimeField
+      FieldName = 'DataEnvio'
+      Required = True
+    end
+    object QueryOrcamento_ChatTexto: TMemoField
+      FieldName = 'Texto'
+      Required = True
+      BlobType = ftMemo
+    end
+    object QueryOrcamento_Chatorcamento_id: TLongWordField
+      FieldName = 'orcamento_id'
+      Required = True
+    end
+    object QueryOrcamento_ChatPessoa_id: TLongWordField
+      FieldName = 'Pessoa_id'
+      Required = True
+    end
+    object QueryOrcamento_ChatNomePessoa: TStringField
+      FieldName = 'NomePessoa'
+      ReadOnly = True
+      Size = 250
+    end
+  end
+  object QueryOrcamento_Proposta: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO orcamento_proposta'
+      
+        '  (id, Orcamento_id, FormaPagamento_id, QtdParcelas, ValorTotal,' +
+        ' DataInicio, DataPrevisao, Observacoes)'
+      'VALUES'
+      
+        '  (:id, :Orcamento_id, :FormaPagamento_id, :QtdParcelas, :ValorT' +
+        'otal, :DataInicio, :DataPrevisao, :Observacoes)')
+    SQLDelete.Strings = (
+      'DELETE FROM orcamento_proposta'
+      'WHERE'
+      '  id = :Old_id')
+    SQLUpdate.Strings = (
+      'UPDATE orcamento_proposta'
+      'SET'
+      
+        '  id = :id, Orcamento_id = :Orcamento_id, FormaPagamento_id = :F' +
+        'ormaPagamento_id, QtdParcelas = :QtdParcelas, ValorTotal = :Valo' +
+        'rTotal, DataInicio = :DataInicio, DataPrevisao = :DataPrevisao, ' +
+        'Observacoes = :Observacoes'
+      'WHERE'
+      '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM orcamento_proposta'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
+    SQLRefresh.Strings = (
+      
+        'SELECT id, Orcamento_id, FormaPagamento_id, QtdParcelas, ValorTo' +
+        'tal, DataInicio, DataPrevisao, Observacoes FROM orcamento_propos' +
+        'ta'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM orcamento_proposta')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT *'
+      'FROM orcamento_proposta'
+      'where orcamento_id = :pOrcamento_id;')
+    Left = 548
+    Top = 204
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'pOrcamento_id'
+        Value = 4
+      end>
+    object QueryOrcamento_Propostaid: TLongWordField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object QueryOrcamento_PropostaOrcamento_id: TLongWordField
+      FieldName = 'Orcamento_id'
+      Required = True
+    end
+    object QueryOrcamento_PropostaFormaPagamento_id: TLongWordField
+      FieldName = 'FormaPagamento_id'
+      Required = True
+    end
+    object QueryOrcamento_PropostaQtdParcelas: TLongWordField
+      FieldName = 'QtdParcelas'
+    end
+    object QueryOrcamento_PropostaValorTotal: TFloatField
+      FieldName = 'ValorTotal'
+      Required = True
+      currency = True
+    end
+    object QueryOrcamento_PropostaDataInicio: TDateTimeField
+      FieldName = 'DataInicio'
+      Required = True
+    end
+    object QueryOrcamento_PropostaDataPrevisao: TDateTimeField
+      FieldName = 'DataPrevisao'
+    end
+    object QueryOrcamento_PropostaObservacoes: TMemoField
+      FieldName = 'Observacoes'
+      BlobType = ftMemo
+    end
+  end
+  object QueryFormaPagamento: TUniQuery
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'select * from FormaPagamento;')
+    Left = 416
+    Top = 204
+    object QueryFormaPagamentoid: TLongWordField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object QueryFormaPagamentoFormaPagamento: TStringField
+      FieldName = 'FormaPagamento'
+      Required = True
+      Size = 200
+    end
+  end
+  object QueryOrcamento_Contrato: TUniQuery
+    SQLInsert.Strings = (
+      'INSERT INTO orcamento_contrato'
+      
+        '  (id, Orcamento_id, Nota, Descricao, Status, DataAbertura, Data' +
+        'Fechamento)'
+      'VALUES'
+      
+        '  (:id, :Orcamento_id, :Nota, :Descricao, :Status, :DataAbertura' +
+        ', :DataFechamento)')
+    SQLDelete.Strings = (
+      'DELETE FROM orcamento_contrato'
+      'WHERE'
+      '  id = :Old_id')
+    SQLUpdate.Strings = (
+      'UPDATE orcamento_contrato'
+      'SET'
+      
+        '  id = :id, Orcamento_id = :Orcamento_id, Nota = :Nota, Descrica' +
+        'o = :Descricao, Status = :Status, DataAbertura = :DataAbertura, ' +
+        'DataFechamento = :DataFechamento'
+      'WHERE'
+      '  id = :Old_id')
+    SQLLock.Strings = (
+      'SELECT * FROM orcamento_contrato'
+      'WHERE'
+      '  id = :Old_id'
+      'FOR UPDATE')
+    SQLRefresh.Strings = (
+      
+        'SELECT id, Orcamento_id, Nota, Descricao, Status, DataAbertura, ' +
+        'DataFechamento FROM orcamento_contrato'
+      'WHERE'
+      '  id = :id')
+    SQLRecCount.Strings = (
+      'SELECT COUNT(*) FROM orcamento_contrato')
+    Connection = UniConnPrincipal
+    SQL.Strings = (
+      'SELECT occ.*,'
+      '       o.contratante_id,'
+      '       o.contratado_id,'
+      '       o.Descricao as DescOrcamento,'
+      '       op.QtdParcelas,'
+      '       op.ValorTotal,'
+      '       op.Observacoes,'
+      '       f.FormaPagamento,'
+      '       p.NomePessoa as Profissional'
+      
+        'FROM orcamento_contrato occ left join orcamento o on occ.orcamen' +
+        'to_id = o.id'
+      
+        '                            left join orcamento_proposta op on o' +
+        '.id = op.orcamento_id'
+      
+        '                            left join FormaPagamento f on op.For' +
+        'maPagamento_id = f.id'
+      
+        '                            left join pessoa p on p.id = o.contr' +
+        'atado_id'
+      'where o.contratante_id = :pContratante_id'
+      'and occ.Status = :pStatus'
+      'Order by dataabertura;')
+    Active = True
+    Left = 160
+    Top = 252
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'pContratante_id'
+        Value = 1
+      end
+      item
+        DataType = ftBoolean
+        Name = 'pStatus'
+        Value = False
+      end>
+    object QueryOrcamento_Contratoid: TLongWordField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object QueryOrcamento_ContratoOrcamento_id: TLongWordField
+      FieldName = 'Orcamento_id'
+      Required = True
+    end
+    object QueryOrcamento_ContratoNota: TLongWordField
+      FieldName = 'Nota'
+    end
+    object QueryOrcamento_ContratoDescricao: TMemoField
+      FieldName = 'Descricao'
+      BlobType = ftMemo
+    end
+    object QueryOrcamento_ContratoStatus: TBooleanField
+      FieldName = 'Status'
+      Required = True
+    end
+    object QueryOrcamento_ContratoDataAbertura: TDateTimeField
+      FieldName = 'DataAbertura'
+      Required = True
+    end
+    object QueryOrcamento_ContratoDataFechamento: TDateTimeField
+      FieldName = 'DataFechamento'
+    end
+    object QueryOrcamento_Contratocontratante_id: TLongWordField
+      FieldName = 'contratante_id'
+      ReadOnly = True
+    end
+    object QueryOrcamento_Contratocontratado_id: TLongWordField
+      FieldName = 'contratado_id'
+      ReadOnly = True
+    end
+    object QueryOrcamento_ContratoDescOrcamento: TMemoField
+      FieldName = 'DescOrcamento'
+      ReadOnly = True
+      BlobType = ftMemo
+    end
+    object QueryOrcamento_ContratoQtdParcelas: TLongWordField
+      FieldName = 'QtdParcelas'
+      ReadOnly = True
+    end
+    object QueryOrcamento_ContratoValorTotal: TFloatField
+      FieldName = 'ValorTotal'
+      ReadOnly = True
+    end
+    object QueryOrcamento_ContratoObservacoes: TMemoField
+      FieldName = 'Observacoes'
+      ReadOnly = True
+      BlobType = ftMemo
+    end
+    object QueryOrcamento_ContratoFormaPagamento: TStringField
+      FieldName = 'FormaPagamento'
+      ReadOnly = True
+      Size = 200
+    end
+    object QueryOrcamento_ContratoProfissional: TStringField
+      FieldName = 'Profissional'
       ReadOnly = True
       Size = 250
     end

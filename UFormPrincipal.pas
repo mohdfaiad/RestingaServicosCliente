@@ -18,15 +18,28 @@ type
     LinkFillControlToField2: TLinkFillControlToField;
     RctFundoPrincipal: TRectangle;
     Rectangle2: TRectangle;
-    LinkListControlToField1: TLinkListControlToField;
+    BtnMostraComboArea: TButton;
+    CbxArea: TComboBox;
+    BtnSeta1: TButton;
+    BtnSeta2: TButton;
+    BindSourceDB3: TBindSourceDB;
+    LinkFillControlToField: TLinkFillControlToField;
+    LinkFillControlToField3: TLinkFillControlToField;
+    RctArea: TRectangle;
     procedure CbxProfissoesChange(Sender: TObject);
     procedure LstvwProfissionaisItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure FormShow(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BtnMostraComboAreaClick(Sender: TObject);
+    procedure CbxAreaChange(Sender: TObject);
   private
     { Private declarations }
   public
+    area:Integer;
+    Status:Integer;
+    procedure consultaProfissional(Origem:Integer);
+
     { Public declarations }
   end;
 
@@ -40,13 +53,54 @@ implementation
 
 uses UDMPrincipal, UFormFichaProfissional;
 
-procedure TFormPrincipal.CbxProfissoesChange(Sender: TObject);
+procedure TFormPrincipal.BtnMostraComboAreaClick(Sender: TObject);
+begin
+  inherited;
+
+  RctArea.Visible := not RctArea.Visible;
+  if RctArea.Visible then
+  Begin
+    BtnSeta1.StyleLookup := 'arrowuptoolbutton';
+    BtnSeta2.StyleLookup := 'arrowuptoolbutton';
+  End
+  Else
+  Begin
+    BtnSeta1.StyleLookup := 'arrowdowntoolbutton';
+    BtnSeta2.StyleLookup := 'arrowdowntoolbutton';
+  End;
+
+end;
+
+procedure TFormPrincipal.CbxAreaChange(Sender: TObject);
 begin
   inherited;
   with DMPrincipal do
   Begin
+    QueryProfissoes.Close;
+    QueryProfissoes.ParamByName('pNome').AsString := CbxArea.Selected.Text;
+    QueryProfissoes.Open;
+  End;
+  RctArea.Visible := false;
+  BtnSeta1.StyleLookup := 'arrowdowntoolbutton';
+  BtnSeta2.StyleLookup := 'arrowdowntoolbutton';
+
+end;
+
+procedure TFormPrincipal.CbxProfissoesChange(Sender: TObject);
+begin
+  inherited;
+
+  consultaProfissional(Status);
+
+end;
+
+procedure TFormPrincipal.consultaProfissional(Origem: Integer);
+begin
+
+  with DMPrincipal do
+  Begin
     QueryPessoa.Close;
-    QueryPessoa.ParamByName('pProfissao').AsString :=  CbxProfissoes.Selected.Text;
+    QueryPessoa.ParamByName('pProfissao').AsString := CbxProfissoes.Selected.Text;
     QueryPessoa.Open;
 
     if QueryPessoa.IsEmpty then
@@ -55,27 +109,11 @@ begin
 
 end;
 
-procedure TFormPrincipal.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+procedure TFormPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   inherited;
-//  CanClose := False;
-//  MessageDlg('Deseja realmente fechar o aplicativo?',
-//    System.UITypes.TMsgDlgType.mtInformation,
-//    [System.UITypes.TMsgDlgBtn.mbYes, System.UITypes.TMsgDlgBtn.mbNo], 0,
-//    procedure(const BotaoPressionado: TModalResult)
-//      begin
-//        case BotaoPressionado of
-//          mrYes:
-//          begin
-//            Application.Terminate;
-//          end;
-//          mrNo:
-//          begin
-//            Show;
-//          end;
-//        end;
-//      end
-//    );
+//  action := TCloseAction.caFree;
+//  FreeAndNil(FormPrincipal);
 
 end;
 
@@ -108,8 +146,14 @@ end;
 procedure TFormPrincipal.FormShow(Sender: TObject);
 begin
   inherited;
-  DMPrincipal.QueryProfissoes.Close;
-  DMPrincipal.QueryProfissoes.Open;
+  with DMPrincipal do
+  begin
+    QueryArea.Close;
+    QueryArea.Open;
+    RctArea.Visible := true;
+    BtnSeta1.StyleLookup := 'arrowuptoolbutton';
+    BtnSeta2.StyleLookup := 'arrowuptoolbutton';
+  end;
 
 end;
 
@@ -130,12 +174,8 @@ begin
     QueryServicosPrestados.ParamByName('pContratado_id').AsInteger := strtoint(id);
     QueryServicosPrestados.Open;
     if FormFichaProfissional=nil then
-    Begin
       Application.CreateForm(TFormFichaProfissional,FormFichaProfissional);
-      TFormFichaProfissional.Create(self).Show;
-    End
-    else
-      FormFichaProfissional.show;
+    TFormFichaProfissional.Create(self).Show;
   end;
 
 end;

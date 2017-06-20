@@ -13,9 +13,6 @@ Coordinates=219,826,88,36
 [LblSair]
 Coordinates=446,680,55,58
 
-[LblConfiguracoes]
-Coordinates=986,552,115,58
-
 [LblMinhaConta]
 Coordinates=542,552,101,58
 
@@ -54,7 +51,7 @@ Coordinates=918,10,188,168
 Coordinates=10,10,217,322
 
 []
-Coordinates=650,330,106,58
+Coordinates=76,826,117,36
 Visible=True
 ExplicitSubNodes=Fill.Bitmap.Bitmap.Image;Fill.Bitmap.Bitmap.LoadFromStream
 
@@ -86,12 +83,6 @@ Coordinates=774,764,83,36
 
 [RctSair]
 Coordinates=883,764,57,36
-
-[RctConfiguracoes]
-Coordinates=76,826,117,36
-
-[ImgConfiguracao]
-Coordinates=404,552,112,58
 
 [ImgContratos]
 Coordinates=207,680,92,58
@@ -125,9 +116,6 @@ Coordinates=966,764,63,36
 
 [RctMenuSuperior]
 Coordinates=139,764,114,36
-
-[ImgLogo]
-Coordinates=117,680,64,58
 
 [CrlFoto]
 Coordinates=670,430,106,58

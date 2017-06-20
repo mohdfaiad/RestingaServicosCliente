@@ -291,16 +291,16 @@
         <IncludeAndroid_Splash>False</IncludeAndroid_Splash>
         <Android_SplashGravity>fill</Android_SplashGravity>
         <Android_SplashTileMode>disabled</Android_SplashTileMode>
-        <Android_SplashImage426>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png</Android_SplashImage426>
-        <Android_LauncherIcon72>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp72.png</Android_LauncherIcon72>
-        <Android_LauncherIcon144>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp144.png</Android_LauncherIcon144>
-        <Android_LauncherIcon48>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp48.png</Android_LauncherIcon48>
-        <Android_SplashImage470>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png</Android_SplashImage470>
-        <Android_SplashImage640>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png</Android_SplashImage640>
-        <Android_SplashImage960>C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png</Android_SplashImage960>
+        <Android_SplashImage426>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\426x320-02.png</Android_SplashImage426>
+        <Android_LauncherIcon72>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\72x72-01.png</Android_LauncherIcon72>
+        <Android_LauncherIcon144>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\144x144-02.png</Android_LauncherIcon144>
+        <Android_LauncherIcon48>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\48x48-02.png</Android_LauncherIcon48>
+        <Android_SplashImage470>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\470x320-01.png</Android_SplashImage470>
+        <Android_SplashImage640>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\640x480-01.png</Android_SplashImage640>
+        <Android_SplashImage960>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\960x720-02.png</Android_SplashImage960>
         <VerInfo_Build>1</VerInfo_Build>
-        <Android_LauncherIcon96>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp96.png</Android_LauncherIcon96>
-        <Android_LauncherIcon36>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp36.png</Android_LauncherIcon36>
+        <Android_LauncherIcon96>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\96x96-02.png</Android_LauncherIcon96>
+        <Android_LauncherIcon36>D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\36x36-02.png</Android_LauncherIcon36>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -388,10 +388,6 @@
             <Form>FormSolicitaOrcamento</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="UFormContratos.pas">
-            <Form>FormContratos</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="UFormServicos.pas">
             <Form>FormServicos</Form>
             <FormType>fmx</FormType>
@@ -412,16 +408,28 @@
             <Form>FormDadosPessoais</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="UFormContato.pas">
-            <Form>FormContato</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="UFormSeguranca.pas">
             <Form>FormSeguranca</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="UFormContatoPessoa.pas">
-            <Form>FormContatoPessoa</Form>
+        <DCCReference Include="UFormListaOrcamentos.pas">
+            <Form>FormListaOrcamentos</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormContato2.pas">
+            <Form>FormContato2</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormListaContratos.pas">
+            <Form>FormListaContratos</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormContratoFicha.pas">
+            <Form>FormContratoFicha</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UFormFinalizarContrato.pas">
+            <Form>FormFinalizarContrato</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -450,9 +458,9 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp72.png" Configuration="Debug" Class="Android_LauncherIcon72">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\640x480-01.png" Configuration="Debug" Class="Android_SplashImage640">
                     <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
+                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -462,7 +470,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp48.png" Configuration="Debug" Class="Android_LauncherIcon48">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\960x720-02.png" Configuration="Debug" Class="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\72x72-01.png" Configuration="Debug" Class="Android_LauncherIcon72">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -479,7 +493,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp144.png" Configuration="Debug" Class="Android_LauncherIcon144">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\48x48-02.png" Configuration="Debug" Class="Android_LauncherIcon48">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -490,37 +504,31 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp96.png" Configuration="Debug" Class="Android_LauncherIcon96">
-                    <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgsqlite3.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp36.png" Configuration="Debug" Class="Android_LauncherIcon36">
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\144x144-02.png" Configuration="Debug" Class="Android_LauncherIcon144">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png" Configuration="Debug" Class="Android_SplashImage470">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\470x320-01.png" Configuration="Debug" Class="Android_SplashImage470">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png" Configuration="Debug" Class="Android_SplashImage640">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\36x36-02.png" Configuration="Debug" Class="Android_LauncherIcon36">
                     <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -535,15 +543,26 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\lib\android\debug\mips\libnative-activity.so" Configuration="Debug" Class="AndroidLibnativeMipsFile">
+                <DeployFile LocalName="$(NDKBasePath)\prebuilt\android-arm\gdbserver\gdbserver" Configuration="Debug" Class="AndroidGDBServer">
                     <Platform Name="Android">
-                        <RemoteName>libRestingaServicos.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png" Configuration="Debug" Class="Android_SplashImage960">
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\96x96-02.png" Configuration="Debug" Class="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteName>ic_launcher.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\426x320-02.png" Configuration="Debug" Class="Android_SplashImage426">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\lib\android\debug\mips\libnative-activity.so" Configuration="Debug" Class="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteName>libRestingaServicos.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -553,23 +572,27 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(NDKBasePath)\prebuilt\android-arm\gdbserver\gdbserver" Configuration="Debug" Class="AndroidGDBServer">
-                    <Platform Name="Android">
-                        <Overwrite>true</Overwrite>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
                     </Platform>
-                </DeployFile>
-                <DeployFile LocalName="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png" Configuration="Debug" Class="Android_SplashImage426">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -948,27 +971,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

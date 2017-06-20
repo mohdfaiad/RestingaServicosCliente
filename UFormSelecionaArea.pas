@@ -12,29 +12,43 @@ type
     TxtTitulo: TText;
     GridPanelLayout1: TGridPanelLayout;
     RctConstrucao: TRectangle;
-    Image1: TImage;
-    Label1: TLabel;
-    Rectangle2: TRectangle;
-    Image2: TImage;
-    Label2: TLabel;
-    Rectangle3: TRectangle;
-    Image3: TImage;
-    Label3: TLabel;
-    Rectangle4: TRectangle;
-    Image4: TImage;
-    Label4: TLabel;
-    Rectangle5: TRectangle;
-    Image5: TImage;
-    Label5: TLabel;
-    Rectangle6: TRectangle;
-    Image6: TImage;
-    Label6: TLabel;
-    procedure Image1Click(Sender: TObject);
+    ImgConstrucao: TImage;
+    LblConstrucao: TLabel;
+    RctCasa: TRectangle;
+    ImgCasa: TImage;
+    LblCasa: TLabel;
+    RctEducacao: TRectangle;
+    ImgEducacao: TImage;
+    LblEducacao: TLabel;
+    RctFesta: TRectangle;
+    ImgFesta: TImage;
+    LblFesta: TLabel;
+    RctTecnologia: TRectangle;
+    ImgTecnologia: TImage;
+    LblTecnologia: TLabel;
+    RctAutomotivo: TRectangle;
+    ImgAutomotivo: TImage;
+    LblAutomotivo: TLabel;
+    RctAssistencia: TRectangle;
+    ImgAssistencia: TImage;
+    LblAssistencia: TLabel;
+    RctConsultoria: TRectangle;
+    ImgConsultoria: TImage;
+    LblConsultoria: TLabel;
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure RctConstrucaoClick(Sender: TObject);
+    procedure RctCasaClick(Sender: TObject);
+    procedure RctEducacaoClick(Sender: TObject);
+    procedure RctFestaClick(Sender: TObject);
+    procedure RctTecnologiaClick(Sender: TObject);
+    procedure RctAutomotivoClick(Sender: TObject);
+    procedure RctAssistenciaClick(Sender: TObject);
+    procedure RctConsultoriaClick(Sender: TObject);
   private
     { Private declarations }
   public
+    procedure abrePesquisa(area:integer);
     { Public declarations }
   end;
 
@@ -45,11 +59,34 @@ implementation
 
 {$R *.fmx}
 
-uses UFormPrincipal, UFormPesquisaSemLogin;
+uses UFormPrincipal, UFormPesquisaSemLogin, UFormSplash;
+
+procedure TFormSelecionaArea.abrePesquisa(area: integer);
+begin
+
+  if FormSplash.Pessoa_id=0 then
+  Begin
+    if FormPesquisaSemLogin=nil then
+      Application.CreateForm(TFormPesquisaSemLogin,FormPesquisaSemLogin);
+    FormPesquisaSemLogin.Area := area;
+    FormPesquisaSemLogin.show;
+  End
+  else
+  Begin
+    if FormPrincipal=nil then
+      Application.CreateForm(TFormPrincipal,FormPrincipal);
+    FormPrincipal.Area := area;
+    FormPrincipal.show;
+  End;
+
+end;
 
 procedure TFormSelecionaArea.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
+
+//  action := TCloseAction.caFree;
 //  FreeAndNil(FormSelecionaArea);
+
 end;
 
 procedure TFormSelecionaArea.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -61,12 +98,59 @@ begin
   end;
 end;
 
-procedure TFormSelecionaArea.Image1Click(Sender: TObject);
+procedure TFormSelecionaArea.RctAssistenciaClick(Sender: TObject);
 begin
 
-  if FormPesquisaSemLogin=nil then
-    Application.CreateForm(TFormPesquisaSemLogin,FormPesquisaSemLogin);
-  TFormPesquisaSemLogin.create(self).show;
+  abrePesquisa(7);
+
+end;
+
+procedure TFormSelecionaArea.RctAutomotivoClick(Sender: TObject);
+begin
+
+  abrePesquisa(6);
+
+end;
+
+procedure TFormSelecionaArea.RctCasaClick(Sender: TObject);
+begin
+
+  abrePesquisa(2);
+
+end;
+
+procedure TFormSelecionaArea.RctConstrucaoClick(Sender: TObject);
+begin
+
+  abrePesquisa(1);
+
+end;
+
+procedure TFormSelecionaArea.RctConsultoriaClick(Sender: TObject);
+begin
+
+  abrePesquisa(8);
+
+end;
+
+procedure TFormSelecionaArea.RctEducacaoClick(Sender: TObject);
+begin
+
+  abrePesquisa(3);
+
+end;
+
+procedure TFormSelecionaArea.RctFestaClick(Sender: TObject);
+begin
+
+  abrePesquisa(4);
+
+end;
+
+procedure TFormSelecionaArea.RctTecnologiaClick(Sender: TObject);
+begin
+
+  abrePesquisa(5);
 
 end;
 

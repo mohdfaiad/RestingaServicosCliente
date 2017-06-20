@@ -17,15 +17,17 @@ uses
   UFormFichaProfissionalSemLogin in 'UFormFichaProfissionalSemLogin.pas' {FormFichaProfissionalSemLogin},
   UFormFichaProfissional in 'UFormFichaProfissional.pas' {FormFichaProfissional},
   UFormSolicitaOrcamento in 'UFormSolicitaOrcamento.pas' {FormSolicitaOrcamento},
-  UFormContratos in 'UFormContratos.pas' {FormContratos},
   UFormServicos in 'UFormServicos.pas' {FormServicos},
   UFormSolicitaOrcamento2 in 'UFormSolicitaOrcamento2.pas' {FormSolicitaOrcamento2},
   UFormChat in 'UFormChat.pas' {FormChat},
   UFormMinhaConta in 'UFormMinhaConta.pas' {FormMinhaConta},
   UFormDadosPessoais in 'UFormDadosPessoais.pas' {FormDadosPessoais},
-  UFormContato in 'UFormContato.pas' {FormContato},
   UFormSeguranca in 'UFormSeguranca.pas' {FormSeguranca},
-  UFormContatoPessoa in 'UFormContatoPessoa.pas' {FormContatoPessoa};
+  UFormListaOrcamentos in 'UFormListaOrcamentos.pas' {FormListaOrcamentos},
+  UFormContato2 in 'UFormContato2.pas' {FormContato2},
+  UFormListaContratos in 'UFormListaContratos.pas' {FormListaContratos},
+  UFormContratoFicha in 'UFormContratoFicha.pas' {FormContratoFicha},
+  UFormFinalizarContrato in 'UFormFinalizarContrato.pas' {FormFinalizarContrato};
 
 {$R *.res}
 
@@ -33,5 +35,8 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormSplash, FormSplash);
   Application.CreateForm(TDMPrincipal, DMPrincipal);
+  Application.CreateForm(TFormListaContratos, FormListaContratos);
+  Application.CreateForm(TFormContratoFicha, FormContratoFicha);
+  Application.CreateForm(TFormFinalizarContrato, FormFinalizarContrato);
   Application.Run;
 end.

@@ -1,42 +1,94 @@
 ﻿[CbxServicos]
-Coordinates=200,267,84,123
+Coordinates=830,40,84,123
 
 [LstVwProfissionais]
-Coordinates=10,10,109,231
+Coordinates=222,10,109,231
 Visible=True
 
 [LblTitulo]
-Coordinates=530,267,57,51
+Coordinates=609,691,57,51
 
 [RctServicos]
-Coordinates=10,434,73,33
+Coordinates=692,691,73,33
 
 []
-Coordinates=250,1,82,33
+Coordinates=535,524,140,123
+Visible=True
 
 [DMPrincipal.QueryProfissoes]
-Coordinates=210,430,159,33
+Coordinates=990,40,159,33
 Visible=False
 
 [DMPrincipal.QueryProfissional]
-Coordinates=352,10,165,213
+Coordinates=564,10,165,213
 
 [DMPrincipal.QueryServicosPrestados]
-Coordinates=543,10,199,195
+Coordinates=10,303,199,195
 
 [DMPrincipal.QueryLogradouro]
-Coordinates=10,267,164,141
+Coordinates=181,524,164,141
 
 [DMPrincipal.QueryPessoa]
 Coordinates=810,320,142,33
 Visible=False
 
-[BindSourceDB1]
-Coordinates=364,276,140,105
-
 [BindingsList1]
 Coordinates=138,242,82,33
 
 [BindSourceDB2]
-Coordinates=199,46,127,159
+Coordinates=411,46,127,159
+Visible=True
+
+[DMPrincipal.QuerySeguranca]
+Coordinates=701,524,159,105
+
+[DMPrincipal.QueryDadosPessoais]
+Coordinates=405,303,182,141
+
+[DMPrincipal.QueryPessoaLogada]
+Coordinates=10,691,179,105
+
+[DMPrincipal.QueryCadastraPessoa]
+Coordinates=10,10,186,267
+
+[DMPrincipal.QueryDadosContato]
+Coordinates=613,303,176,141
+
+[DMPrincipal.QueryUsuario]
+Coordinates=235,303,144,159
+
+[DMPrincipal.QueryBuscaUsuario]
+Coordinates=215,691,175,105
+
+[DMPrincipal.QueryTipoContato]
+Coordinates=416,691,167,87
+
+[DMPrincipal.QueryContato]
+Coordinates=10,524,145,141
+
+[BindSourceDB1]
+Coordinates=990,40,140,123
+
+[StyleBook1]
+Coordinates=417,1,70,33
+
+[BtnMostraComboArea]
+Coordinates=625,242,123,51
+
+[DMPrincipal.QueryArea]
+Coordinates=1040,200,129,33
+Visible=False
+
+[BtnSeta2]
+Coordinates=417,224,58,51
+
+[BtnSeta1]
+Coordinates=358,536,58,51
+
+[CbxArea]
+Coordinates=898,182,84,123
+Visible=True
+
+[BindSourceDB3]
+Coordinates=1040,200,114,105
 

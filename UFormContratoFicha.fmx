@@ -1,0 +1,665 @@
+inherited FormContratoFicha: TFormContratoFicha
+  Caption = 'FormModelo1'
+  Position = ScreenCenter
+  DesignerMasterStyle = 0
+  inherited Lyt1: TLayout
+    inherited TbPrincipal: TToolBar
+      inherited lblTituloModelo: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Dados do contrato'
+      end
+    end
+    inherited Lyt2: TLayout
+      object TbciGeral: TTabControl
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 457.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = PlatformDefault
+        Sizes = (
+          290s
+          431s
+          290s
+          431s)
+        object TabItemGeral: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 122.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Informa'#231#245'es Gerais'
+          ExplicitSize.cx = 122.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object RctDadosOrcamento: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 290.000000000000000000
+            Size.Height = 421.000000000000000000
+            Size.PlatformDefault = False
+            object GplDados: TGridPanelLayout
+              Align = Top
+              Margins.Left = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 28.000000000000000000
+              Size.Width = 280.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              ColumnCollection = <
+                item
+                  Value = 100.000000000000000000
+                end>
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = GplDadosLinha1
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = GplDadosLinha2
+                  Row = 1
+                end>
+              RowCollection = <
+                item
+                  Value = 50.000000000000000000
+                end
+                item
+                  Value = 50.000000000000000000
+                end
+                item
+                  SizeStyle = Auto
+                end
+                item
+                  SizeStyle = Auto
+                end>
+              object GplDadosLinha1: TGridPanelLayout
+                Align = Client
+                Size.Width = 280.000000000000000000
+                Size.Height = 25.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                ColumnCollection = <
+                  item
+                    Value = 32.959920088224740000
+                  end
+                  item
+                    Value = 67.040079911775270000
+                  end>
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = LblProfissional
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = LblProfissionalNome
+                    Row = 0
+                  end>
+                RowCollection = <
+                  item
+                    Value = 100.000000000000000000
+                  end
+                  item
+                    SizeStyle = Auto
+                  end>
+                object LblProfissional: TLabel
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 92.287773132324220000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'Profissional:'
+                end
+                object LblProfissionalNome: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style, FontColor]
+                  Margins.Left = 5.000000000000000000
+                  Size.Width = 182.712219238281200000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'jason voorhees'
+                end
+              end
+              object GplDadosLinha2: TGridPanelLayout
+                Align = Client
+                Size.Width = 280.000000000000000000
+                Size.Height = 25.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                ColumnCollection = <
+                  item
+                    Value = 36.946579934754640000
+                  end
+                  item
+                    Value = 63.053420065245350000
+                  end>
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = LblData
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = LblDataCriacao
+                    Row = 0
+                  end>
+                RowCollection = <
+                  item
+                    Value = 100.000000000000000000
+                  end
+                  item
+                    SizeStyle = Auto
+                  end>
+                object LblData: TLabel
+                  Align = Client
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 103.450424194335900000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'Data do pedido:'
+                end
+                object LblDataCriacao: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style, FontColor]
+                  Margins.Left = 5.000000000000000000
+                  Size.Width = 171.549575805664100000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = '19/06/2017 22:52:14'
+                end
+              end
+            end
+            object GplDescricao: TGridPanelLayout
+              Align = Client
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 280.000000000000000000
+              Size.Height = 328.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              ColumnCollection = <
+                item
+                  Value = 100.000000000000000000
+                end>
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = Label1
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = TxtDescricao
+                  Row = 1
+                end>
+              RowCollection = <
+                item
+                  Value = 9.216355581378459000
+                end
+                item
+                  Value = 90.783644418621530000
+                end
+                item
+                  SizeStyle = Auto
+                end>
+              object Label1: TLabel
+                Align = Client
+                StyledSettings = [Size, FontColor]
+                Size.Width = 280.000000000000000000
+                Size.Height = 30.229646682739260000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                Text = 'Descri'#231#227'o do or'#231'amento:'
+              end
+              object TxtDescricao: TText
+                Align = Client
+                Size.Width = 280.000000000000000000
+                Size.Height = 297.770355224609300000
+                Size.PlatformDefault = False
+                Text = 'oi teste'
+                TextSettings.HorzAlign = Leading
+                TextSettings.VertAlign = Leading
+              end
+            end
+            object RctTituloDadosOrcamento: TRectangle
+              Align = Top
+              Fill.Color = claBlack
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 290.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              object LblTituloOrcamento: TLabel
+                Align = Client
+                StyledSettings = []
+                Size.Width = 290.000000000000000000
+                Size.Height = 23.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Dados do or'#231'amento:'
+              end
+            end
+          end
+        end
+        object TabItemValoresEPrazos: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 106.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Valores e prazos'
+          ExplicitSize.cx = 106.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object RctValores: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 280.000000000000000000
+            Size.Height = 421.000000000000000000
+            Size.PlatformDefault = False
+            object RctValoresTitulo: TRectangle
+              Align = Top
+              Fill.Color = claBlack
+              Size.Width = 280.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              object Label2: TLabel
+                Align = Client
+                StyledSettings = []
+                Size.Width = 280.000000000000000000
+                Size.Height = 25.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Valores e prazos para o contrato'
+              end
+            end
+            object GplValores: TGridPanelLayout
+              Align = Client
+              Size.Width = 280.000000000000000000
+              Size.Height = 396.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              ColumnCollection = <
+                item
+                  Value = 50.000000000000000000
+                end
+                item
+                  Value = 50.000000000000000000
+                end>
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = Label4
+                  Row = 0
+                end
+                item
+                  Column = 1
+                  Control = LblValortotal
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  ColumnSpan = 2
+                  Control = GplDescricaoValores
+                  Row = 3
+                  RowSpan = 3
+                end
+                item
+                  Column = 0
+                  Control = Label3
+                  Row = 1
+                end
+                item
+                  Column = 1
+                  Control = LblPagamento
+                  Row = 1
+                end
+                item
+                  Column = 0
+                  Control = Label9
+                  Row = 2
+                end
+                item
+                  Column = 1
+                  Control = LblParcela
+                  Row = 2
+                end>
+              RowCollection = <
+                item
+                  Value = 9.884169955605421000
+                end
+                item
+                  Value = 9.883499464032283000
+                end
+                item
+                  Value = 9.884278334313517000
+                end
+                item
+                  Value = 50.352316764236570000
+                end
+                item
+                  Value = 10.003835534311110000
+                end
+                item
+                  Value = 9.991899947501107000
+                end
+                item
+                  SizeStyle = Auto
+                end>
+              object Label4: TLabel
+                Align = Client
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.141311645507810000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Trailing
+                Text = 'Valor total:'
+              end
+              object LblValortotal: TLabel
+                Align = Client
+                StyledSettings = [Size, Style, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.141311645507810000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                Text = '320'
+              end
+              object GplDescricaoValores: TGridPanelLayout
+                Align = Client
+                Size.Width = 280.000000000000000000
+                Size.Height = 278.578308105468700000
+                Size.PlatformDefault = False
+                TabOrder = 6
+                ColumnCollection = <
+                  item
+                    Value = 50.000000000000000000
+                  end
+                  item
+                    Value = 50.000000000000000000
+                  end>
+                ControlCollection = <
+                  item
+                    Column = 0
+                    ColumnSpan = 2
+                    Control = Label5
+                    Row = 0
+                  end
+                  item
+                    Column = 0
+                    ColumnSpan = 2
+                    Control = TxtObservacoes
+                    Row = 1
+                  end>
+                RowCollection = <
+                  item
+                    Value = 13.826497166373940000
+                  end
+                  item
+                    Value = 86.173502833626060000
+                  end
+                  item
+                    SizeStyle = Auto
+                  end>
+                object Label5: TLabel
+                  Align = Client
+                  StyledSettings = [Size, FontColor]
+                  Margins.Left = 5.000000000000000000
+                  Margins.Right = 5.000000000000000000
+                  Size.Width = 270.000000000000000000
+                  Size.Height = 38.517620086669920000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Text = 'Observa'#231#245'es:'
+                end
+                object TxtObservacoes: TText
+                  Align = Client
+                  Enabled = False
+                  Margins.Left = 3.000000000000000000
+                  Margins.Top = 3.000000000000000000
+                  Margins.Right = 3.000000000000000000
+                  Margins.Bottom = 3.000000000000000000
+                  Size.Width = 274.000000000000000000
+                  Size.Height = 234.060684204101600000
+                  Size.PlatformDefault = False
+                  Text = 'teste de proposta'
+                  TextSettings.HorzAlign = Leading
+                  TextSettings.VertAlign = Leading
+                end
+              end
+              object Label3: TLabel
+                Align = Client
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.138656616210940000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Trailing
+                Text = 'Forma pagamento'
+              end
+              object LblPagamento: TLabel
+                Align = Client
+                StyledSettings = [Size, Style, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.138656616210940000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                Text = 'Dinheiro'
+              end
+              object Label9: TLabel
+                Align = Client
+                StyledSettings = [Size, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.141738891601560000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.HorzAlign = Trailing
+                Text = 'Parcelas'
+              end
+              object LblParcela: TLabel
+                Align = Client
+                StyledSettings = [Size, Style, FontColor]
+                Margins.Left = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 130.000000000000000000
+                Size.Height = 39.141738891601560000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                Text = '1'
+              end
+            end
+          end
+        end
+      end
+      object RctContratar: TRectangle
+        Align = Bottom
+        Fill.Color = claDarkblue
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 467.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object BtnContratar: TButton
+          Align = Bottom
+          StyledSettings = []
+          Size.Width = 290.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Finalizar contrato'
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = BtnContratarClick
+        end
+      end
+    end
+  end
+  inherited MvMenu: TMultiView
+    Size.Width = 250.000000000000000000
+    inherited RctPrincipalMenu: TRectangle
+      Size.Width = 249.000000000000000000
+      inherited RctMenuTop: TRectangle
+        Size.Width = 251.000000000000000000
+        inherited LblNomeUsuario: TLabel
+          Size.Width = 148.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited VsbMenu: TVertScrollBox
+        Size.Width = 249.000000000000000000
+        Viewport.Width = 249.000000000000000000
+        Viewport.Height = 448.000000000000000000
+        inherited RctSair: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgSair: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctServicos: TRectangle
+          inherited ImgServicos: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctMinhaConta: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgMinhaConta: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctOrcamento: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgOrcamento: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited RctContratos: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgContratos: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited LineSeparador: TLine
+          Size.Width = 239.000000000000000000
+        end
+      end
+    end
+  end
+  inherited BdlPessoaLogada: TBindingsList
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Profissional'
+      Component = LblProfissionalNome
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'DataAbertura'
+      Component = LblDataCriacao
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText4: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'DescOrcamento'
+      Component = TxtDescricao
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText5: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'ValorTotal'
+      Component = LblValortotal
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText6: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'QtdParcelas'
+      Component = LblParcela
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText7: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'FormaPagamento'
+      Component = LblPagamento
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText8: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'Observacoes'
+      Component = TxtObservacoes
+      ComponentProperty = 'Text'
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryOrcamento_Contrato
+    ScopeMappings = <>
+    Left = 136
+    Top = 264
+  end
+end

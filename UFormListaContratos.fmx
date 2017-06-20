@@ -1,0 +1,188 @@
+inherited FormListaContratos: TFormListaContratos
+  Caption = 'FormModelo1'
+  Position = ScreenCenter
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited Lyt1: TLayout
+    inherited TbPrincipal: TToolBar
+      inherited lblTituloModelo: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Lyt2: TLayout
+      object Rectangle1: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        object Label1: TLabel
+          Align = Left
+          StyledSettings = [Style, FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 52.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Text = 'Status:'
+        end
+        object CbxContrato: TComboBox
+          Align = Client
+          Items.Strings = (
+            'Contratos em abertos'
+            'Contratos fechados')
+          ItemIndex = 0
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 218.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnChange = CbxContratoChange
+        end
+      end
+      object LwContratos: TListView
+        ItemAppearanceClassName = 'TDynamicAppearance'
+        ItemEditAppearanceClassName = 'TDynamicAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        ItemIndex = 1
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 457.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearance.ItemHeight = 60
+        ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Profissional'
+            AppearanceClassName = 'TTextObjectAppearance'
+            Appearance.Font.Family = 'Roboto'
+            Appearance.Font.StyleExt = {00070000000000000004000000}
+            Appearance.TextAlign = Leading
+            Appearance.WordWrap = True
+            Appearance.Width = 269.000000000000000000
+            Appearance.Height = 21.000000000000000000
+          end
+          item
+            AppearanceObjectName = 'Descricao'
+            AppearanceClassName = 'TTextObjectAppearance'
+            Appearance.Font.Family = 'Roboto'
+            Appearance.Font.Size = 10.000000000000000000
+            Appearance.TextAlign = Leading
+            Appearance.TextVertAlign = Leading
+            Appearance.WordWrap = True
+            Appearance.Width = 269.000000000000000000
+            Appearance.Height = 39.000000000000000000
+            Appearance.PlaceOffset.Y = 20.000000000000000000
+          end>
+        ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+          item
+            AppearanceObjectName = 'Text1'
+            AppearanceClassName = 'TTextObjectAppearance'
+          end>
+        ItemAppearanceObjects.HeaderObjects.Text.Font.Family = 'Roboto'
+        ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00070000000000000004000000}
+        OnItemClickEx = LwContratosItemClickEx
+      end
+    end
+  end
+  inherited MvMenu: TMultiView
+    Size.Width = 250.000000000000000000
+    inherited RctPrincipalMenu: TRectangle
+      Size.Width = 249.000000000000000000
+      inherited RctMenuTop: TRectangle
+        Size.Width = 251.000000000000000000
+        inherited LblNomeUsuario: TLabel
+          Size.Width = 148.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited VsbMenu: TVertScrollBox
+        Size.Width = 249.000000000000000000
+        Viewport.Width = 249.000000000000000000
+        Viewport.Height = 448.000000000000000000
+        inherited RctSair: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgSair: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctServicos: TRectangle
+          inherited ImgServicos: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctMinhaConta: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgMinhaConta: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctOrcamento: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgOrcamento: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited RctContratos: TRectangle
+          Size.Width = 239.000000000000000000
+          inherited ImgContratos: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited LineSeparador: TLine
+          Size.Width = 239.000000000000000000
+        end
+      end
+    end
+  end
+  inherited BdlPessoaLogada: TBindingsList
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      Control = LwContratos
+      FillExpressions = <
+        item
+          SourceMemberName = 'Profissional'
+          ControlMemberName = 'Profissional'
+        end
+        item
+          SourceMemberName = 'DescOrcamento'
+          ControlMemberName = 'Descricao'
+        end>
+      FillHeaderExpressions = <>
+      FillHeaderFieldName = 'DataAbertura'
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMPrincipal.QueryOrcamento_Contrato
+    ScopeMappings = <>
+    Left = 136
+    Top = 264
+  end
+end

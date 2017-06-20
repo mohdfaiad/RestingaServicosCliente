@@ -50,6 +50,7 @@ type
     ShadowEffect2: TShadowEffect;
     procedure BtnOrcamentoClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -64,21 +65,35 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-uses UFormLogin, UDMPrincipal;
+uses UFormLogin, UDMPrincipal, UFormPesquisaSemLogin;
 
 procedure TFormFichaProfissionalSemLogin.BtnOrcamentoClick(Sender: TObject);
 begin
+
   ShowMessage('Voce precisa estar logado para solicitar o orçamento de um profissional!');
   if FormLogin = nil then
     application.CreateForm(TFormLogin,FormLogin);
-  TFormLogin.Create(self).Show;
+  TFormLogin.create(self).show;
+  close;
+
+end;
+
+procedure TFormFichaProfissionalSemLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+
+//  action := TCloseAction.caFree;
+//  FreeAndNil(FormFichaProfissionalSemLogin);
+
 end;
 
 procedure TFormFichaProfissionalSemLogin.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
 begin
 
-//  if Key = vkHardwareBack then
-//    close;
+  if Key = vkHardwareBack then
+  Begin
+    close;
+    FormPesquisaSemLogin.Show;
+  End;
 
 end;
 

@@ -5,7 +5,7 @@ Coordinates=10,10,80,141
 Coordinates=223,213,115,33
 
 [QueryProfissoes]
-Coordinates=328,10,96,87
+Coordinates=328,10,96,105
 
 [QueryProfissionalnota]
 Coordinates=75,304,124,33
@@ -31,9 +31,6 @@ Coordinates=242,356,100,33
 [QueryProfissionalDescricao]
 Coordinates=426,261,152,33
 
-[QueryProfissoesid]
-Coordinates=426,313,105,33
-
 [MySQLUniProvider1]
 Coordinates=426,365,113,33
 
@@ -49,14 +46,11 @@ Coordinates=616,209,166,33
 [QueryLogradouro]
 Coordinates=217,10,101,141
 
-[QueryProfissoesnome]
-Coordinates=616,417,124,33
-
 [QueryProfissionalAvaliacao]
 Coordinates=226,170,151,33
 
 []
-Coordinates=1079,573,82,33
+Coordinates=1351,313,156,33
 
 [QueryProfissionalTotalAtendimentos]
 Coordinates=24,242,196,33
@@ -212,7 +206,7 @@ Coordinates=97,242,126,33
 Coordinates=1079,365,184,33
 
 [QueryContato]
-Coordinates=15,170,83,105
+Coordinates=15,170,83,141
 
 [QueryDadosPessoaisCPFCNPJ]
 Coordinates=1079,417,168,33
@@ -224,7 +218,7 @@ Coordinates=331,689,149,33
 Coordinates=1079,469,164,33
 
 [QueryDadosPessoais]
-Coordinates=620,70,120,141
+Coordinates=620,70,120,159
 Visible=True
 
 [QueryDadosPessoaisid]
@@ -238,4 +232,142 @@ Coordinates=1079,521,172,33
 
 [QueryDadosPessoaisData_nascimento]
 Coordinates=1079,625,205,33
+
+[QueryContatoid]
+Coordinates=129,555,92,33
+
+[QueryDadosContatoid]
+Coordinates=640,417,123,33
+
+[QueryOrcamento_ChatPessoa_id]
+Coordinates=1079,677,178,33
+
+[QueryFormaPagamentoFormaPagamento]
+Coordinates=1351,53,218,33
+
+[QueryOrcamentos]
+Coordinates=0,0,104,177
+
+[QueryDadosContatoPessoa_id]
+Coordinates=1079,729,165,33
+
+[QueryAreaid]
+Coordinates=0,623,76,33
+
+[QueryOrcamento_Chatorcamento_id]
+Coordinates=1079,781,194,33
+
+[QueryFormaPagamento]
+Coordinates=246,1,131,87
+
+[QueryOrcamento_ChatNomePessoa]
+Coordinates=1079,833,191,33
+
+[QueryOrcamento_PropostaDataInicio]
+Coordinates=880,903,198,33
+
+[QueryOrcamento_Contrato]
+Coordinates=96,196,147,339
+
+[QueryTipoContatoNomeTipoContato]
+Coordinates=681,903,194,33
+
+[QueryTipoContatoid]
+Coordinates=708,832,113,33
+
+[QueryOrcamento_Chatid]
+Coordinates=569,832,136,33
+
+[QueryOrcamentosdata_orcamento]
+Coordinates=492,903,183,33
+
+[QueryOrcamento_Propostaid]
+Coordinates=333,903,158,33
+
+[QueryOrcamentosDescricao]
+Coordinates=410,832,153,33
+
+[QueryDadosPessoaisfoto]
+Coordinates=261,832,139,33
+
+[QueryOrcamentosStatus]
+Coordinates=122,832,135,33
+
+[QueryContatodesc_logradouro]
+Coordinates=164,903,166,33
+
+[QueryDadosContatocontato]
+Coordinates=0,870,151,33
+
+[QueryFormaPagamentoid]
+Coordinates=1351,209,140,33
+
+[QueryOrcamento_Chat]
+Coordinates=433,1,127,159
+
+[QueryTipoContato]
+Coordinates=123,1,104,87
+
+[QueryDadosContatoContato_tipo_id]
+Coordinates=1351,261,192,33
+
+[QueryOrcamento_PropostaDataPrevisao]
+Coordinates=1351,365,214,33
+
+[QueryOrcamento_PropostaQtdParcelas]
+Coordinates=1351,469,208,33
+
+[QueryOrcamento_PropostaObservacoes]
+Coordinates=1351,521,213,33
+
+[QueryOrcamento_PropostaValorTotal]
+Coordinates=1351,573,199,33
+
+[QueryProfissoesid]
+Coordinates=13,832,105,33
+
+[QueryDadosContato]
+Coordinates=281,107,114,141
+
+[QueryArea]
+Coordinates=123,107,67,87
+
+[QueryOrcamento_PropostaOrcamento_id]
+Coordinates=1351,625,218,33
+
+[QueryOrcamento_ChatDataEnvio]
+Coordinates=1351,677,177,33
+
+[QueryOrcamentoscontratado_id]
+Coordinates=1351,781,172,33
+
+[QueryOrcamento_PropostaFormaPagamento_id]
+Coordinates=1607,1,250,33
+
+[QueryProfissoesProfissao_area_id]
+Coordinates=1351,833,185,33
+
+[QueryProfissoesNome]
+Coordinates=1351,885,125,33
+
+[QueryOrcamentosid]
+Coordinates=1332,974,113,33
+
+[QueryOrcamentosnomepessoa]
+Coordinates=1163,974,167,33
+
+[QueryOrcamento_Proposta]
+Coordinates=827,670,148,195
+
+[QueryDadosContatoNomeTipoContato]
+Coordinates=556,974,203,33
+
+[QueryOrcamento_ChatTexto]
+Coordinates=397,974,154,33
+
+[QueryAreaNomeArea]
+Coordinates=278,974,118,33
+
+[QueryOrcamentoscontratante_id]
+Coordinates=1607,105,175,33
 

@@ -1,0 +1,237 @@
+inherited FormChat_LgXhdpiPh: TFormChat_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Lyt1: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited TbPrincipal: TToolBar
+      Size.Width = 450.000000000000000000
+      inherited RctMenuSuperior: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited BtnBuscar: TButton
+          Position.X = 402.000000000000000000
+        end
+      end
+      inherited lblTituloModelo: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Lyt2: TLayout
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited RctContratar: TRectangle
+        Position.Y = 605.000000000000000000
+        Size.Width = 440.000000000000000000
+        inherited BtnContratar: TButton
+          Size.Width = 440.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited TbcOrcamento: TTabControl
+        Size.Width = 440.000000000000000000
+        Size.Height = 600.000000000000000000
+        TabHeight = 49.000000000000000000
+        Sizes = (
+          440s
+          551s
+          440s
+          551s)
+        inherited TabItemGeral: TTabItem
+          Size.Width = 220.000000000000000000
+          Size.Height = 49.000000000000000000
+          ExplicitSize.cx = 122.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          inherited RctChatOrcamento: TRectangle
+            Margins.Left = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Size.Width = 430.000000000000000000
+            Size.Height = 336.000000000000000000
+            inherited LwChat: TListView
+              Size.Width = 420.000000000000000000
+              Size.Height = 272.000000000000000000
+              ItemAppearanceObjects.HeaderObjects.Text.Font.StyleExt = {00070000000000000004000000}
+            end
+            inherited Layout1: TLayout
+              Position.Y = 300.000000000000000000
+              Size.Width = 430.000000000000000000
+              inherited Layout2: TLayout
+                Size.Width = 430.000000000000000000
+                inherited RctMensagem: TRectangle
+                  Size.Width = 376.000000000000000000
+                  inherited EdtMensagemChat: TEdit
+                    Size.Width = 376.000000000000000000
+                    Size.Height = 32.000000000000000000
+                  end
+                end
+                inherited BtnEnviaMensagem: TButton
+                  Position.X = 385.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+            end
+            inherited Rectangle1: TRectangle
+              Size.Width = 430.000000000000000000
+              inherited Label3: TLabel
+                Size.Width = 430.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+          inherited RctDadosOrcamento: TRectangle
+            Margins.Left = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Size.Width = 430.000000000000000000
+            Stroke.Color = claNull
+            inherited GplDados: TGridPanelLayout
+              Size.Width = 420.000000000000000000
+              inherited GplDadosLinha1: TGridPanelLayout
+                Size.Width = 420.000000000000000000
+                inherited LblProfissional: TLabel
+                  Size.Width = 138.431671142578100000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited LblProfissionalNome: TLabel
+                  Size.Width = 276.568328857421900000
+                end
+              end
+              inherited GplDadosLinha2: TGridPanelLayout
+                Size.Width = 420.000000000000000000
+                inherited LblData: TLabel
+                  Size.Width = 155.175628662109400000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited LblDataCriacao: TLabel
+                  Size.Width = 259.824371337890600000
+                end
+              end
+            end
+            inherited GplDescricao: TGridPanelLayout
+              Size.Width = 420.000000000000000000
+              inherited Label1: TLabel
+                Size.Width = 420.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+              inherited TxtDescricao: TText
+                Size.Width = 420.000000000000000000
+              end
+            end
+            inherited RctTituloDadosOrcamento: TRectangle
+              Size.Width = 430.000000000000000000
+              inherited LblTituloOrcamento: TLabel
+                Size.Width = 430.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+        end
+        inherited TabItemValores: TTabItem
+          Size.Width = 220.000000000000000000
+          Size.Height = 49.000000000000000000
+          ExplicitSize.cx = 106.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          inherited RctValores: TRectangle
+            Size.Width = 430.000000000000000000
+            inherited RctValoresTitulo: TRectangle
+              Size.Width = 430.000000000000000000
+              inherited Label2: TLabel
+                Size.Width = 430.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+            inherited GplValores: TGridPanelLayout
+              Size.Width = 430.000000000000000000
+              inherited Label4: TLabel
+                Size.Width = 205.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+              inherited LblValortotal: TLabel
+                Size.Width = 205.000000000000000000
+              end
+              inherited Label6: TLabel
+                Size.Width = 205.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+              inherited LblDataInicio: TLabel
+                Size.Width = 205.000000000000000000
+              end
+              inherited Label8: TLabel
+                Size.Width = 205.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+              inherited LblDataFim: TLabel
+                Size.Width = 205.000000000000000000
+              end
+              inherited GplDescricaoValores: TGridPanelLayout
+                Size.Width = 430.000000000000000000
+                inherited Label5: TLabel
+                  Size.Width = 420.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited TxtObservacoes: TText
+                  Size.Width = 430.000000000000000000
+                end
+              end
+            end
+          end
+          inherited Rectangle2: TRectangle
+            Size.Width = 430.000000000000000000
+            Size.Height = 288.000000000000000000
+            inherited Rectangle3: TRectangle
+              Size.Width = 430.000000000000000000
+              inherited Label7: TLabel
+                Size.Width = 430.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited MvMenu: TMultiView
+    inherited RctPrincipalMenu: TRectangle
+      inherited RctMenuTop: TRectangle
+        inherited LblNomeUsuario: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited VsbMenu: TVertScrollBox
+        Viewport.Width = 249.000000000000000000
+        Viewport.Height = 448.000000000000000000
+        inherited RctSair: TRectangle
+          inherited ImgSair: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctServicos: TRectangle
+          inherited ImgServicos: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctMinhaConta: TRectangle
+          inherited ImgMinhaConta: TImage
+            MultiResBitmap.Height = 108
+            MultiResBitmap.Width = 108
+          end
+        end
+        inherited RctOrcamento: TRectangle
+          inherited ImgOrcamento: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+        inherited RctContratos: TRectangle
+          inherited ImgContratos: TImage
+            MultiResBitmap.Height = 144
+            MultiResBitmap.Width = 144
+          end
+        end
+      end
+    end
+  end
+end

@@ -37,15 +37,15 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
-uses UFormDadosPessoais, UFormContato, UFormSeguranca;
+uses UFormDadosPessoais, UFormContato, UFormSeguranca, UFormContato2;
 
 
 procedure TFormMinhaConta.RctContatoClick(Sender: TObject);
 begin
   inherited;
-  if FormContato = nil then
-    application.CreateForm(TFormContato,FormContato);
-  TFormContato.Create(self).Show;
+  if FormContato2 = nil then
+    application.CreateForm(TFormContato2,FormContato2);
+  TFormContato2.Create(self).Show;
 end;
 
 procedure TFormMinhaConta.RctDadosPessoaisClick(Sender: TObject);

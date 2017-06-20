@@ -31,8 +31,10 @@ uses UFormPrincipal, UDMPrincipal, UFormSelecaoInicial;
 procedure TFormSplash.Timer1Timer(Sender: TObject);
 begin
 
-  if (Timer1.Interval = 2000) then
+  if (Timer1.Interval = 3000) then
   begin
+    Pessoa_id:=0;
+    Nome_Pessoa := '';
     DMPrincipal.UniConnPrincipal.Connected:= true;
     if FormSelecaoInicial=nil then
       Application.CreateForm(TFormSelecaoInicial,FormSelecaoInicial);

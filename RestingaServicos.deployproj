@@ -45,10 +45,10 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Android'">
-        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-hdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon72</DeployClass>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\640x480-01.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -64,10 +64,19 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-mdpi\</RemoteDir>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\960x720-02.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\72x72-01.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -91,7 +100,16 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp144.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\48x48-02.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\144x144-02.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RestingaServicos\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
@@ -100,25 +118,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-xhdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon96</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\Logo-icone-Transp36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-ldpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon36</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp470x320.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\470x320-01.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RestingaServicos\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
@@ -127,37 +127,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp640x480.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-large\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage640</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\library\lib\mips\</RemoteDir>
-            <RemoteName>libRestingaServicos.so</RemoteName>
-            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp960x720.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\res\drawable-xlarge\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage960</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Debug\classes.dex" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RestingaServicos\classes\</RemoteDir>
-            <RemoteName>classes.dex</RemoteName>
-            <DeployClass>AndroidClassesDexFile</DeployClass>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\36x36-02.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -172,10 +145,37 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="C:\Users\Natalia Schnechel\Dropbox\Desenvolvimento de sistemas 2 (1)\Imagens\Icones aplicacao\Logo-icone-Transp426x320.png" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\96x96-02.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="D:\Dropbox\IFRS\Desenvolvimento de sistemas 2\Imagens\Icones aplicacao\426x320-02.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RestingaServicos\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\library\lib\mips\</RemoteDir>
+            <RemoteName>libRestingaServicos.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\classes.dex" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RestingaServicos\classes\</RemoteDir>
+            <RemoteName>classes.dex</RemoteName>
+            <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>

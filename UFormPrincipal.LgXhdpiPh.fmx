@@ -12,31 +12,57 @@ inherited FormPrincipal_LgXhdpiPh: TFormPrincipal_LgXhdpiPh
         inherited BtnBuscar: TButton
           Position.X = 402.000000000000000000
         end
-        inherited ImgLogo: TImage
-          MultiResBitmap.Height = 144
-          MultiResBitmap.Width = 144
-          MultiResBitmap.LoadSize = 2
-        end
+      end
+      inherited lblTituloModelo: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
     inherited Lyt2: TLayout
       Size.Width = 450.000000000000000000
       Size.Height = 647.000000000000000000
-    end
-    inherited RctFundoPrincipal: TRectangle
-      Size.Width = 450.000000000000000000
-      Size.Height = 647.000000000000000000
-      inherited LstvwProfissionais: TListView
-        Size.Width = 440.000000000000000000
-        Size.Height = 592.000000000000000000
+      inherited RctFundoPrincipal: TRectangle
+        Fill.Kind = Bitmap
+        Size.Width = 450.000000000000000000
+        Size.Height = 601.000000000000000000
+        inherited LstvwProfissionais: TListView
+          Size.Width = 440.000000000000000000
+          Size.Height = 554.000000000000000000
+        end
+        inherited Rectangle2: TRectangle
+          Size.Width = 440.000000000000000000
+          Size.Height = 32.000000000000000000
+          inherited CbxProfissoes: TComboBox
+            Size.Width = 440.000000000000000000
+            Size.Height = 32.000000000000000000
+          end
+        end
       end
-      inherited Rectangle2: TRectangle
+      inherited BtnMostraComboArea: TButton
         Size.Width = 440.000000000000000000
-        inherited CbxProfissoes: TComboBox
+        Size.Height = 41.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        inherited BtnSeta1: TButton
+          Enabled = False
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited BtnSeta2: TButton
+          Enabled = False
+          Position.X = 392.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+      inherited RctArea: TRectangle
+        Margins.Bottom = 5.000000000000000000
+        Visible = False
+        inherited CbxArea: TComboBox
           Margins.Left = 5.000000000000000000
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
-          Size.Width = 430.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 280.000000000000000000
           Size.Height = 32.000000000000000000
         end
       end
@@ -54,12 +80,6 @@ inherited FormPrincipal_LgXhdpiPh: TFormPrincipal_LgXhdpiPh
         Viewport.Height = 502.000000000000000000
         inherited RctSair: TRectangle
           inherited ImgSair: TImage
-            MultiResBitmap.Height = 108
-            MultiResBitmap.Width = 108
-          end
-        end
-        inherited RctConfiguracoes: TRectangle
-          inherited ImgConfiguracao: TImage
             MultiResBitmap.Height = 108
             MultiResBitmap.Width = 108
           end

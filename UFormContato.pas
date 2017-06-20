@@ -13,7 +13,6 @@ uses
 
 type
   TFormContato = class(TFormModelo)
-    LblTituloContato: TLabel;
     BtnSalvar: TButton;
     RctSalvar: TRectangle;
     GplCEPNum: TGridPanelLayout;
@@ -40,6 +39,8 @@ type
     BindSourceDB3: TBindSourceDB;
     LinkListControlToField2: TLinkListControlToField;
     VsbTipo: TVertScrollBox;
+    ImgLogo: TImage;
+    LbltituloContato: TLabel;
     procedure FormShow(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
     procedure BtnTipoClick(Sender: TObject);
@@ -77,12 +78,14 @@ begin
   inherited;
   with DMPrincipal do
   Begin
+    Application.ProcessMessages;
     QueryDadosContato.append;
     QueryDadosContatoPessoa_id.value := QueryPessoaLogadaid.Value;
     QueryDadosContatoContato_tipo_id.Value := BindSourceDB2.DataSet.FieldByName('id').AsInteger;
     QueryDadosContatocontato.AsString := EdtTipo.Text;
     QueryDadosContato.Post;
-    Application.ProcessMessages;
+    QueryDadosContato.Close;
+    QueryDadosContato.Open;
   End;
 
 end;

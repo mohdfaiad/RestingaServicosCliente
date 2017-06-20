@@ -51,6 +51,7 @@ type
     ShadowEffect6: TShadowEffect;
     procedure BtnOrcamentoClick(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -71,12 +72,16 @@ procedure TFormFichaProfissional.BtnOrcamentoClick(Sender: TObject);
 begin
   inherited;
   if FormSolicitaOrcamento2=nil then
-  Begin
     Application.CreateForm(TFormSolicitaOrcamento2,FormSolicitaOrcamento2);
-    TFormSolicitaOrcamento2.create(self).show;
-  End
-  Else
-    FormSolicitaOrcamento2.Show;
+  TFormSolicitaOrcamento2.create(self).show;
+
+end;
+
+procedure TFormFichaProfissional.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+//  action := TCloseAction.caFree;
+//  FreeAndNil(FormFichaProfissional);
 
 end;
 

@@ -9,8 +9,6 @@ type
   TDMPrincipal = class(TDataModule)
     UniConnPrincipal: TUniConnection;
     QueryProfissoes: TUniQuery;
-    QueryProfissoesid: TIntegerField;
-    QueryProfissoesnome: TStringField;
     MySQLUniProvider1: TMySQLUniProvider;
     QueryPessoa: TUniQuery;
     QueryLogradouro: TUniQuery;
@@ -97,6 +95,56 @@ type
     QueryDadosContatoContato_tipo_id: TLongWordField;
     QueryDadosContatocontato: TStringField;
     QueryDadosContatoNomeTipoContato: TStringField;
+    QueryProfissoesid: TLongWordField;
+    QueryProfissoesProfissao_area_id: TLongWordField;
+    QueryProfissoesNome: TStringField;
+    QueryArea: TUniQuery;
+    QueryAreaid: TLongWordField;
+    QueryAreaNomeArea: TStringField;
+    QueryDadosPessoaisfoto: TBlobField;
+    QueryOrcamentos: TUniQuery;
+    QueryOrcamentosid: TLongWordField;
+    QueryOrcamentoscontratante_id: TLongWordField;
+    QueryOrcamentoscontratado_id: TLongWordField;
+    QueryOrcamentosdata_orcamento: TDateTimeField;
+    QueryOrcamentosStatus: TBooleanField;
+    QueryOrcamentosDescricao: TMemoField;
+    QueryOrcamentosnomepessoa: TStringField;
+    QueryOrcamento_Chat: TUniQuery;
+    QueryOrcamento_Chatid: TLongWordField;
+    QueryOrcamento_ChatDataEnvio: TDateTimeField;
+    QueryOrcamento_ChatTexto: TMemoField;
+    QueryOrcamento_Chatorcamento_id: TLongWordField;
+    QueryOrcamento_ChatPessoa_id: TLongWordField;
+    QueryOrcamento_ChatNomePessoa: TStringField;
+    QueryOrcamento_Proposta: TUniQuery;
+    QueryOrcamento_Propostaid: TLongWordField;
+    QueryOrcamento_PropostaOrcamento_id: TLongWordField;
+    QueryOrcamento_PropostaFormaPagamento_id: TLongWordField;
+    QueryOrcamento_PropostaQtdParcelas: TLongWordField;
+    QueryOrcamento_PropostaValorTotal: TFloatField;
+    QueryOrcamento_PropostaDataInicio: TDateTimeField;
+    QueryOrcamento_PropostaDataPrevisao: TDateTimeField;
+    QueryOrcamento_PropostaObservacoes: TMemoField;
+    QueryFormaPagamento: TUniQuery;
+    QueryFormaPagamentoid: TLongWordField;
+    QueryFormaPagamentoFormaPagamento: TStringField;
+    QueryOrcamento_Contrato: TUniQuery;
+    QueryOrcamento_Contratoid: TLongWordField;
+    QueryOrcamento_ContratoOrcamento_id: TLongWordField;
+    QueryOrcamento_ContratoNota: TLongWordField;
+    QueryOrcamento_ContratoDescricao: TMemoField;
+    QueryOrcamento_ContratoStatus: TBooleanField;
+    QueryOrcamento_ContratoDataAbertura: TDateTimeField;
+    QueryOrcamento_ContratoDataFechamento: TDateTimeField;
+    QueryOrcamento_Contratocontratante_id: TLongWordField;
+    QueryOrcamento_Contratocontratado_id: TLongWordField;
+    QueryOrcamento_ContratoDescOrcamento: TMemoField;
+    QueryOrcamento_ContratoQtdParcelas: TLongWordField;
+    QueryOrcamento_ContratoValorTotal: TFloatField;
+    QueryOrcamento_ContratoObservacoes: TMemoField;
+    QueryOrcamento_ContratoFormaPagamento: TStringField;
+    QueryOrcamento_ContratoProfissional: TStringField;
   private
     { Private declarations }
   public

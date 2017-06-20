@@ -163,9 +163,6 @@ Coordinates=975,552,53,51
 [RctSalvar]
 Coordinates=1062,786,61,33
 
-[LblTituloContato]
-Coordinates=1010,702,96,51
-
 [LblEndereco]
 Coordinates=430,552,76,51
 
@@ -201,4 +198,7 @@ Coordinates=1350,150,99,51
 
 [BindSourceDB1]
 Coordinates=1053,10,128,159
+
+[]
+Coordinates=1010,702,96,51
 

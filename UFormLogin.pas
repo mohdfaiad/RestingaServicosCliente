@@ -25,7 +25,6 @@ type
     procedure BtnEntrarClick(Sender: TObject);
     procedure BtnCadastrarClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure EdtEmailKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     procedure EdtSenhaKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
@@ -74,12 +73,8 @@ begin
         QueryPessoaLogada.ParamByName('pId').Value := QueryBuscaUsuarioid.AsInteger;
         QueryPessoaLogada.Open;
         if FormPrincipal = nil then
-        Begin
           application.CreateForm(TFormPrincipal,FormPrincipal);
-          TFormPrincipal.Create(self).Show;
-        End
-        else
-          FormPrincipal.Show;
+        TFormPrincipal.Create(self).Show;
 
         Close;
       End;
@@ -101,13 +96,6 @@ begin
 
   if ((Key = vkReturn) or (Key = vkTab)) then
     BtnEntrarClick(self);
-end;
-
-procedure TFormLogin.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-
-  FreeAndNil(FormLogin);
-
 end;
 
 procedure TFormLogin.SpeedButton1Click(Sender: TObject);

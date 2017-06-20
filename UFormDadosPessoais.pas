@@ -8,13 +8,11 @@ uses
   UFormModelo, Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti,
   System.Bindings.Outputs, Fmx.Bind.Editors, FMX.Edit, Data.Bind.Components,
   Data.Bind.DBScope, FMX.Objects, FMX.Layouts, FMX.Effects, FMX.MultiView,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.MediaLibrary.Actions, System.Actions, FMX.ActnList, FMX.StdActns, FMX.Media;
 
 type
   TFormDadosPessoais = class(TFormModelo)
-    LblTituloDadosPessoais: TLabel;
     ImgFoto: TImage;
-    ImgCamera: TImage;
     LblNomeCompleto: TLabel;
     LblDataNascimento: TLabel;
     LblCPF: TLabel;
@@ -27,12 +25,27 @@ type
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
+    CameraComponent1: TCameraComponent;
+    ActionList1: TActionList;
+    TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
+    TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
+    ShowShareSheetAction1: TShowShareSheetAction;
+    GridPanelLayout1: TGridPanelLayout;
+    Button1: TButton;
+    Button2: TButton;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
+    RctBotoesFoto: TRectangle;
     procedure BtnSalvarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure ShowShareSheetAction1BeforeExecute(Sender: TObject);
+    procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+    procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
   private
     { Private declarations }
   public
     function validaCampo:boolean;
+    procedure GetImagem;
+
 
   end;
 
@@ -71,6 +84,36 @@ begin
   end;
 end;
 
+
+procedure TFormDadosPessoais.GetImagem;
+begin
+
+  CameraComponent1.SampleBufferToBitmap(imgFoto.Bitmap, True);
+
+end;
+
+procedure TFormDadosPessoais.ShowShareSheetAction1BeforeExecute(Sender: TObject);
+begin
+  inherited;
+  ShowShareSheetAction1.Bitmap.Assign(imgFoto.Bitmap);
+
+end;
+
+procedure TFormDadosPessoais.TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+
+begin
+  inherited;
+  Image.Resize(140,160);
+  BindSourceDB1.DataSet.FieldByName('foto').Assign(image);
+
+end;
+
+procedure TFormDadosPessoais.TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+begin
+  inherited;
+  Image.Resize(140,140);
+  BindSourceDB1.DataSet.FieldByName('foto').Assign(image);
+end;
 
 function TFormDadosPessoais.validaCampo: boolean;
 begin

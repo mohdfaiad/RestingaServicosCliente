@@ -107,3 +107,12 @@ Coordinates=235,78,53,58
 [BtnEnviaOrcamento]
 Coordinates=231,260,98,36
 
+[DMPrincipal.QueryProfissoes]
+Visible=False
+
+[DMPrincipal.QueryPessoa]
+Visible=False
+
+[DMPrincipal.QueryArea]
+Visible=False
+
